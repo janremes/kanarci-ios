@@ -43,4 +43,78 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)customizeAppearance {
+    
+	//  Customize navigation bar
+	// Customize the title text for *all* UINavigationBars
+	[[UINavigationBar appearance] setTitleTextAttributes:@{
+                               UITextAttributeTextColor : [Theme defaultTextColor],
+                         UITextAttributeTextShadowColor : [UIColor clearColor],
+                                    UITextAttributeFont : [Theme boldAppFontOfSize:20.0]}];
+    
+	//  Custom navigation bar background
+	[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar_bg"] forBarMetrics:UIBarMetricsDefault];
+    
+   
+    
+    
+	//  Customize bar button items - normal state
+	[[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                               UITextAttributeTextColor : [Theme defaultTextColor],
+                         UITextAttributeTextShadowColor : [UIColor clearColor],
+                                    UITextAttributeFont : [Theme boldAppFontOfSize:[Theme defaultControlsTextSize]]
+     }
+	                                            forState:UIControlStateNormal];
+    
+	//  Customize bar button items - highlighted state
+	[[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                               UITextAttributeTextColor : [UIColor whiteColor],
+                         UITextAttributeTextShadowColor : [UIColor clearColor]
+     }
+	                                            forState:UIControlStateHighlighted];
+    
+    //  Customize bar button items - disabled state
+	[[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                               UITextAttributeTextColor : [Theme lightTextColor],
+                         UITextAttributeTextShadowColor : [UIColor clearColor]
+     }
+	                                            forState:UIControlStateDisabled];
+    
+    
+//	//  Bar button item
+//	UIImage *barButtonBg = [[UIImage imageNamed:@"lam_btn_navbar_button"]
+//                            resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+//	[[UIBarButtonItem appearance] setBackgroundImage:barButtonBg
+//	                                        forState:UIControlStateNormal
+//			                              barMetrics:UIBarMetricsDefault];
+//    
+//	//  Back button
+//	UIImage *barBackButtonBg = [[UIImage imageNamed:@"lam_btn_navbar_back"]
+//                                resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 5)];
+//	[[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackButtonBg
+//	                                                  forState:UIControlStateNormal
+//			                                        barMetrics:UIBarMetricsDefault];
+    
+	//  Customize tab bar
+//	UITabBar *tabBar = self.tabBarController.tabBar;
+    
+	// Set last tab item title
+//	[[[tabBar items] lastObject] setTitle:NSLocalizedString(@"TAB_ACCOUNT", nil)];
+    
+	//  Set text
+	NSDictionary *textAttributes = @{
+                                  UITextAttributeFont : [Theme boldAppFontOfSize:[Theme defaultControlsTextSize]],
+                                  UITextAttributeTextColor : RGBCOLOR(74.0f, 74.0f, 74.0f),
+                                  UITextAttributeTextShadowColor : [UIColor clearColor]
+                                  };
+    
+	[[UITabBarItem appearance] setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
+    
+	/* [NSDictionary dictionaryWithObjectsAndKeys:
+     [Theme boldAppFontOfSize: [Theme defaultControlsTextSize]], UITextAttributeFont,
+     RGBCOLOR(74, 74, 74), UITextAttributeTextColor,
+     [UIColor clearColor], UITextAttributeTextShadowColor, nil]
+     forState: UIControlStateNormal];*/
+}
+
 @end
