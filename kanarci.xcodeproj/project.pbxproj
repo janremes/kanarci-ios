@@ -41,6 +41,17 @@
 		7C9074DB16F13AC900ED3DCD /* KNNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9074D916F13AC800ED3DCD /* KNNavigationItem.m */; };
 		7C9074DF16F13E7000ED3DCD /* legenda_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074DD16F13E7000ED3DCD /* legenda_bg.png */; };
 		7C9074E016F13E7000ED3DCD /* legenda_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074DE16F13E7000ED3DCD /* legenda_bg@2x.png */; };
+		7C9074E416F1E14D00ED3DCD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9074E316F1E14D00ED3DCD /* ProfileViewController.m */; };
+		7C9074E716F1E40D00ED3DCD /* ProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9074E616F1E40D00ED3DCD /* ProfileHeaderView.m */; };
+		7C9074EA16F1E59500ED3DCD /* MeasurementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9074E916F1E59500ED3DCD /* MeasurementCell.m */; };
+		7C9074EC16F2787F00ED3DCD /* MeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074EB16F2787F00ED3DCD /* MeasurementCell.xib */; };
+		7C9074F016F286A500ED3DCD /* profile_header_me.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074EE16F286A500ED3DCD /* profile_header_me.png */; };
+		7C9074F116F286A500ED3DCD /* profile_header_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074EF16F286A500ED3DCD /* profile_header_me@2x.png */; };
+		7C9074F416F28A0C00ED3DCD /* profile_divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074F216F28A0C00ED3DCD /* profile_divider.png */; };
+		7C9074F516F28A0C00ED3DCD /* profile_divider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074F316F28A0C00ED3DCD /* profile_divider@2x.png */; };
+		7C9074F916F28AE800ED3DCD /* air_quality1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074F716F28AE800ED3DCD /* air_quality1.png */; };
+		7C9074FA16F28AE800ED3DCD /* air_quality1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074F816F28AE800ED3DCD /* air_quality1@2x.png */; };
+		7C9074FE16F28B9100ED3DCD /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9074FD16F28B9100ED3DCD /* Measurement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +100,21 @@
 		7C9074DA16F13AC900ED3DCD /* KNNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNNavigationItem.h; sourceTree = "<group>"; };
 		7C9074DD16F13E7000ED3DCD /* legenda_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = legenda_bg.png; sourceTree = "<group>"; };
 		7C9074DE16F13E7000ED3DCD /* legenda_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "legenda_bg@2x.png"; sourceTree = "<group>"; };
+		7C9074E216F1E14D00ED3DCD /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		7C9074E316F1E14D00ED3DCD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		7C9074E516F1E40D00ED3DCD /* ProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHeaderView.h; sourceTree = "<group>"; };
+		7C9074E616F1E40D00ED3DCD /* ProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHeaderView.m; sourceTree = "<group>"; };
+		7C9074E816F1E59500ED3DCD /* MeasurementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementCell.h; sourceTree = "<group>"; };
+		7C9074E916F1E59500ED3DCD /* MeasurementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementCell.m; sourceTree = "<group>"; };
+		7C9074EB16F2787F00ED3DCD /* MeasurementCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeasurementCell.xib; sourceTree = "<group>"; };
+		7C9074EE16F286A500ED3DCD /* profile_header_me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_header_me.png; sourceTree = "<group>"; };
+		7C9074EF16F286A500ED3DCD /* profile_header_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_header_me@2x.png"; sourceTree = "<group>"; };
+		7C9074F216F28A0C00ED3DCD /* profile_divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_divider.png; sourceTree = "<group>"; };
+		7C9074F316F28A0C00ED3DCD /* profile_divider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_divider@2x.png"; sourceTree = "<group>"; };
+		7C9074F716F28AE800ED3DCD /* air_quality1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air_quality1.png; sourceTree = "<group>"; };
+		7C9074F816F28AE800ED3DCD /* air_quality1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air_quality1@2x.png"; sourceTree = "<group>"; };
+		7C9074FC16F28B9100ED3DCD /* Measurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measurement.h; sourceTree = "<group>"; };
+		7C9074FD16F28B9100ED3DCD /* Measurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measurement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +164,8 @@
 		7C365F5116ED36F0001BC05C /* kanarci */ = {
 			isa = PBXGroup;
 			children = (
+				7C9074FB16F28B7E00ED3DCD /* Model */,
+				7C9074E116F1E12900ED3DCD /* Controllers */,
 				7C9074D216F1344D00ED3DCD /* UI */,
 				7C9074C516F12AD100ED3DCD /* Global */,
 				7C9074AF16F1260600ED3DCD /* images */,
@@ -174,6 +202,8 @@
 		7C9074AF16F1260600ED3DCD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7C9074F616F28ADB00ED3DCD /* air_quality */,
+				7C9074ED16F2869D00ED3DCD /* profile */,
 				7C9074DC16F13E6000ED3DCD /* bg */,
 				7C9074CD16F1312900ED3DCD /* navbar */,
 				7C9074B016F1260C00ED3DCD /* tabs */,
@@ -237,6 +267,49 @@
 				7C9074DE16F13E7000ED3DCD /* legenda_bg@2x.png */,
 			);
 			name = bg;
+			sourceTree = "<group>";
+		};
+		7C9074E116F1E12900ED3DCD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C9074E216F1E14D00ED3DCD /* ProfileViewController.h */,
+				7C9074E316F1E14D00ED3DCD /* ProfileViewController.m */,
+				7C9074E516F1E40D00ED3DCD /* ProfileHeaderView.h */,
+				7C9074E616F1E40D00ED3DCD /* ProfileHeaderView.m */,
+				7C9074E816F1E59500ED3DCD /* MeasurementCell.h */,
+				7C9074E916F1E59500ED3DCD /* MeasurementCell.m */,
+				7C9074EB16F2787F00ED3DCD /* MeasurementCell.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7C9074ED16F2869D00ED3DCD /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				7C9074F216F28A0C00ED3DCD /* profile_divider.png */,
+				7C9074F316F28A0C00ED3DCD /* profile_divider@2x.png */,
+				7C9074EE16F286A500ED3DCD /* profile_header_me.png */,
+				7C9074EF16F286A500ED3DCD /* profile_header_me@2x.png */,
+			);
+			name = profile;
+			sourceTree = "<group>";
+		};
+		7C9074F616F28ADB00ED3DCD /* air_quality */ = {
+			isa = PBXGroup;
+			children = (
+				7C9074F716F28AE800ED3DCD /* air_quality1.png */,
+				7C9074F816F28AE800ED3DCD /* air_quality1@2x.png */,
+			);
+			name = air_quality;
+			sourceTree = "<group>";
+		};
+		7C9074FB16F28B7E00ED3DCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C9074FC16F28B9100ED3DCD /* Measurement.h */,
+				7C9074FD16F28B9100ED3DCD /* Measurement.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +387,13 @@
 				7C9074D116F1313300ED3DCD /* navbar_bg@2x.png in Resources */,
 				7C9074DF16F13E7000ED3DCD /* legenda_bg.png in Resources */,
 				7C9074E016F13E7000ED3DCD /* legenda_bg@2x.png in Resources */,
+				7C9074EC16F2787F00ED3DCD /* MeasurementCell.xib in Resources */,
+				7C9074F016F286A500ED3DCD /* profile_header_me.png in Resources */,
+				7C9074F116F286A500ED3DCD /* profile_header_me@2x.png in Resources */,
+				7C9074F416F28A0C00ED3DCD /* profile_divider.png in Resources */,
+				7C9074F516F28A0C00ED3DCD /* profile_divider@2x.png in Resources */,
+				7C9074F916F28AE800ED3DCD /* air_quality1.png in Resources */,
+				7C9074FA16F28AE800ED3DCD /* air_quality1@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +429,10 @@
 				7C9074CB16F12AD900ED3DCD /* KNFormatter.m in Sources */,
 				7C9074D516F1346200ED3DCD /* KNNavigationBar.m in Sources */,
 				7C9074DB16F13AC900ED3DCD /* KNNavigationItem.m in Sources */,
+				7C9074E416F1E14D00ED3DCD /* ProfileViewController.m in Sources */,
+				7C9074E716F1E40D00ED3DCD /* ProfileHeaderView.m in Sources */,
+				7C9074EA16F1E59500ED3DCD /* MeasurementCell.m in Sources */,
+				7C9074FE16F28B9100ED3DCD /* Measurement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
