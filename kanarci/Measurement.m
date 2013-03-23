@@ -10,4 +10,6 @@
 
 @implementation Measurement
 
+@synthesize date,preciseValue,qualityString,thoroughfare,locality,country,longtitude,latitude,bucketValue;
+
 @end

@@ -30,13 +30,5 @@
     return self.station.location.coordinate;
 }
 
-/*
- UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
- [rightButton addTarget:self
- action:@selector(showDetails:)
- forControlEvents:UIControlEventTouchUpInside];
- 
- customPinView.rightCalloutAccessoryView = rightButton;
- */
 
 @end

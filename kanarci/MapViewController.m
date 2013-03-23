@@ -50,12 +50,14 @@
         }
         _annotations = annot;
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self updateMapView];
-        });
+    
+       [self updateMapView];
+
         
         
-    } failure:nil];
+    } failure:^(NSError *error){
+        NSLog(@"Downloading stations failed");
+    }];
 }
 
 -(void)updateMapView {
@@ -85,29 +87,25 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    CLLocationCoordinate2D coord ;
+
+     
+    NSDate *lastStationLoadTime = [[DataController sharedInstance] stationsLoadTime];
     
-    
-//    if([DataController getInstance].positionBlocked) {
-//        //   coord = [CLLocationCoordinate2D alloc];
-//        coord.latitude = 49.863796;
-//        coord.longitude = 18.55145;
-//    } else {
-//        coord = [[DataController getInstance] location].coordinate;;
-//    }
-    
-    coord.latitude = 49.930008;
-    coord.longitude = 15.550996;
-    
-    MKCoordinateSpan span = {.latitudeDelta =  3, .longitudeDelta =  3};
-    MKCoordinateRegion region = {coord, span};
-    [self.mapView setRegion:region];
-    //  NSLog(@"appear");
-    
-  //  self.mapView.layer.cornerRadius = 5.0;
-   // self.mapView.layer.masksToBounds = YES;
-  //  self.navigationController.navigationBar.hidden = YES;
-    [self updateMapView];
+    // IF no data was previously loaded, or time interval since last fetch is larger than 10min
+    if ([self.annotations count] == 0 || [lastStationLoadTime timeIntervalSinceNow] > 600.0 ) {
+        
+        CLLocationCoordinate2D coord ;
+        
+        
+        coord.latitude = 49.930008;
+        coord.longitude = 15.550996;
+        
+        MKCoordinateSpan span = {.latitudeDelta =  3, .longitudeDelta =  3};
+        MKCoordinateRegion region = {coord, span};
+        [self.mapView setRegion:region];
+        
+         [self performSelectorInBackground:@selector(loadData) withObject:nil];
+    }
     
     
  

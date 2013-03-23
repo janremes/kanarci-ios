@@ -85,6 +85,24 @@
 		7CBBB51616FDC03F0027E4C5 /* mapPin6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB50816FDC03F0027E4C5 /* mapPin6@2x.png */; };
 		7CBBB51716FDC03F0027E4C5 /* mapPin0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB50916FDC03F0027E4C5 /* mapPin0@2x.png */; };
 		7CBBB51816FDC03F0027E4C5 /* mapPin0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB50A16FDC03F0027E4C5 /* mapPin0.png */; };
+		7CBBB51D16FE2D270027E4C5 /* MeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB51C16FE2D270027E4C5 /* MeasureViewController.m */; };
+		7CBBB52016FE2ED80027E4C5 /* MeasureBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB51F16FE2ED80027E4C5 /* MeasureBar.m */; };
+		7CBBB52F16FE32F70027E4C5 /* air_quality0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52116FE32F60027E4C5 /* air_quality0.png */; };
+		7CBBB53016FE32F70027E4C5 /* air_quality4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52216FE32F60027E4C5 /* air_quality4.png */; };
+		7CBBB53116FE32F70027E4C5 /* air_quality5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52316FE32F60027E4C5 /* air_quality5.png */; };
+		7CBBB53216FE32F70027E4C5 /* air_quality6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52416FE32F60027E4C5 /* air_quality6.png */; };
+		7CBBB53316FE32F70027E4C5 /* measure_bar_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52516FE32F60027E4C5 /* measure_bar_arrow.png */; };
+		7CBBB53416FE32F70027E4C5 /* air_quality2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52616FE32F60027E4C5 /* air_quality2.png */; };
+		7CBBB53516FE32F70027E4C5 /* air_quality3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52716FE32F70027E4C5 /* air_quality3.png */; };
+		7CBBB53616FE32F70027E4C5 /* air_quality0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52816FE32F70027E4C5 /* air_quality0@2x.png */; };
+		7CBBB53716FE32F70027E4C5 /* measure_bar_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52916FE32F70027E4C5 /* measure_bar_arrow@2x.png */; };
+		7CBBB53816FE32F70027E4C5 /* air_quality2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52A16FE32F70027E4C5 /* air_quality2@2x.png */; };
+		7CBBB53916FE32F70027E4C5 /* air_quality3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52B16FE32F70027E4C5 /* air_quality3@2x.png */; };
+		7CBBB53A16FE32F70027E4C5 /* air_quality4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52C16FE32F70027E4C5 /* air_quality4@2x.png */; };
+		7CBBB53B16FE32F70027E4C5 /* air_quality5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52D16FE32F70027E4C5 /* air_quality5@2x.png */; };
+		7CBBB53C16FE32F70027E4C5 /* air_quality6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52E16FE32F70027E4C5 /* air_quality6@2x.png */; };
+		7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */; };
+		7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB54116FE4A010027E4C5 /* KNUIFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +214,28 @@
 		7CBBB50816FDC03F0027E4C5 /* mapPin6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapPin6@2x.png"; sourceTree = "<group>"; };
 		7CBBB50916FDC03F0027E4C5 /* mapPin0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapPin0@2x.png"; sourceTree = "<group>"; };
 		7CBBB50A16FDC03F0027E4C5 /* mapPin0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapPin0.png; sourceTree = "<group>"; };
+		7CBBB51B16FE2D270027E4C5 /* MeasureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureViewController.h; sourceTree = "<group>"; };
+		7CBBB51C16FE2D270027E4C5 /* MeasureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureViewController.m; sourceTree = "<group>"; };
+		7CBBB51E16FE2ED80027E4C5 /* MeasureBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBar.h; sourceTree = "<group>"; };
+		7CBBB51F16FE2ED80027E4C5 /* MeasureBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBar.m; sourceTree = "<group>"; };
+		7CBBB52116FE32F60027E4C5 /* air_quality0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air_quality0.png; sourceTree = "<group>"; };
+		7CBBB52216FE32F60027E4C5 /* air_quality4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air_quality4.png; sourceTree = "<group>"; };
+		7CBBB52316FE32F60027E4C5 /* air_quality5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air_quality5.png; sourceTree = "<group>"; };
+		7CBBB52416FE32F60027E4C5 /* air_quality6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air_quality6.png; sourceTree = "<group>"; };
+		7CBBB52516FE32F60027E4C5 /* measure_bar_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = measure_bar_arrow.png; sourceTree = "<group>"; };
+		7CBBB52616FE32F60027E4C5 /* air_quality2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air_quality2.png; sourceTree = "<group>"; };
+		7CBBB52716FE32F70027E4C5 /* air_quality3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air_quality3.png; sourceTree = "<group>"; };
+		7CBBB52816FE32F70027E4C5 /* air_quality0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air_quality0@2x.png"; sourceTree = "<group>"; };
+		7CBBB52916FE32F70027E4C5 /* measure_bar_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "measure_bar_arrow@2x.png"; sourceTree = "<group>"; };
+		7CBBB52A16FE32F70027E4C5 /* air_quality2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air_quality2@2x.png"; sourceTree = "<group>"; };
+		7CBBB52B16FE32F70027E4C5 /* air_quality3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air_quality3@2x.png"; sourceTree = "<group>"; };
+		7CBBB52C16FE32F70027E4C5 /* air_quality4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air_quality4@2x.png"; sourceTree = "<group>"; };
+		7CBBB52D16FE32F70027E4C5 /* air_quality5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air_quality5@2x.png"; sourceTree = "<group>"; };
+		7CBBB52E16FE32F70027E4C5 /* air_quality6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air_quality6@2x.png"; sourceTree = "<group>"; };
+		7CBBB53D16FE42B10027E4C5 /* MeasurementManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementManager.h; sourceTree = "<group>"; };
+		7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementManager.m; sourceTree = "<group>"; };
+		7CBBB54016FE4A010027E4C5 /* KNUIFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNUIFactory.h; sourceTree = "<group>"; };
+		7CBBB54116FE4A010027E4C5 /* KNUIFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNUIFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +298,7 @@
 				7CBBB4F716FCDBAB0027E4C5 /* Data */,
 				7CBBB4D516FCD6410027E4C5 /* ThirdParty */,
 				7CBBB4CB16FCD4330027E4C5 /* Map */,
+				7CBBB51A16FE2D050027E4C5 /* Measure */,
 				7C9074FB16F28B7E00ED3DCD /* Model */,
 				7C9074E116F1E12900ED3DCD /* Controllers */,
 				7C9074D216F1344D00ED3DCD /* UI */,
@@ -349,6 +390,8 @@
 				7C9074DA16F13AC900ED3DCD /* KNNavigationItem.h */,
 				7C9074D316F1346200ED3DCD /* KNNavigationBar.h */,
 				7C9074D416F1346200ED3DCD /* KNNavigationBar.m */,
+				7CBBB54016FE4A010027E4C5 /* KNUIFactory.h */,
+				7CBBB54116FE4A010027E4C5 /* KNUIFactory.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -390,6 +433,20 @@
 		7C9074F616F28ADB00ED3DCD /* air_quality */ = {
 			isa = PBXGroup;
 			children = (
+				7CBBB52116FE32F60027E4C5 /* air_quality0.png */,
+				7CBBB52216FE32F60027E4C5 /* air_quality4.png */,
+				7CBBB52316FE32F60027E4C5 /* air_quality5.png */,
+				7CBBB52416FE32F60027E4C5 /* air_quality6.png */,
+				7CBBB52516FE32F60027E4C5 /* measure_bar_arrow.png */,
+				7CBBB52616FE32F60027E4C5 /* air_quality2.png */,
+				7CBBB52716FE32F70027E4C5 /* air_quality3.png */,
+				7CBBB52816FE32F70027E4C5 /* air_quality0@2x.png */,
+				7CBBB52916FE32F70027E4C5 /* measure_bar_arrow@2x.png */,
+				7CBBB52A16FE32F70027E4C5 /* air_quality2@2x.png */,
+				7CBBB52B16FE32F70027E4C5 /* air_quality3@2x.png */,
+				7CBBB52C16FE32F70027E4C5 /* air_quality4@2x.png */,
+				7CBBB52D16FE32F70027E4C5 /* air_quality5@2x.png */,
+				7CBBB52E16FE32F70027E4C5 /* air_quality6@2x.png */,
 				7C9074F716F28AE800ED3DCD /* air_quality1.png */,
 				7C9074F816F28AE800ED3DCD /* air_quality1@2x.png */,
 			);
@@ -495,6 +552,19 @@
 			name = mapPin;
 			sourceTree = "<group>";
 		};
+		7CBBB51A16FE2D050027E4C5 /* Measure */ = {
+			isa = PBXGroup;
+			children = (
+				7CBBB51B16FE2D270027E4C5 /* MeasureViewController.h */,
+				7CBBB51C16FE2D270027E4C5 /* MeasureViewController.m */,
+				7CBBB51E16FE2ED80027E4C5 /* MeasureBar.h */,
+				7CBBB51F16FE2ED80027E4C5 /* MeasureBar.m */,
+				7CBBB53D16FE42B10027E4C5 /* MeasurementManager.h */,
+				7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */,
+			);
+			name = Measure;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -591,6 +661,20 @@
 				7CBBB51616FDC03F0027E4C5 /* mapPin6@2x.png in Resources */,
 				7CBBB51716FDC03F0027E4C5 /* mapPin0@2x.png in Resources */,
 				7CBBB51816FDC03F0027E4C5 /* mapPin0.png in Resources */,
+				7CBBB52F16FE32F70027E4C5 /* air_quality0.png in Resources */,
+				7CBBB53016FE32F70027E4C5 /* air_quality4.png in Resources */,
+				7CBBB53116FE32F70027E4C5 /* air_quality5.png in Resources */,
+				7CBBB53216FE32F70027E4C5 /* air_quality6.png in Resources */,
+				7CBBB53316FE32F70027E4C5 /* measure_bar_arrow.png in Resources */,
+				7CBBB53416FE32F70027E4C5 /* air_quality2.png in Resources */,
+				7CBBB53516FE32F70027E4C5 /* air_quality3.png in Resources */,
+				7CBBB53616FE32F70027E4C5 /* air_quality0@2x.png in Resources */,
+				7CBBB53716FE32F70027E4C5 /* measure_bar_arrow@2x.png in Resources */,
+				7CBBB53816FE32F70027E4C5 /* air_quality2@2x.png in Resources */,
+				7CBBB53916FE32F70027E4C5 /* air_quality3@2x.png in Resources */,
+				7CBBB53A16FE32F70027E4C5 /* air_quality4@2x.png in Resources */,
+				7CBBB53B16FE32F70027E4C5 /* air_quality5@2x.png in Resources */,
+				7CBBB53C16FE32F70027E4C5 /* air_quality6@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +728,10 @@
 				7CBBB4F216FCD7DD0027E4C5 /* UIImageView+AFNetworking.m in Sources */,
 				7CBBB4F516FCD7F70027E4C5 /* SFHFKeychainUtils.m in Sources */,
 				7CBBB4FA16FCDBBB0027E4C5 /* DataController.m in Sources */,
+				7CBBB51D16FE2D270027E4C5 /* MeasureViewController.m in Sources */,
+				7CBBB52016FE2ED80027E4C5 /* MeasureBar.m in Sources */,
+				7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */,
+				7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

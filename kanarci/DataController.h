@@ -20,7 +20,7 @@
 
 @interface DataController : NSObject <CLLocationManagerDelegate, UIAlertViewDelegate> {
     NSMutableArray *stations;
-    NSDate *dataDate;
+    NSDate *stationsLoadTime;
     NSMutableData *responseData;
     
     CLLocationManager *locationManager;
@@ -46,12 +46,12 @@
 - (void) loadStationsWithSuccess:(void (^)(NSArray *stations))success
                          failure:(void (^)(NSError *error))failure;
 
-@property (nonatomic, retain) NSMutableArray *stations;
-@property (nonatomic, retain) NSDate *dataDate;
-@property (nonatomic, retain) NSMutableData *responseData;
+@property (nonatomic, strong) NSMutableArray *stations;
+@property (nonatomic, strong) NSDate *stationsLoadTime;
+@property (nonatomic, strong) NSMutableData *responseData;
 
-@property (nonatomic, retain) CLLocationManager *locationManager;
-@property (nonatomic, retain) CLLocation *location;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *location;
 
 @property (unsafe_unretained) id <DataControllerDelegate> delegate;
 

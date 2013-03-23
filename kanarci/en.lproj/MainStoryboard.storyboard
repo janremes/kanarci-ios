@@ -33,21 +33,6 @@
             </objects>
             <point key="canvasLocation" x="1821" y="-86"/>
         </scene>
-        <!--View Controller - měření-->
-        <scene sceneID="gbA-La-E7Z">
-            <objects>
-                <viewController id="aaH-IG-Lxa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Trh-Dj-ZUh">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="měření" id="D0Z-i7-wzu"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wts-yG-ask" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="494" y="450"/>
-        </scene>
         <!--View Controller - legenda-->
         <scene sceneID="Vrr-IX-kmD">
             <objects>
@@ -159,6 +144,54 @@
             </objects>
             <point key="canvasLocation" x="1087" y="280"/>
         </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="aIE-Gf-9vW">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="HPq-YB-GBU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pqW-Bq-Wkt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eri-rv-Xp8" customClass="KNNavigationBar">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vUn-4z-iPv" kind="relationship" relationship="rootViewController" id="xwl-ne-w85"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAS-B3-QMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="666"/>
+        </scene>
+        <!--Measure View Controller - Měření-->
+        <scene sceneID="C73-qV-Vzm">
+            <objects>
+                <viewController title="Měření" id="vUn-4z-iPv" customClass="MeasureViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cf1-Tj-MoL">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fz2-y4-v0X">
+                                <rect key="frame" x="261" y="304" width="51" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="test">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testButtonTouched:" destination="vUn-4z-iPv" eventType="touchUpInside" id="zxs-j8-8Bu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Měření" id="Pjw-ql-3My" customClass="KNNavigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jnz-eP-QjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="672"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
@@ -175,14 +208,14 @@
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="aaH-IG-Lxa" kind="relationship" relationship="viewControllers" id="mlJ-dQ-Sfx"/>
-                        <segue destination="rcV-Yc-8Hp" kind="relationship" relationship="viewControllers" id="r4Z-27-and"/>
-                        <segue destination="iFN-Tm-69M" kind="relationship" relationship="viewControllers" id="04a-tO-Qzt"/>
+                        <segue destination="HPq-YB-GBU" kind="relationship" relationship="viewControllers" id="5xN-Mz-83z"/>
+                        <segue destination="rcV-Yc-8Hp" kind="relationship" relationship="viewControllers" id="hVs-p8-p5c"/>
+                        <segue destination="iFN-Tm-69M" kind="relationship" relationship="viewControllers" id="i4v-og-SDH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-812" y="352"/>
+            <point key="canvasLocation" x="-730" y="360"/>
         </scene>
     </scenes>
     <resources>
@@ -192,6 +225,35 @@
         <image name="tab_profile.png" width="12" height="16"/>
         <image name="tab_stats.png" width="17" height="18"/>
     </resources>
+    <classes>
+        <class className="KNNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNNavigationBar.h"/>
+        </class>
+        <class className="KNNavigationItem" superclassName="UINavigationItem">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNNavigationItem.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="MeasureViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeasureViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="testButtonTouched:"/>
+            </relationships>
+        </class>
+        <class className="ProfileViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="_tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

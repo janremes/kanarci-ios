@@ -17,7 +17,7 @@
 
 
 @implementation DataController
-@synthesize stations, responseData, dataDate;
+@synthesize stations, responseData, stationsLoadTime;
 @synthesize location, locationManager, delegate;
 @synthesize dataLoaded, positionLoaded, positionBlocked, tokenLoaded;
 
@@ -73,7 +73,7 @@ static DataController *instance = nil;
               
             NSMutableArray *stationsJSON = [JSON objectForKey:@"stations"];
             
-            self.dataDate = [NSDate dateWithTimeIntervalSince1970:[[JSON objectForKey:@"date"] doubleValue]];
+            self.stationsLoadTime = [NSDate dateWithTimeIntervalSince1970:[[JSON objectForKey:@"date"] doubleValue]];
             self.stations = [[NSMutableArray alloc] initWithCapacity:[stationsJSON count]];
              int number = 0;
             
@@ -107,7 +107,7 @@ static DataController *instance = nil;
         
         if(failure) {
             dispatch_async(dispatch_get_main_queue(), ^{
-           
+                failure(error);
             });
         }
     }];

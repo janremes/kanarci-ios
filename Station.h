@@ -35,13 +35,13 @@
 -(BOOL)isEqualToStation:(Station*)station;
 
 @property (readwrite, assign) NSInteger number;
-@property (nonatomic, retain) NSString *code;
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *date;
-@property (nonatomic, retain) CLLocation *location;
+@property (nonatomic, strong) NSString *code;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) CLLocation *location;
 
-@property (nonatomic, retain) NSMutableDictionary *measurements;
-@property (nonatomic, retain) NSNumber *totalQuality;
+@property (nonatomic, strong) NSMutableDictionary *measurements;
+@property (nonatomic, strong) NSNumber *totalQuality;
 
 -(id)initWithDictionaryData:(NSDictionary *)dictionary ;
 
