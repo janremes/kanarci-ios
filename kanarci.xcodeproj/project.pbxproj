@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C16954F17005A2C00A8A2F0 /* KNMeasureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16954E17005A2C00A8A2F0 /* KNMeasureFactory.m */; };
+		7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695511700783900A8A2F0 /* kanar6@2x.png */; };
+		7C1695601700783900A8A2F0 /* kanar6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695521700783900A8A2F0 /* kanar6.png */; };
+		7C1695611700783900A8A2F0 /* kanar5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695531700783900A8A2F0 /* kanar5@2x.png */; };
+		7C1695621700783900A8A2F0 /* kanar5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695541700783900A8A2F0 /* kanar5.png */; };
+		7C1695631700783900A8A2F0 /* kanar4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695551700783900A8A2F0 /* kanar4@2x.png */; };
+		7C1695641700783900A8A2F0 /* kanar4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695561700783900A8A2F0 /* kanar4.png */; };
+		7C1695651700783900A8A2F0 /* kanar3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695571700783900A8A2F0 /* kanar3@2x.png */; };
+		7C1695661700783900A8A2F0 /* kanar3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695581700783900A8A2F0 /* kanar3.png */; };
+		7C1695671700783900A8A2F0 /* kanar2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695591700783900A8A2F0 /* kanar2@2x.png */; };
+		7C1695681700783900A8A2F0 /* kanar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C16955A1700783900A8A2F0 /* kanar2.png */; };
+		7C1695691700783900A8A2F0 /* kanar1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C16955B1700783900A8A2F0 /* kanar1@2x.png */; };
+		7C16956A1700783900A8A2F0 /* kanar1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C16955C1700783900A8A2F0 /* kanar1.png */; };
+		7C16956B1700783900A8A2F0 /* kanar0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C16955D1700783900A8A2F0 /* kanar0@2x.png */; };
+		7C16956C1700783900A8A2F0 /* kanar0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C16955E1700783900A8A2F0 /* kanar0.png */; };
 		7C365F4C16ED36F0001BC05C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C365F4B16ED36F0001BC05C /* UIKit.framework */; };
 		7C365F4E16ED36F0001BC05C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C365F4D16ED36F0001BC05C /* Foundation.framework */; };
 		7C365F5016ED36F0001BC05C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C365F4F16ED36F0001BC05C /* CoreGraphics.framework */; };
@@ -17,11 +32,6 @@
 		7C365F6016ED36F0001BC05C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F5F16ED36F0001BC05C /* Default@2x.png */; };
 		7C365F6216ED36F0001BC05C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F6116ED36F0001BC05C /* Default-568h@2x.png */; };
 		7C365F6516ED36F0001BC05C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F6316ED36F0001BC05C /* MainStoryboard.storyboard */; };
-		7C365F6A16ED36F1001BC05C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F6916ED36F0001BC05C /* first.png */; };
-		7C365F6C16ED36F1001BC05C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F6B16ED36F1001BC05C /* first@2x.png */; };
-		7C365F6F16ED36F1001BC05C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C365F6E16ED36F1001BC05C /* SecondViewController.m */; };
-		7C365F7116ED36F1001BC05C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F7016ED36F1001BC05C /* second.png */; };
-		7C365F7316ED36F1001BC05C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F7216ED36F1001BC05C /* second@2x.png */; };
 		7C9074BB16F1261E00ED3DCD /* tab_legend.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B116F1261E00ED3DCD /* tab_legend.png */; };
 		7C9074BC16F1261F00ED3DCD /* tab_measure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B216F1261E00ED3DCD /* tab_measure.png */; };
 		7C9074BD16F1261F00ED3DCD /* tab_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B316F1261E00ED3DCD /* tab_profile.png */; };
@@ -106,6 +116,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C16954D17005A2B00A8A2F0 /* KNMeasureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureFactory.h; sourceTree = "<group>"; };
+		7C16954E17005A2C00A8A2F0 /* KNMeasureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureFactory.m; sourceTree = "<group>"; };
+		7C1695511700783900A8A2F0 /* kanar6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar6@2x.png"; sourceTree = "<group>"; };
+		7C1695521700783900A8A2F0 /* kanar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar6.png; sourceTree = "<group>"; };
+		7C1695531700783900A8A2F0 /* kanar5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar5@2x.png"; sourceTree = "<group>"; };
+		7C1695541700783900A8A2F0 /* kanar5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar5.png; sourceTree = "<group>"; };
+		7C1695551700783900A8A2F0 /* kanar4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar4@2x.png"; sourceTree = "<group>"; };
+		7C1695561700783900A8A2F0 /* kanar4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar4.png; sourceTree = "<group>"; };
+		7C1695571700783900A8A2F0 /* kanar3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar3@2x.png"; sourceTree = "<group>"; };
+		7C1695581700783900A8A2F0 /* kanar3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar3.png; sourceTree = "<group>"; };
+		7C1695591700783900A8A2F0 /* kanar2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar2@2x.png"; sourceTree = "<group>"; };
+		7C16955A1700783900A8A2F0 /* kanar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar2.png; sourceTree = "<group>"; };
+		7C16955B1700783900A8A2F0 /* kanar1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar1@2x.png"; sourceTree = "<group>"; };
+		7C16955C1700783900A8A2F0 /* kanar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar1.png; sourceTree = "<group>"; };
+		7C16955D1700783900A8A2F0 /* kanar0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar0@2x.png"; sourceTree = "<group>"; };
+		7C16955E1700783900A8A2F0 /* kanar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar0.png; sourceTree = "<group>"; };
 		7C365F4816ED36F0001BC05C /* kanarci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kanarci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C365F4B16ED36F0001BC05C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C365F4D16ED36F0001BC05C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,12 +146,6 @@
 		7C365F5F16ED36F0001BC05C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7C365F6116ED36F0001BC05C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7C365F6416ED36F0001BC05C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		7C365F6916ED36F0001BC05C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		7C365F6B16ED36F1001BC05C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		7C365F6D16ED36F1001BC05C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		7C365F6E16ED36F1001BC05C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		7C365F7016ED36F1001BC05C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		7C365F7216ED36F1001BC05C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		7C9074B116F1261E00ED3DCD /* tab_legend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_legend.png; sourceTree = "<group>"; };
 		7C9074B216F1261E00ED3DCD /* tab_measure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_measure.png; sourceTree = "<group>"; };
 		7C9074B316F1261E00ED3DCD /* tab_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_profile.png; sourceTree = "<group>"; };
@@ -257,6 +277,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C1695501700781D00A8A2F0 /* kanari */ = {
+			isa = PBXGroup;
+			children = (
+				7C1695511700783900A8A2F0 /* kanar6@2x.png */,
+				7C1695521700783900A8A2F0 /* kanar6.png */,
+				7C1695531700783900A8A2F0 /* kanar5@2x.png */,
+				7C1695541700783900A8A2F0 /* kanar5.png */,
+				7C1695551700783900A8A2F0 /* kanar4@2x.png */,
+				7C1695561700783900A8A2F0 /* kanar4.png */,
+				7C1695571700783900A8A2F0 /* kanar3@2x.png */,
+				7C1695581700783900A8A2F0 /* kanar3.png */,
+				7C1695591700783900A8A2F0 /* kanar2@2x.png */,
+				7C16955A1700783900A8A2F0 /* kanar2.png */,
+				7C16955B1700783900A8A2F0 /* kanar1@2x.png */,
+				7C16955C1700783900A8A2F0 /* kanar1.png */,
+				7C16955D1700783900A8A2F0 /* kanar0@2x.png */,
+				7C16955E1700783900A8A2F0 /* kanar0.png */,
+			);
+			name = kanari;
+			sourceTree = "<group>";
+		};
 		7C365F3F16ED36F0001BC05C = {
 			isa = PBXGroup;
 			children = (
@@ -307,12 +348,6 @@
 				7C365F5A16ED36F0001BC05C /* AppDelegate.h */,
 				7C365F5B16ED36F0001BC05C /* AppDelegate.m */,
 				7C365F6316ED36F0001BC05C /* MainStoryboard.storyboard */,
-				7C365F6916ED36F0001BC05C /* first.png */,
-				7C365F6B16ED36F1001BC05C /* first@2x.png */,
-				7C365F6D16ED36F1001BC05C /* SecondViewController.h */,
-				7C365F6E16ED36F1001BC05C /* SecondViewController.m */,
-				7C365F7016ED36F1001BC05C /* second.png */,
-				7C365F7216ED36F1001BC05C /* second@2x.png */,
 				7C365F5216ED36F0001BC05C /* Supporting Files */,
 			);
 			path = kanarci;
@@ -335,6 +370,7 @@
 		7C9074AF16F1260600ED3DCD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7C1695501700781D00A8A2F0 /* kanari */,
 				7CBBB51916FDC0450027E4C5 /* mapPin */,
 				7C9074F616F28ADB00ED3DCD /* air_quality */,
 				7C9074ED16F2869D00ED3DCD /* profile */,
@@ -561,6 +597,8 @@
 				7CBBB51F16FE2ED80027E4C5 /* MeasureBar.m */,
 				7CBBB53D16FE42B10027E4C5 /* MeasurementManager.h */,
 				7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */,
+				7C16954D17005A2B00A8A2F0 /* KNMeasureFactory.h */,
+				7C16954E17005A2C00A8A2F0 /* KNMeasureFactory.m */,
 			);
 			name = Measure;
 			sourceTree = "<group>";
@@ -622,10 +660,6 @@
 				7C365F6016ED36F0001BC05C /* Default@2x.png in Resources */,
 				7C365F6216ED36F0001BC05C /* Default-568h@2x.png in Resources */,
 				7C365F6516ED36F0001BC05C /* MainStoryboard.storyboard in Resources */,
-				7C365F6A16ED36F1001BC05C /* first.png in Resources */,
-				7C365F6C16ED36F1001BC05C /* first@2x.png in Resources */,
-				7C365F7116ED36F1001BC05C /* second.png in Resources */,
-				7C365F7316ED36F1001BC05C /* second@2x.png in Resources */,
 				7C9074BB16F1261E00ED3DCD /* tab_legend.png in Resources */,
 				7C9074BC16F1261F00ED3DCD /* tab_measure.png in Resources */,
 				7C9074BD16F1261F00ED3DCD /* tab_profile.png in Resources */,
@@ -675,6 +709,20 @@
 				7CBBB53A16FE32F70027E4C5 /* air_quality4@2x.png in Resources */,
 				7CBBB53B16FE32F70027E4C5 /* air_quality5@2x.png in Resources */,
 				7CBBB53C16FE32F70027E4C5 /* air_quality6@2x.png in Resources */,
+				7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */,
+				7C1695601700783900A8A2F0 /* kanar6.png in Resources */,
+				7C1695611700783900A8A2F0 /* kanar5@2x.png in Resources */,
+				7C1695621700783900A8A2F0 /* kanar5.png in Resources */,
+				7C1695631700783900A8A2F0 /* kanar4@2x.png in Resources */,
+				7C1695641700783900A8A2F0 /* kanar4.png in Resources */,
+				7C1695651700783900A8A2F0 /* kanar3@2x.png in Resources */,
+				7C1695661700783900A8A2F0 /* kanar3.png in Resources */,
+				7C1695671700783900A8A2F0 /* kanar2@2x.png in Resources */,
+				7C1695681700783900A8A2F0 /* kanar2.png in Resources */,
+				7C1695691700783900A8A2F0 /* kanar1@2x.png in Resources */,
+				7C16956A1700783900A8A2F0 /* kanar1.png in Resources */,
+				7C16956B1700783900A8A2F0 /* kanar0@2x.png in Resources */,
+				7C16956C1700783900A8A2F0 /* kanar0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,7 +752,6 @@
 			files = (
 				7C365F5816ED36F0001BC05C /* main.m in Sources */,
 				7C365F5C16ED36F0001BC05C /* AppDelegate.m in Sources */,
-				7C365F6F16ED36F1001BC05C /* SecondViewController.m in Sources */,
 				7C9074CA16F12AD900ED3DCD /* KNTheme.m in Sources */,
 				7C9074CB16F12AD900ED3DCD /* KNFormatter.m in Sources */,
 				7C9074D516F1346200ED3DCD /* KNNavigationBar.m in Sources */,
@@ -732,6 +779,7 @@
 				7CBBB52016FE2ED80027E4C5 /* MeasureBar.m in Sources */,
 				7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */,
 				7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */,
+				7C16954F17005A2C00A8A2F0 /* KNMeasureFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,7 +67,7 @@
     CGPoint oldCenter = _arrow.center;
     CGFloat newY = [[_markers objectAtIndex:value] center].y;
     
-    [UIView animateWithDuration:1.2
+    [UIView animateWithDuration:0.9
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseInOut  
                      animations:^{
@@ -76,7 +76,7 @@
                          
                      }
                      completion:^(BOOL finished){
-                         NSLog(@"Arrow moved!");
+                      //   NSLog(@"Arrow moved!");
                      }];
     
     

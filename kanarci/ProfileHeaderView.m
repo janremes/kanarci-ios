@@ -19,7 +19,7 @@
         CGFloat imageSize = 81;
         _profileImageView = [[UIImageView alloc] initWithFrame:CGRectMake((frame.size.width/2) - imageSize/2, 0, imageSize, imageSize)];
         [_profileImageView setImage:[UIImage imageNamed:@"profile_header_me"]];
-        [_profileImageView setBackgroundColor:[UIColor greenColor]];
+        [_profileImageView setBackgroundColor:[UIColor whiteColor]];
         
         [self addSubview:_profileImageView];
     }

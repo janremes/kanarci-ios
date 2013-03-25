@@ -11,11 +11,11 @@
 @implementation KNTheme
 
 + (UIFont *)appFontOfSize:(CGFloat)size {
-    return [UIFont systemFontOfSize:size];
+    return [UIFont fontWithName:@"HelveticaNeue-Light" size:size];;
 }
 
 + (UIFont *)boldAppFontOfSize:(CGFloat)size {
-    return [UIFont fontWithName:@"FamiliarPro-Bold" size:size];
+    return [UIFont fontWithName:@"HelveticaNeue-Medium" size:size];
 }
 
 + (CGFloat)bigTextSize {
