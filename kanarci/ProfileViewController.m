@@ -31,6 +31,10 @@
     return self;
 }
 
+-(void)awakeFromNib {
+    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab_profile"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab_profile"]];
+}
+
 
 #pragma mark -
 #pragma mark Table view data source

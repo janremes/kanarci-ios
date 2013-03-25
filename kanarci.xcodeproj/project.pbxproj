@@ -113,6 +113,12 @@
 		7CBBB53C16FE32F70027E4C5 /* air_quality6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB52E16FE32F70027E4C5 /* air_quality6@2x.png */; };
 		7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */; };
 		7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB54116FE4A010027E4C5 /* KNUIFactory.m */; };
+		7CC0B2B6170109F6007752CA /* KNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B2B5170109F6007752CA /* KNTabBarController.m */; };
+		7CC0B2BB17010CCA007752CA /* kn_bg_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2B717010CCA007752CA /* kn_bg_tabbar.png */; };
+		7CC0B2BC17010CCA007752CA /* kn_tab_bg_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2B817010CCA007752CA /* kn_tab_bg_active.png */; };
+		7CC0B2BD17010CCA007752CA /* kn_bg_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2B917010CCA007752CA /* kn_bg_tabbar@2x.png */; };
+		7CC0B2BE17010CCA007752CA /* kn_tab_bg_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2BA17010CCA007752CA /* kn_tab_bg_active@2x.png */; };
+		7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +262,14 @@
 		7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementManager.m; sourceTree = "<group>"; };
 		7CBBB54016FE4A010027E4C5 /* KNUIFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNUIFactory.h; sourceTree = "<group>"; };
 		7CBBB54116FE4A010027E4C5 /* KNUIFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNUIFactory.m; sourceTree = "<group>"; };
+		7CC0B2B4170109F6007752CA /* KNTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTabBarController.h; sourceTree = "<group>"; };
+		7CC0B2B5170109F6007752CA /* KNTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTabBarController.m; sourceTree = "<group>"; };
+		7CC0B2B717010CCA007752CA /* kn_bg_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_bg_tabbar.png; sourceTree = "<group>"; };
+		7CC0B2B817010CCA007752CA /* kn_tab_bg_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_tab_bg_active.png; sourceTree = "<group>"; };
+		7CC0B2B917010CCA007752CA /* kn_bg_tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_bg_tabbar@2x.png"; sourceTree = "<group>"; };
+		7CC0B2BA17010CCA007752CA /* kn_tab_bg_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_tab_bg_active@2x.png"; sourceTree = "<group>"; };
+		7CC0B2C017010F35007752CA /* KNDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNDescriptionViewController.h; sourceTree = "<group>"; };
+		7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNDescriptionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +350,7 @@
 		7C365F5116ED36F0001BC05C /* kanarci */ = {
 			isa = PBXGroup;
 			children = (
+				7CC0B2BF17010F16007752CA /* Legend */,
 				7CBBB4F716FCDBAB0027E4C5 /* Data */,
 				7CBBB4D516FCD6410027E4C5 /* ThirdParty */,
 				7CBBB4CB16FCD4330027E4C5 /* Map */,
@@ -428,6 +443,8 @@
 				7C9074D416F1346200ED3DCD /* KNNavigationBar.m */,
 				7CBBB54016FE4A010027E4C5 /* KNUIFactory.h */,
 				7CBBB54116FE4A010027E4C5 /* KNUIFactory.m */,
+				7CC0B2B4170109F6007752CA /* KNTabBarController.h */,
+				7CC0B2B5170109F6007752CA /* KNTabBarController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -435,6 +452,10 @@
 		7C9074DC16F13E6000ED3DCD /* bg */ = {
 			isa = PBXGroup;
 			children = (
+				7CC0B2B717010CCA007752CA /* kn_bg_tabbar.png */,
+				7CC0B2B817010CCA007752CA /* kn_tab_bg_active.png */,
+				7CC0B2B917010CCA007752CA /* kn_bg_tabbar@2x.png */,
+				7CC0B2BA17010CCA007752CA /* kn_tab_bg_active@2x.png */,
 				7C9074DD16F13E7000ED3DCD /* legenda_bg.png */,
 				7C9074DE16F13E7000ED3DCD /* legenda_bg@2x.png */,
 			);
@@ -603,6 +624,15 @@
 			name = Measure;
 			sourceTree = "<group>";
 		};
+		7CC0B2BF17010F16007752CA /* Legend */ = {
+			isa = PBXGroup;
+			children = (
+				7CC0B2C017010F35007752CA /* KNDescriptionViewController.h */,
+				7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */,
+			);
+			name = Legend;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -723,6 +753,10 @@
 				7C16956A1700783900A8A2F0 /* kanar1.png in Resources */,
 				7C16956B1700783900A8A2F0 /* kanar0@2x.png in Resources */,
 				7C16956C1700783900A8A2F0 /* kanar0.png in Resources */,
+				7CC0B2BB17010CCA007752CA /* kn_bg_tabbar.png in Resources */,
+				7CC0B2BC17010CCA007752CA /* kn_tab_bg_active.png in Resources */,
+				7CC0B2BD17010CCA007752CA /* kn_bg_tabbar@2x.png in Resources */,
+				7CC0B2BE17010CCA007752CA /* kn_tab_bg_active@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +814,8 @@
 				7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */,
 				7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */,
 				7C16954F17005A2C00A8A2F0 /* KNMeasureFactory.m in Sources */,
+				7CC0B2B6170109F6007752CA /* KNTabBarController.m in Sources */,
+				7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
