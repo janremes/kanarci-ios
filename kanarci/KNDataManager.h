@@ -57,14 +57,10 @@ extern const NSString *KNMeasureDataChangedNotification;
 
 
 + (KNDataManager *) sharedInstance;
-- (void) loadStations;
+
 - (void) loadPosition;
 
 - (Station *) getNearestStation;
-
--(void) loadAllData;
--(void) dataDidFinishLoading;
--(NSString*)getDataAge ;
 
 - (void) loadStationsWithSuccess:(void (^)(NSArray *stations))success
                          failure:(void (^)(NSError *error))failure;

@@ -260,7 +260,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response,NSError *error, id JSON) {
         
-         NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
+         NSLog(@"Connection failed: %@", [error description]);
         
         if(failure) {
             dispatch_async(dispatch_get_main_queue(), ^{
