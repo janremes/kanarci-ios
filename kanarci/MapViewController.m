@@ -9,7 +9,7 @@
 #import "MapViewController.h"
 #import "Station.h"
 #import "StationAnnotation.h"
-#import "DataController.h"
+#import "KNDataManager.h"
 
 @interface MapViewController ()
 
@@ -45,7 +45,7 @@
 
 
 -(void) loadData{
-    [[DataController sharedInstance] loadStationsWithSuccess:^(NSArray *stations){
+    [[KNDataManager sharedInstance] loadStationsWithSuccess:^(NSArray *stations){
         
         NSMutableArray *annot = [NSMutableArray arrayWithCapacity:[stations count]];
         for(Station *station in stations) {
@@ -93,7 +93,7 @@
     
 
      
-    NSDate *lastStationLoadTime = [[DataController sharedInstance] stationsLoadTime];
+    NSDate *lastStationLoadTime = [[KNDataManager sharedInstance] stationsLoadTime];
     
     // IF no data was previously loaded, or time interval since last fetch is larger than 10min
     if ([self.annotations count] == 0 || [lastStationLoadTime timeIntervalSinceNow] > 600.0 ) {

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KNMeasureFactory : NSObject
+@interface KNMeasureHelper : NSObject
 
 
 /**
@@ -19,5 +19,6 @@
  */
 
 +(NSString *) getQualityStringForValue:(int) value;
++(NSString *) getImageNameForBucketValue:(int) value;
 
 @end

@@ -10,6 +10,8 @@
 #import "ProfileHeaderView.h"
 #import "MeasurementCell.h"
 #import "Measurement.h"
+#import "KNDataManager.h"
+#import "KNMeasureHelper.h"
 
 @interface ProfileViewController ()
     
@@ -18,6 +20,12 @@
 
 @implementation ProfileViewController{
     NSArray *_measurements;
+    NSDateFormatter *_dateFormatter;
+    NSDateFormatter *_timeFormatter;
+    
+    
+
+
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +41,16 @@
 
 -(void)awakeFromNib {
     [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab_profile"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab_profile"]];
+    addNotificationObserver(self, measurementDataChangedWithNotification:, KNMeasureDataChangedNotification, nil);
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    _timeFormatter = [[NSDateFormatter alloc] init];
+    [_dateFormatter setDateFormat:@"EE d/MM/yy"];
+    [_timeFormatter setDateFormat:@"HH:mm"];
+
 }
+
+
+
 
 
 #pragma mark -
@@ -52,6 +69,24 @@
 				break;
 			}
 		}
+    }
+    
+    Measurement *currentMeasure = [_measurements objectAtIndex:[_measurements count] - indexPath.row -1];
+    
+    
+    
+    [cell.airQualityImageView setImage:[UIImage imageNamed:[KNMeasureHelper getImageNameForBucketValue:currentMeasure.bucketValue]]];
+    
+    cell.dateLabel.text = [_dateFormatter stringFromDate:currentMeasure.date];
+    cell.timeLabel.text = [_timeFormatter stringFromDate:currentMeasure.date];
+    
+    if (currentMeasure.locationDataAvailable) {
+        cell.thoroughfareLabel.text = currentMeasure.thoroughfare;
+        cell.localityLabel.text = currentMeasure.locality;
+        
+    } else {
+        cell.thoroughfareLabel.text = @"Lokace neznámá.";
+        cell.localityLabel.text = @"";
     }
     
     return cell;
@@ -89,6 +124,11 @@
     
 }
 
+-(void) measurementDataChangedWithNotification:(NSNotification *) notification {
+    _measurements = [[KNDataManager sharedInstance] getAllMeasures];
+    [_tableView reloadData];
+}
+
 #pragma mark -
 #pragma mark View controllers delegates
 
@@ -96,7 +136,7 @@
 {
     [super viewDidLoad];
 	
-     _measurements = @[[Measurement new],[Measurement new], [Measurement new]];
+     _measurements = [[KNDataManager sharedInstance] getAllMeasures];
     
 }
 
@@ -104,6 +144,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)dealloc {
+    
 }
 
 @end

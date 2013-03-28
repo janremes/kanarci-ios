@@ -10,13 +10,14 @@
 #import <MapKit/MapKit.h>
 
 
-@interface Measurement : NSObject {
+@interface Measurement : NSObject <NSCoding> {
     NSDate *date;
     NSInteger bucketValue;
     NSNumber *preciseValue;
     NSString *qualityString;
     
     //location info
+    BOOL locationDataAvailable;
     NSString *thoroughfare;
     NSString *locality;
     NSString *country;
@@ -35,5 +36,7 @@
 @property (nonatomic,strong) NSString *country;
 @property (nonatomic) double longtitude;
 @property (nonatomic) double latitude;
+@property (nonatomic) BOOL locationDataAvailable;
+
 
 @end

@@ -7,11 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "KNDataManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
+    
+    
+    //Initialize data manager
+    [KNDataManager sharedInstance];
+    
+    // Select the center tab of our initial tab bar controller:
+    UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+    tabBar.selectedIndex = 2;
+    
     // Override point for customization after application launch.
     return YES;
 }

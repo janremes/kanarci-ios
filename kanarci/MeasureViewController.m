@@ -9,7 +9,8 @@
 #import "MeasureViewController.h"
 #import "MeasureBar.h"
 #import "KNUIFactory.h"
-#import "KNMeasureFactory.h"
+#import "KNMeasureHelper.h"
+#import "KNDataManager.h"
 
 @interface MeasureViewController ()
 
@@ -30,6 +31,10 @@
         // Custom initialization
     }
     return self;
+}
+
+-(void)awakeFromNib {
+    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab_measure"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab_measure"]];
 }
 
 - (void)viewDidLoad
@@ -138,7 +143,7 @@
 
 -(void) setMeasureQualityTitle:(int) value {
 
-    [_measuredAirQualityLabel setText:[[KNMeasureFactory getQualityStringForValue:value] uppercaseString]];
+    [_measuredAirQualityLabel setText:[[KNMeasureHelper getQualityStringForValue:value] uppercaseString]];
     
 }
 
@@ -166,10 +171,12 @@
 
 - (IBAction)testButtonTouched:(id)sender {
     Measurement *newMeasurement = [[Measurement alloc] init];
-    newMeasurement.bucketValue = (arc4random() % 5) + 1;
+    newMeasurement.bucketValue = (arc4random() % 6) + 1;
+    newMeasurement.preciseValue = [NSNumber numberWithInt:(arc4random() % 100) + 1];
     newMeasurement.date = [NSDate new];
     
     [self updateWithMeasure:newMeasurement];
+    [[KNDataManager sharedInstance] saveMeasure:newMeasurement];
     
 
 

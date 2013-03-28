@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Station.h"
+#import "Measurement.h"
 
 //Delegate methods giving Statin controller information about stop animating
 @protocol DataControllerDelegate <NSObject>
@@ -18,10 +19,14 @@
 
 @end
 
-@interface DataController : NSObject <CLLocationManagerDelegate, UIAlertViewDelegate> {
+
+extern const NSString *KNMeasureDataChangedNotification;
+
+@interface KNDataManager : NSObject <CLLocationManagerDelegate> {
     NSMutableArray *stations;
     NSDate *stationsLoadTime;
     NSMutableData *responseData;
+    
     
     CLLocationManager *locationManager;
     CLLocation *location;
@@ -31,21 +36,10 @@
     BOOL dataLoaded;
     BOOL tokenLoaded;
     BOOL positionBlocked;
+    BOOL iCloudAvailable;
     
     
 }
-+ (DataController *) sharedInstance;
-- (void) loadStations;
-- (void) loadPosition;
-- (Station *) getNearestStation;
-
--(void) loadAllData;
--(void) dataDidFinishLoading;
--(NSString*)getDataAge ;
-
-- (void) loadStationsWithSuccess:(void (^)(NSArray *stations))success
-                         failure:(void (^)(NSError *error))failure;
-
 @property (nonatomic, strong) NSMutableArray *stations;
 @property (nonatomic, strong) NSDate *stationsLoadTime;
 @property (nonatomic, strong) NSMutableData *responseData;
@@ -59,6 +53,23 @@
 @property (readwrite, assign) BOOL dataLoaded;
 @property (readwrite, assign) BOOL tokenLoaded;
 @property (readwrite, assign) BOOL positionBlocked;
+@property (readwrite, assign) BOOL iCloudAvailable;
 
+
++ (KNDataManager *) sharedInstance;
+- (void) loadStations;
+- (void) loadPosition;
+
+- (Station *) getNearestStation;
+
+-(void) loadAllData;
+-(void) dataDidFinishLoading;
+-(NSString*)getDataAge ;
+
+- (void) loadStationsWithSuccess:(void (^)(NSArray *stations))success
+                         failure:(void (^)(NSError *error))failure;
+
+-(void) saveMeasure:(Measurement *) measure;
+-(NSArray *) getAllMeasures;
 
 @end

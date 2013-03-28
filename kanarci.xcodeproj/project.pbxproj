@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C16954F17005A2C00A8A2F0 /* KNMeasureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16954E17005A2C00A8A2F0 /* KNMeasureFactory.m */; };
+		7C0E4D8C170352EC00B130E5 /* KNMeasureDataDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */; };
+		7C16954F17005A2C00A8A2F0 /* KNMeasureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16954E17005A2C00A8A2F0 /* KNMeasureHelper.m */; };
 		7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695511700783900A8A2F0 /* kanar6@2x.png */; };
 		7C1695601700783900A8A2F0 /* kanar6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695521700783900A8A2F0 /* kanar6.png */; };
 		7C1695611700783900A8A2F0 /* kanar5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695531700783900A8A2F0 /* kanar5@2x.png */; };
@@ -79,7 +80,7 @@
 		7CBBB4F116FCD7DD0027E4C5 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB4E716FCD7DD0027E4C5 /* AFXMLRequestOperation.m */; };
 		7CBBB4F216FCD7DD0027E4C5 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB4E916FCD7DD0027E4C5 /* UIImageView+AFNetworking.m */; };
 		7CBBB4F516FCD7F70027E4C5 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB4F416FCD7F70027E4C5 /* SFHFKeychainUtils.m */; };
-		7CBBB4FA16FCDBBB0027E4C5 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB4F916FCDBBB0027E4C5 /* DataController.m */; };
+		7CBBB4FA16FCDBBB0027E4C5 /* KNDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB4F916FCDBBB0027E4C5 /* KNDataManager.m */; };
 		7CBBB4FC16FDB5B80027E4C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CBBB4FB16FDB5B80027E4C5 /* Security.framework */; };
 		7CBBB50B16FDC03F0027E4C5 /* mapPin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB4FD16FDC03D0027E4C5 /* mapPin1.png */; };
 		7CBBB50C16FDC03F0027E4C5 /* mapPin1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBB4FE16FDC03D0027E4C5 /* mapPin1@2x.png */; };
@@ -119,11 +120,15 @@
 		7CC0B2BD17010CCA007752CA /* kn_bg_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2B917010CCA007752CA /* kn_bg_tabbar@2x.png */; };
 		7CC0B2BE17010CCA007752CA /* kn_tab_bg_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2BA17010CCA007752CA /* kn_tab_bg_active@2x.png */; };
 		7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */; };
+		7CC0B2C517011304007752CA /* KNCosmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B2C417011304007752CA /* KNCosmService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C16954D17005A2B00A8A2F0 /* KNMeasureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureFactory.h; sourceTree = "<group>"; };
-		7C16954E17005A2C00A8A2F0 /* KNMeasureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureFactory.m; sourceTree = "<group>"; };
+		7C0E4D89170351BE00B130E5 /* kanarci.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = kanarci.entitlements; sourceTree = "<group>"; };
+		7C0E4D8A170352EC00B130E5 /* KNMeasureDataDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureDataDocument.h; sourceTree = "<group>"; };
+		7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureDataDocument.m; sourceTree = "<group>"; };
+		7C16954D17005A2B00A8A2F0 /* KNMeasureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureHelper.h; sourceTree = "<group>"; };
+		7C16954E17005A2C00A8A2F0 /* KNMeasureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureHelper.m; sourceTree = "<group>"; };
 		7C1695511700783900A8A2F0 /* kanar6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar6@2x.png"; sourceTree = "<group>"; };
 		7C1695521700783900A8A2F0 /* kanar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanar6.png; sourceTree = "<group>"; };
 		7C1695531700783900A8A2F0 /* kanar5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar5@2x.png"; sourceTree = "<group>"; };
@@ -223,8 +228,8 @@
 		7CBBB4E916FCD7DD0027E4C5 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		7CBBB4F316FCD7F70027E4C5 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		7CBBB4F416FCD7F70027E4C5 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
-		7CBBB4F816FCDBBB0027E4C5 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
-		7CBBB4F916FCDBBB0027E4C5 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		7CBBB4F816FCDBBB0027E4C5 /* KNDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNDataManager.h; sourceTree = "<group>"; };
+		7CBBB4F916FCDBBB0027E4C5 /* KNDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNDataManager.m; sourceTree = "<group>"; };
 		7CBBB4FB16FDB5B80027E4C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7CBBB4FD16FDC03D0027E4C5 /* mapPin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapPin1.png; sourceTree = "<group>"; };
 		7CBBB4FE16FDC03D0027E4C5 /* mapPin1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapPin1@2x.png"; sourceTree = "<group>"; };
@@ -270,6 +275,8 @@
 		7CC0B2BA17010CCA007752CA /* kn_tab_bg_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_tab_bg_active@2x.png"; sourceTree = "<group>"; };
 		7CC0B2C017010F35007752CA /* KNDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNDescriptionViewController.h; sourceTree = "<group>"; };
 		7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNDescriptionViewController.m; sourceTree = "<group>"; };
+		7CC0B2C317011304007752CA /* KNCosmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNCosmService.h; sourceTree = "<group>"; };
+		7CC0B2C417011304007752CA /* KNCosmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNCosmService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +378,7 @@
 		7C365F5216ED36F0001BC05C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C0E4D89170351BE00B130E5 /* kanarci.entitlements */,
 				7C365F5316ED36F0001BC05C /* kanarci-Info.plist */,
 				7C365F5416ED36F0001BC05C /* InfoPlist.strings */,
 				7C365F5716ED36F0001BC05C /* main.m */,
@@ -582,8 +590,12 @@
 		7CBBB4F716FCDBAB0027E4C5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7CBBB4F816FCDBBB0027E4C5 /* DataController.h */,
-				7CBBB4F916FCDBBB0027E4C5 /* DataController.m */,
+				7CBBB4F816FCDBBB0027E4C5 /* KNDataManager.h */,
+				7CBBB4F916FCDBBB0027E4C5 /* KNDataManager.m */,
+				7CC0B2C317011304007752CA /* KNCosmService.h */,
+				7CC0B2C417011304007752CA /* KNCosmService.m */,
+				7C0E4D8A170352EC00B130E5 /* KNMeasureDataDocument.h */,
+				7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -618,8 +630,8 @@
 				7CBBB51F16FE2ED80027E4C5 /* MeasureBar.m */,
 				7CBBB53D16FE42B10027E4C5 /* MeasurementManager.h */,
 				7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */,
-				7C16954D17005A2B00A8A2F0 /* KNMeasureFactory.h */,
-				7C16954E17005A2C00A8A2F0 /* KNMeasureFactory.m */,
+				7C16954D17005A2B00A8A2F0 /* KNMeasureHelper.h */,
+				7C16954E17005A2C00A8A2F0 /* KNMeasureHelper.m */,
 			);
 			name = Measure;
 			sourceTree = "<group>";
@@ -808,14 +820,16 @@
 				7CBBB4F116FCD7DD0027E4C5 /* AFXMLRequestOperation.m in Sources */,
 				7CBBB4F216FCD7DD0027E4C5 /* UIImageView+AFNetworking.m in Sources */,
 				7CBBB4F516FCD7F70027E4C5 /* SFHFKeychainUtils.m in Sources */,
-				7CBBB4FA16FCDBBB0027E4C5 /* DataController.m in Sources */,
+				7CBBB4FA16FCDBBB0027E4C5 /* KNDataManager.m in Sources */,
 				7CBBB51D16FE2D270027E4C5 /* MeasureViewController.m in Sources */,
 				7CBBB52016FE2ED80027E4C5 /* MeasureBar.m in Sources */,
 				7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */,
 				7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */,
-				7C16954F17005A2C00A8A2F0 /* KNMeasureFactory.m in Sources */,
+				7C16954F17005A2C00A8A2F0 /* KNMeasureHelper.m in Sources */,
 				7CC0B2B6170109F6007752CA /* KNTabBarController.m in Sources */,
 				7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */,
+				7CC0B2C517011304007752CA /* KNCosmService.m in Sources */,
+				7C0E4D8C170352EC00B130E5 /* KNMeasureDataDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,6 +914,7 @@
 		7C365F7716ED36F1001BC05C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = kanarci/kanarci.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanarci/kanarci-Prefix.pch";
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";
@@ -912,6 +927,7 @@
 		7C365F7816ED36F1001BC05C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = kanarci/kanarci.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanarci/kanarci-Prefix.pch";
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";

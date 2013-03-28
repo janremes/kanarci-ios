@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Jan Remes. All rights reserved.
 //
 
-#import "KNMeasureFactory.h"
+#import "KNMeasureHelper.h"
 
-@implementation KNMeasureFactory
+@implementation KNMeasureHelper
 
 
 +(NSString *) getQualityStringForValue:(int) value{
@@ -16,6 +16,11 @@
     
     return [qualities objectAtIndex:value];
     
+}
+
+
++(NSString *)getImageNameForBucketValue:(int)value {
+    return [NSString stringWithFormat:@"air_quality%d",value];
 }
 
 @end

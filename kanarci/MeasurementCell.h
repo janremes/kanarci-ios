@@ -10,4 +10,10 @@
 
 @interface MeasurementCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *airQualityImageView;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *localityLabel;
+@property (strong, nonatomic) IBOutlet UILabel *thoroughfareLabel;
+
 @end

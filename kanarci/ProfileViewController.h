@@ -12,4 +12,7 @@
    IBOutlet UITableView *_tableView;
 }
 
+
+-(void) measurementDataChangedWithNotification:(NSNotification *) notification ;
+
 @end
