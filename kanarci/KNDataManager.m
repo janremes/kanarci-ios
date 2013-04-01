@@ -14,6 +14,9 @@
 #import "Station.h"
 #import "AFJSONRequestOperation.h"
 #import "KNMeasureDataDocument.h"
+#import "COSMDatapointModel.h"
+#import "KNCosmService.h"
+
 
 #define kFilename_icloud @"kanarci_data"
 #define kFilename_local @"kanarci_data_local"
@@ -310,6 +313,8 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     
     _currentMeasurement = measure;
     
+    [self saveMeasureToCosm:measure];
+    
     [_currentMeasurement setLocationDataAvailable:NO];
     
     if(self.positionBlocked) {
@@ -330,6 +335,14 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
         }
     }
     
+}
+
+-(void) saveMeasureToCosm:(Measurement *) measurement {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        [KNCosmService postMeasurementToCosm:measurement];
+    
+    });
 }
 
 -(NSArray *)getAllMeasures {

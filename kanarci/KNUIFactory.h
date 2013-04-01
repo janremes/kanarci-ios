@@ -25,4 +25,6 @@
  */
 + (UILabel *)labelWithFontSize:(CGFloat)size bold:(BOOL)bold;
 
+
++ (UISegmentedControl *)segmentedControlWithItems:(NSArray *)items;
 @end

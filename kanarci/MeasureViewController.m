@@ -45,7 +45,7 @@
     
     UILabel *airQualityLabel = [KNUIFactory labelWithFontSize:descLabelSize bold:NO];
     
-    [airQualityLabel setFrame:CGRectMake(20, 10, 100, 20)];
+    [airQualityLabel setFrame:CGRectMake(15, 10, 100, 20)];
     
     [airQualityLabel setText:@"kvalita ovzduší:"];
     
@@ -61,25 +61,25 @@
     
     UILabel *timeLabel = [KNUIFactory labelWithFontSize:descLabelSize bold:NO];
     
-    [timeLabel setFrame:CGRectMake(20, 310, 100, 20)];
+    [timeLabel setFrame:CGRectMake(15, 300, 100, 20)];
     
     [timeLabel setText:@"aktualizováno:"];
     
     [self.view addSubview:timeLabel];
     
     
-    _measureDateLabel = [KNUIFactory labelWithFontSize:16.0 bold:YES];
+    _measureDateLabel = [KNUIFactory labelWithFontSize:15.0 bold:YES];
     
 
-    [_measureDateLabel setFrame:CGRectMake(20, 330, 150, 20)];
+    [_measureDateLabel setFrame:CGRectMake(15, 320, 150, 20)];
     
     [self setMeasureDateTitle:[NSDate new]];
     
     [self.view addSubview:_measureDateLabel];
     
-    _measuredAirQualityLabel = [KNUIFactory labelWithFontSize:22.0 bold:YES];
+    _measuredAirQualityLabel = [KNUIFactory labelWithFontSize:21.0 bold:YES];
     
-    [_measuredAirQualityLabel setFrame:CGRectMake(20, 30, 200, 30)];
+    [_measuredAirQualityLabel setFrame:CGRectMake(15, 30, 200, 30)];
     
     [self setMeasureQualityTitle:0];
     

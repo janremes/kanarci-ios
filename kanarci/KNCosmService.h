@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Measurement.h"
+
 
 @interface KNCosmService : NSObject
+
+
++ (KNCosmService *) sharedInstance;
+
++ (void) postMeasurementToCosm:(Measurement *) measurement;
 
 @end

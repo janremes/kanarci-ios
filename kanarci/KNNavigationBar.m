@@ -7,6 +7,7 @@
 //
 
 #import "KNNavigationBar.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation KNNavigationBar
 
@@ -35,10 +36,10 @@
 
 
 -(void) setup {
-//    [self setTitleTextAttributes:@{
-//       UITextAttributeTextColor : [Theme defaultTextColor],
-// UITextAttributeTextShadowColor : [UIColor clearColor],
-//            UITextAttributeFont : [Theme boldAppFontOfSize:20.0]}];
+//    self.layer.shadowColor = [UIColor blackColor].CGColor;
+//    self.layer.shadowOpacity = 0.4;
+//    self.layer.shadowRadius = 7;
+//    self.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
     
     
 }
@@ -53,6 +54,8 @@
  UIImage *image = [UIImage imageNamed: @"navbar_bg"];
  [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     
+
+    
   
 }
 
@@ -60,6 +63,8 @@
 - (CGSize)sizeThatFits:(CGSize)size {
     [self setTitleVerticalPositionAdjustment:-10 forBarMetrics:UIBarMetricsDefault];
     return CGSizeMake(self.frame.size.width, 58.0);
+    
+
     
 }
 

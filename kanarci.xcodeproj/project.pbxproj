@@ -33,6 +33,23 @@
 		7C365F6016ED36F0001BC05C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F5F16ED36F0001BC05C /* Default@2x.png */; };
 		7C365F6216ED36F0001BC05C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F6116ED36F0001BC05C /* Default-568h@2x.png */; };
 		7C365F6516ED36F0001BC05C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C365F6316ED36F0001BC05C /* MainStoryboard.storyboard */; };
+		7C58119D1709E11200680ECF /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811971709E11200680ECF /* base64.c */; };
+		7C58119E1709E11200680ECF /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58119A1709E11200680ECF /* SRWebSocket.m */; };
+		7C58119F1709E11200680ECF /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58119C1709E11200680ECF /* NSData+SRB64Additions.m */; };
+		7C5811A11709E18100680ECF /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5811A01709E18100680ECF /* libicucore.dylib */; };
+		7C5811A31709E18800680ECF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5811A21709E18800680ECF /* CFNetwork.framework */; };
+		7C5811BE1709E1E800680ECF /* COSMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811A71709E1E800680ECF /* COSMAPI.m */; };
+		7C5811BF1709E1E800680ECF /* COSMDatapointCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811A91709E1E800680ECF /* COSMDatapointCollection.m */; };
+		7C5811C01709E1E800680ECF /* COSMDatapointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811AC1709E1E800680ECF /* COSMDatapointModel.m */; };
+		7C5811C11709E1E800680ECF /* COSMDatastreamCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811AE1709E1E800680ECF /* COSMDatastreamCollection.m */; };
+		7C5811C21709E1E800680ECF /* COSMDatastreamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811B01709E1E800680ECF /* COSMDatastreamModel.m */; };
+		7C5811C31709E1E800680ECF /* COSMFeedCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811B21709E1E800680ECF /* COSMFeedCollection.m */; };
+		7C5811C41709E1E800680ECF /* COSMFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811B51709E1E800680ECF /* COSMFeedModel.m */; };
+		7C5811C51709E1E800680ECF /* COSMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811B71709E1E800680ECF /* COSMModel.m */; };
+		7C5811C61709E1E800680ECF /* COSMRequestable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811BA1709E1E800680ECF /* COSMRequestable.m */; };
+		7C5811C71709E1E800680ECF /* COSMSubscribable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811BC1709E1E800680ECF /* COSMSubscribable.m */; };
+		7C5811CA1709E29D00680ECF /* KNUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811C91709E29D00680ECF /* KNUser.m */; };
+		7C5811CD1709EC9300680ECF /* KNCosmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811CC1709EC9300680ECF /* KNCosmService.m */; };
 		7C9074BB16F1261E00ED3DCD /* tab_legend.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B116F1261E00ED3DCD /* tab_legend.png */; };
 		7C9074BC16F1261F00ED3DCD /* tab_measure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B216F1261E00ED3DCD /* tab_measure.png */; };
 		7C9074BD16F1261F00ED3DCD /* tab_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B316F1261E00ED3DCD /* tab_profile.png */; };
@@ -120,7 +137,20 @@
 		7CC0B2BD17010CCA007752CA /* kn_bg_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2B917010CCA007752CA /* kn_bg_tabbar@2x.png */; };
 		7CC0B2BE17010CCA007752CA /* kn_tab_bg_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC0B2BA17010CCA007752CA /* kn_tab_bg_active@2x.png */; };
 		7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */; };
-		7CC0B2C517011304007752CA /* KNCosmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B2C417011304007752CA /* KNCosmService.m */; };
+		7CC9362A1704E3E8008E903C /* UIView+FFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC936291704E3E8008E903C /* UIView+FFAdditions.m */; };
+		7CC9362D1704E5A5008E903C /* KNTabBarCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9362C1704E5A5008E903C /* KNTabBarCenterButton.m */; };
+		7CF0820A1708630C004EE818 /* KNSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF082091708630C004EE818 /* KNSegmentedButton.m */; };
+		7CF0820E1708658F004EE818 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0820D1708658F004EE818 /* StatisticsViewController.m */; };
+		7CF0821417086DA7004EE818 /* kn_control_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821017086DA7004EE818 /* kn_control_active.png */; };
+		7CF0821517086DA7004EE818 /* kn_control_passive.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821117086DA7004EE818 /* kn_control_passive.png */; };
+		7CF0821617086DA7004EE818 /* kn_control_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821217086DA7004EE818 /* kn_control_active@2x.png */; };
+		7CF0821717086DA7004EE818 /* kn_control_passive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821317086DA7004EE818 /* kn_control_passive@2x.png */; };
+		7CF0821C17086F23004EE818 /* kn_control__sel_unsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821817086F23004EE818 /* kn_control__sel_unsel.png */; };
+		7CF0821D17086F23004EE818 /* kn_control__unsel_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821917086F23004EE818 /* kn_control__unsel_sel.png */; };
+		7CF0821E17086F23004EE818 /* kn_control__sel_unsel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821A17086F23004EE818 /* kn_control__sel_unsel@2x.png */; };
+		7CF0821F17086F23004EE818 /* kn_control__unsel_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821B17086F23004EE818 /* kn_control__unsel_sel@2x.png */; };
+		7CF08222170870E9004EE818 /* kn_control_unsel_unsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF08220170870E9004EE818 /* kn_control_unsel_unsel.png */; };
+		7CF08223170870E9004EE818 /* kn_control_unsel_unsel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF08221170870E9004EE818 /* kn_control_unsel_unsel@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +187,43 @@
 		7C365F5F16ED36F0001BC05C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7C365F6116ED36F0001BC05C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7C365F6416ED36F0001BC05C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7C5811971709E11200680ECF /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		7C5811981709E11200680ECF /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		7C5811991709E11200680ECF /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		7C58119A1709E11200680ECF /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		7C58119B1709E11200680ECF /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		7C58119C1709E11200680ECF /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		7C5811A01709E18100680ECF /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		7C5811A21709E18800680ECF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7C5811A51709E1E800680ECF /* COSM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSM.h; sourceTree = "<group>"; };
+		7C5811A61709E1E800680ECF /* COSMAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMAPI.h; sourceTree = "<group>"; };
+		7C5811A71709E1E800680ECF /* COSMAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMAPI.m; sourceTree = "<group>"; };
+		7C5811A81709E1E800680ECF /* COSMDatapointCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMDatapointCollection.h; sourceTree = "<group>"; };
+		7C5811A91709E1E800680ECF /* COSMDatapointCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMDatapointCollection.m; sourceTree = "<group>"; };
+		7C5811AA1709E1E800680ECF /* COSMDatapointCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMDatapointCollectionDelegate.h; sourceTree = "<group>"; };
+		7C5811AB1709E1E800680ECF /* COSMDatapointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMDatapointModel.h; sourceTree = "<group>"; };
+		7C5811AC1709E1E800680ECF /* COSMDatapointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMDatapointModel.m; sourceTree = "<group>"; };
+		7C5811AD1709E1E800680ECF /* COSMDatastreamCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMDatastreamCollection.h; sourceTree = "<group>"; };
+		7C5811AE1709E1E800680ECF /* COSMDatastreamCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMDatastreamCollection.m; sourceTree = "<group>"; };
+		7C5811AF1709E1E800680ECF /* COSMDatastreamModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMDatastreamModel.h; sourceTree = "<group>"; };
+		7C5811B01709E1E800680ECF /* COSMDatastreamModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMDatastreamModel.m; sourceTree = "<group>"; };
+		7C5811B11709E1E800680ECF /* COSMFeedCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMFeedCollection.h; sourceTree = "<group>"; };
+		7C5811B21709E1E800680ECF /* COSMFeedCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMFeedCollection.m; sourceTree = "<group>"; };
+		7C5811B31709E1E800680ECF /* COSMFeedCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMFeedCollectionDelegate.h; sourceTree = "<group>"; };
+		7C5811B41709E1E800680ECF /* COSMFeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMFeedModel.h; sourceTree = "<group>"; };
+		7C5811B51709E1E800680ECF /* COSMFeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMFeedModel.m; sourceTree = "<group>"; };
+		7C5811B61709E1E800680ECF /* COSMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMModel.h; sourceTree = "<group>"; };
+		7C5811B71709E1E800680ECF /* COSMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMModel.m; sourceTree = "<group>"; };
+		7C5811B81709E1E800680ECF /* COSMModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMModelDelegate.h; sourceTree = "<group>"; };
+		7C5811B91709E1E800680ECF /* COSMRequestable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMRequestable.h; sourceTree = "<group>"; };
+		7C5811BA1709E1E800680ECF /* COSMRequestable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMRequestable.m; sourceTree = "<group>"; };
+		7C5811BB1709E1E800680ECF /* COSMSubscribable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMSubscribable.h; sourceTree = "<group>"; };
+		7C5811BC1709E1E800680ECF /* COSMSubscribable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COSMSubscribable.m; sourceTree = "<group>"; };
+		7C5811BD1709E1E800680ECF /* COSMSubscribableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COSMSubscribableDelegate.h; sourceTree = "<group>"; };
+		7C5811C81709E29D00680ECF /* KNUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNUser.h; sourceTree = "<group>"; };
+		7C5811C91709E29D00680ECF /* KNUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNUser.m; sourceTree = "<group>"; };
+		7C5811CB1709EC9300680ECF /* KNCosmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNCosmService.h; sourceTree = "<group>"; };
+		7C5811CC1709EC9300680ECF /* KNCosmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNCosmService.m; sourceTree = "<group>"; };
 		7C9074B116F1261E00ED3DCD /* tab_legend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_legend.png; sourceTree = "<group>"; };
 		7C9074B216F1261E00ED3DCD /* tab_measure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_measure.png; sourceTree = "<group>"; };
 		7C9074B316F1261E00ED3DCD /* tab_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_profile.png; sourceTree = "<group>"; };
@@ -275,8 +342,24 @@
 		7CC0B2BA17010CCA007752CA /* kn_tab_bg_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_tab_bg_active@2x.png"; sourceTree = "<group>"; };
 		7CC0B2C017010F35007752CA /* KNDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNDescriptionViewController.h; sourceTree = "<group>"; };
 		7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNDescriptionViewController.m; sourceTree = "<group>"; };
-		7CC0B2C317011304007752CA /* KNCosmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNCosmService.h; sourceTree = "<group>"; };
-		7CC0B2C417011304007752CA /* KNCosmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNCosmService.m; sourceTree = "<group>"; };
+		7CC936281704E3E8008E903C /* UIView+FFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FFAdditions.h"; sourceTree = "<group>"; };
+		7CC936291704E3E8008E903C /* UIView+FFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFAdditions.m"; sourceTree = "<group>"; };
+		7CC9362B1704E5A5008E903C /* KNTabBarCenterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTabBarCenterButton.h; sourceTree = "<group>"; };
+		7CC9362C1704E5A5008E903C /* KNTabBarCenterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTabBarCenterButton.m; sourceTree = "<group>"; };
+		7CF082081708630C004EE818 /* KNSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNSegmentedButton.h; sourceTree = "<group>"; };
+		7CF082091708630C004EE818 /* KNSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNSegmentedButton.m; sourceTree = "<group>"; };
+		7CF0820C1708658F004EE818 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		7CF0820D1708658F004EE818 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		7CF0821017086DA7004EE818 /* kn_control_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_control_active.png; sourceTree = "<group>"; };
+		7CF0821117086DA7004EE818 /* kn_control_passive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_control_passive.png; sourceTree = "<group>"; };
+		7CF0821217086DA7004EE818 /* kn_control_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control_active@2x.png"; sourceTree = "<group>"; };
+		7CF0821317086DA7004EE818 /* kn_control_passive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control_passive@2x.png"; sourceTree = "<group>"; };
+		7CF0821817086F23004EE818 /* kn_control__sel_unsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_control__sel_unsel.png; sourceTree = "<group>"; };
+		7CF0821917086F23004EE818 /* kn_control__unsel_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_control__unsel_sel.png; sourceTree = "<group>"; };
+		7CF0821A17086F23004EE818 /* kn_control__sel_unsel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control__sel_unsel@2x.png"; sourceTree = "<group>"; };
+		7CF0821B17086F23004EE818 /* kn_control__unsel_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control__unsel_sel@2x.png"; sourceTree = "<group>"; };
+		7CF08220170870E9004EE818 /* kn_control_unsel_unsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_control_unsel_unsel.png; sourceTree = "<group>"; };
+		7CF08221170870E9004EE818 /* kn_control_unsel_unsel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control_unsel_unsel@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +367,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5811A31709E18800680ECF /* CFNetwork.framework in Frameworks */,
+				7C5811A11709E18100680ECF /* libicucore.dylib in Frameworks */,
 				7CBBB4FC16FDB5B80027E4C5 /* Security.framework in Frameworks */,
 				7CBBB4CA16FCD3820027E4C5 /* QuartzCore.framework in Frameworks */,
 				7CBBB4C816FCD37C0027E4C5 /* CoreLocation.framework in Frameworks */,
@@ -342,6 +427,8 @@
 		7C365F4A16ED36F0001BC05C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C5811A21709E18800680ECF /* CFNetwork.framework */,
+				7C5811A01709E18100680ECF /* libicucore.dylib */,
 				7CBBB4FB16FDB5B80027E4C5 /* Security.framework */,
 				7CBBB4C916FCD3820027E4C5 /* QuartzCore.framework */,
 				7CBBB4C716FCD37C0027E4C5 /* CoreLocation.framework */,
@@ -357,6 +444,7 @@
 		7C365F5116ED36F0001BC05C /* kanarci */ = {
 			isa = PBXGroup;
 			children = (
+				7CF0820B17086575004EE818 /* Statistics */,
 				7CC0B2BF17010F16007752CA /* Legend */,
 				7CBBB4F716FCDBAB0027E4C5 /* Data */,
 				7CBBB4D516FCD6410027E4C5 /* ThirdParty */,
@@ -390,9 +478,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7C5811961709E0EB00680ECF /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				7C5811971709E11200680ECF /* base64.c */,
+				7C5811981709E11200680ECF /* base64.h */,
+				7C5811991709E11200680ECF /* SRWebSocket.h */,
+				7C58119A1709E11200680ECF /* SRWebSocket.m */,
+				7C58119B1709E11200680ECF /* NSData+SRB64Additions.h */,
+				7C58119C1709E11200680ECF /* NSData+SRB64Additions.m */,
+			);
+			name = SocketRocket;
+			sourceTree = "<group>";
+		};
+		7C5811A41709E1DC00680ECF /* Cosm */ = {
+			isa = PBXGroup;
+			children = (
+				7C5811A51709E1E800680ECF /* COSM.h */,
+				7C5811A61709E1E800680ECF /* COSMAPI.h */,
+				7C5811A71709E1E800680ECF /* COSMAPI.m */,
+				7C5811A81709E1E800680ECF /* COSMDatapointCollection.h */,
+				7C5811A91709E1E800680ECF /* COSMDatapointCollection.m */,
+				7C5811AA1709E1E800680ECF /* COSMDatapointCollectionDelegate.h */,
+				7C5811AB1709E1E800680ECF /* COSMDatapointModel.h */,
+				7C5811AC1709E1E800680ECF /* COSMDatapointModel.m */,
+				7C5811AD1709E1E800680ECF /* COSMDatastreamCollection.h */,
+				7C5811AE1709E1E800680ECF /* COSMDatastreamCollection.m */,
+				7C5811AF1709E1E800680ECF /* COSMDatastreamModel.h */,
+				7C5811B01709E1E800680ECF /* COSMDatastreamModel.m */,
+				7C5811B11709E1E800680ECF /* COSMFeedCollection.h */,
+				7C5811B21709E1E800680ECF /* COSMFeedCollection.m */,
+				7C5811B31709E1E800680ECF /* COSMFeedCollectionDelegate.h */,
+				7C5811B41709E1E800680ECF /* COSMFeedModel.h */,
+				7C5811B51709E1E800680ECF /* COSMFeedModel.m */,
+				7C5811B61709E1E800680ECF /* COSMModel.h */,
+				7C5811B71709E1E800680ECF /* COSMModel.m */,
+				7C5811B81709E1E800680ECF /* COSMModelDelegate.h */,
+				7C5811B91709E1E800680ECF /* COSMRequestable.h */,
+				7C5811BA1709E1E800680ECF /* COSMRequestable.m */,
+				7C5811BB1709E1E800680ECF /* COSMSubscribable.h */,
+				7C5811BC1709E1E800680ECF /* COSMSubscribable.m */,
+				7C5811BD1709E1E800680ECF /* COSMSubscribableDelegate.h */,
+			);
+			name = Cosm;
+			sourceTree = "<group>";
+		};
 		7C9074AF16F1260600ED3DCD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7CF0820F17086D98004EE818 /* knsegmentedcontrol */,
 				7C1695501700781D00A8A2F0 /* kanari */,
 				7CBBB51916FDC0450027E4C5 /* mapPin */,
 				7C9074F616F28ADB00ED3DCD /* air_quality */,
@@ -453,6 +587,10 @@
 				7CBBB54116FE4A010027E4C5 /* KNUIFactory.m */,
 				7CC0B2B4170109F6007752CA /* KNTabBarController.h */,
 				7CC0B2B5170109F6007752CA /* KNTabBarController.m */,
+				7CC9362B1704E5A5008E903C /* KNTabBarCenterButton.h */,
+				7CC9362C1704E5A5008E903C /* KNTabBarCenterButton.m */,
+				7CF082081708630C004EE818 /* KNSegmentedButton.h */,
+				7CF082091708630C004EE818 /* KNSegmentedButton.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -546,6 +684,9 @@
 		7CBBB4D516FCD6410027E4C5 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				7C5811A41709E1DC00680ECF /* Cosm */,
+				7C5811961709E0EB00680ECF /* SocketRocket */,
+				7CC936271704E3D6008E903C /* Extensions */,
 				7CBBB4F616FCD7FE0027E4C5 /* KeychainUtils */,
 				7CBBB4D616FCD7DD0027E4C5 /* AFNetworking */,
 			);
@@ -592,10 +733,12 @@
 			children = (
 				7CBBB4F816FCDBBB0027E4C5 /* KNDataManager.h */,
 				7CBBB4F916FCDBBB0027E4C5 /* KNDataManager.m */,
-				7CC0B2C317011304007752CA /* KNCosmService.h */,
-				7CC0B2C417011304007752CA /* KNCosmService.m */,
 				7C0E4D8A170352EC00B130E5 /* KNMeasureDataDocument.h */,
 				7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */,
+				7C5811C81709E29D00680ECF /* KNUser.h */,
+				7C5811C91709E29D00680ECF /* KNUser.m */,
+				7C5811CB1709EC9300680ECF /* KNCosmService.h */,
+				7C5811CC1709EC9300680ECF /* KNCosmService.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -643,6 +786,41 @@
 				7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */,
 			);
 			name = Legend;
+			sourceTree = "<group>";
+		};
+		7CC936271704E3D6008E903C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CC936281704E3E8008E903C /* UIView+FFAdditions.h */,
+				7CC936291704E3E8008E903C /* UIView+FFAdditions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7CF0820B17086575004EE818 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				7CF0820C1708658F004EE818 /* StatisticsViewController.h */,
+				7CF0820D1708658F004EE818 /* StatisticsViewController.m */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		7CF0820F17086D98004EE818 /* knsegmentedcontrol */ = {
+			isa = PBXGroup;
+			children = (
+				7CF08220170870E9004EE818 /* kn_control_unsel_unsel.png */,
+				7CF08221170870E9004EE818 /* kn_control_unsel_unsel@2x.png */,
+				7CF0821817086F23004EE818 /* kn_control__sel_unsel.png */,
+				7CF0821917086F23004EE818 /* kn_control__unsel_sel.png */,
+				7CF0821A17086F23004EE818 /* kn_control__sel_unsel@2x.png */,
+				7CF0821B17086F23004EE818 /* kn_control__unsel_sel@2x.png */,
+				7CF0821017086DA7004EE818 /* kn_control_active.png */,
+				7CF0821117086DA7004EE818 /* kn_control_passive.png */,
+				7CF0821217086DA7004EE818 /* kn_control_active@2x.png */,
+				7CF0821317086DA7004EE818 /* kn_control_passive@2x.png */,
+			);
+			name = knsegmentedcontrol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -769,6 +947,16 @@
 				7CC0B2BC17010CCA007752CA /* kn_tab_bg_active.png in Resources */,
 				7CC0B2BD17010CCA007752CA /* kn_bg_tabbar@2x.png in Resources */,
 				7CC0B2BE17010CCA007752CA /* kn_tab_bg_active@2x.png in Resources */,
+				7CF0821417086DA7004EE818 /* kn_control_active.png in Resources */,
+				7CF0821517086DA7004EE818 /* kn_control_passive.png in Resources */,
+				7CF0821617086DA7004EE818 /* kn_control_active@2x.png in Resources */,
+				7CF0821717086DA7004EE818 /* kn_control_passive@2x.png in Resources */,
+				7CF0821C17086F23004EE818 /* kn_control__sel_unsel.png in Resources */,
+				7CF0821D17086F23004EE818 /* kn_control__unsel_sel.png in Resources */,
+				7CF0821E17086F23004EE818 /* kn_control__sel_unsel@2x.png in Resources */,
+				7CF0821F17086F23004EE818 /* kn_control__unsel_sel@2x.png in Resources */,
+				7CF08222170870E9004EE818 /* kn_control_unsel_unsel.png in Resources */,
+				7CF08223170870E9004EE818 /* kn_control_unsel_unsel@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,8 +1016,26 @@
 				7C16954F17005A2C00A8A2F0 /* KNMeasureHelper.m in Sources */,
 				7CC0B2B6170109F6007752CA /* KNTabBarController.m in Sources */,
 				7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */,
-				7CC0B2C517011304007752CA /* KNCosmService.m in Sources */,
 				7C0E4D8C170352EC00B130E5 /* KNMeasureDataDocument.m in Sources */,
+				7CC9362A1704E3E8008E903C /* UIView+FFAdditions.m in Sources */,
+				7CC9362D1704E5A5008E903C /* KNTabBarCenterButton.m in Sources */,
+				7CF0820A1708630C004EE818 /* KNSegmentedButton.m in Sources */,
+				7CF0820E1708658F004EE818 /* StatisticsViewController.m in Sources */,
+				7C58119D1709E11200680ECF /* base64.c in Sources */,
+				7C58119E1709E11200680ECF /* SRWebSocket.m in Sources */,
+				7C58119F1709E11200680ECF /* NSData+SRB64Additions.m in Sources */,
+				7C5811BE1709E1E800680ECF /* COSMAPI.m in Sources */,
+				7C5811BF1709E1E800680ECF /* COSMDatapointCollection.m in Sources */,
+				7C5811C01709E1E800680ECF /* COSMDatapointModel.m in Sources */,
+				7C5811C11709E1E800680ECF /* COSMDatastreamCollection.m in Sources */,
+				7C5811C21709E1E800680ECF /* COSMDatastreamModel.m in Sources */,
+				7C5811C31709E1E800680ECF /* COSMFeedCollection.m in Sources */,
+				7C5811C41709E1E800680ECF /* COSMFeedModel.m in Sources */,
+				7C5811C51709E1E800680ECF /* COSMModel.m in Sources */,
+				7C5811C61709E1E800680ECF /* COSMRequestable.m in Sources */,
+				7C5811C71709E1E800680ECF /* COSMSubscribable.m in Sources */,
+				7C5811CA1709E29D00680ECF /* KNUser.m in Sources */,
+				7C5811CD1709EC9300680ECF /* KNCosmService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

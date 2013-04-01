@@ -7,12 +7,17 @@
 //
 
 #import "KNTabBarController.h"
+#import "KNTabBarCenterButton.h"
 
-@interface KNTabBarController ()
 
-@end
+#define CENTER_TAB_INDEX 2
 
-@implementation KNTabBarController
+@implementation KNTabBarController {
+ 
+        
+    KNTabBarCenterButton *_tabbarCenterButton;
+   
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,10 +47,88 @@
 	[[UITabBarItem appearance] setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
 }
 
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    UITabBar *tabbar = self.tabBar;
+    
+	UITabBarItem *centerItem = ([tabbar.items count] >= 2 ? tabbar.items[2] : nil);
+    
+	//  Create custom center tabbar button
+	if(centerItem && !_tabbarCenterButton) {
+        
+		KNTabBarCenterButton *centerButton = [[KNTabBarCenterButton alloc] initWithFrame:CGRectMake(0, 0, self.tabBar.width / 5, 52)];
+        
+		centerButton.normalBackgroundColor = [UIColor blackColor];
+		centerButton.highlightedBackgroundColor = [UIColor blackColor];
+        
+		centerButton.normalImage = centerItem.finishedUnselectedImage;
+		centerButton.highlightedImage = centerItem.finishedSelectedImage;
+        
+		centerButton.titleText = @"měření";
+        centerButton.highlightedImage = [UIImage imageNamed:@"kn_tab_bg_active"];
+       // centerButton.normalImage = [UIImage imageNamed:@"tab_measure"];
+        
+        
+		//    centerButton.frame = CGRectMake(0, 0, self.tabBar.width/5, 52);
+		[centerButton addTarget:self action:@selector(doCenterButtonTapped:) forControlEvents:UIControlEventTouchDown];
+        
+		[self.view addSubview:centerButton];
+		centerButton.bottomMargin = 0;
+		[centerButton centerHorizontally];
+        
+		//  Check default style after initialization
+		centerButton.highlightedStyle = (self.selectedViewController.tabBarItem == centerItem);
+        
+		_tabbarCenterButton = centerButton;
+	}
+}
+
+#pragma mark -
+#pragma mark Overrides
+
+- (void)setSelectedIndex:(NSUInteger)selectedIndex {
+    
+	[super setSelectedIndex:selectedIndex];
+    
+	//  Set style of center button according to currently selected controller
+	if(_tabbarCenterButton) {
+		_tabbarCenterButton.highlightedStyle = (self.selectedIndex == CENTER_TAB_INDEX);
+	}
+}
+
+- (void)setSelectedViewController:(UIViewController *)selectedViewController {
+    
+	[super setSelectedViewController:selectedViewController];
+    
+	//  Set style of center button according to currently selected controller
+	if(_tabbarCenterButton) {
+		_tabbarCenterButton.highlightedStyle = (self.selectedIndex == CENTER_TAB_INDEX);
+	}
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)doCenterButtonTapped:(UIButton *)sender {
+    
+    //  Center button hides default middle tab so the button must simulate its tapping
+    if([self.viewControllers count] >= CENTER_TAB_INDEX) {
+        
+        //  Center tabbar is already selected, pop navigation controller to the top
+        if (self.selectedIndex == CENTER_TAB_INDEX) {
+            [((UINavigationController *)self.viewControllers[CENTER_TAB_INDEX]) popToRootViewControllerAnimated:YES];
+        }
+        //  Else selected center tab
+        else {
+            self.selectedIndex = CENTER_TAB_INDEX;
+        }
+    }
 }
 
 @end

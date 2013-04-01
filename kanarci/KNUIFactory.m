@@ -7,6 +7,7 @@
 //
 
 #import "KNUIFactory.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation KNUIFactory
 
@@ -25,6 +26,91 @@
     label.minimumFontSize = size/1.3;
     
     return label;
+}
+
+
++ (UISegmentedControl *)segmentedControlWithItems:(NSArray *)items {
+	//  Create segmented control
+	UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:items];
+    
+    segment.layer.shadowColor = [UIColor blackColor].CGColor;
+    segment.layer.shadowOpacity = 0.3;
+    segment.layer.shadowRadius = 5;
+    segment.layer.shadowOffset = CGSizeMake(0.0f, 4.0f);
+    
+	//  Set custom font
+	UIFont *font = [Theme boldAppFontOfSize:12.0];
+	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:font, UITextAttributeFont,
+                                [UIColor blackColor], UITextAttributeTextColor,
+                                [UIColor clearColor], UITextAttributeTextShadowColor,
+                                nil];
+	[segment setTitleTextAttributes:attributes
+	                       forState:UIControlStateNormal];
+    
+    
+//    for (UIView *view in segment.subviews) {
+//        view.layer.shadowColor = [UIColor blackColor].CGColor;
+//        view.layer.shadowOpacity = 0.3;
+//        view.layer.shadowRadius = 4;
+//        view.layer.shadowOffset = CGSizeMake(-4.0f, 0.0f);
+//    }
+    
+	//  Customize background
+	UIImage *activeImage =  [UIImage imageNamed:@"kn_control_active"];
+	UIImage *inactiveImage = [UIImage imageNamed:@"kn_control_passive"];
+	UIImage *spaceImage = [[self class] imageFromColor:[UIColor clearColor]];
+    UIImage *selUnselImage = [UIImage imageNamed:@"kn_control__sel_unsel"];
+    UIImage *unselSselImage = [UIImage imageNamed:@"kn_control__unsel_sel"];
+     UIImage *unselSUnselImage = [UIImage imageNamed:@"kn_control_unsel_unsel"];
+	//  Background of segments
+	[segment setBackgroundImage:inactiveImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+	[segment setBackgroundImage:activeImage forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+    
+    
+    //  Spacing images
+//	[segment setDividerImage:spaceImage
+//	     forLeftSegmentState:UIControlStateNormal
+//		   rightSegmentState:UIControlStateNormal
+//				  barMetrics:UIBarMetricsDefault];
+//	[segment setDividerImage:spaceImage
+//	     forLeftSegmentState:UIControlStateSelected
+//		   rightSegmentState:UIControlStateNormal
+//				  barMetrics:UIBarMetricsDefault];
+//	[segment setDividerImage:spaceImage
+//	     forLeftSegmentState:UIControlStateNormal
+//		   rightSegmentState:UIControlStateSelected
+//				  barMetrics:UIBarMetricsDefault];
+    
+	//  Spacing images
+	[segment setDividerImage:unselSUnselImage
+	     forLeftSegmentState:UIControlStateNormal
+		   rightSegmentState:UIControlStateNormal
+				  barMetrics:UIBarMetricsDefault];
+	[segment setDividerImage:selUnselImage
+	     forLeftSegmentState:UIControlStateSelected
+		   rightSegmentState:UIControlStateNormal
+				  barMetrics:UIBarMetricsDefault];
+	[segment setDividerImage:unselSselImage
+	     forLeftSegmentState:UIControlStateNormal
+		   rightSegmentState:UIControlStateSelected
+				  barMetrics:UIBarMetricsDefault];
+    
+	return segment;
+}
+
+
+
+#pragma mark Utils
++ (UIImage *)imageFromColor:(UIColor *)color {
+    
+	CGRect rect = CGRectMake(0, 0, 1, 1);
+	UIGraphicsBeginImageContext(rect.size);
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	CGContextSetFillColorWithColor(context, [color CGColor]);
+	CGContextFillRect(context, rect);
+	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return img;
 }
 
 @end

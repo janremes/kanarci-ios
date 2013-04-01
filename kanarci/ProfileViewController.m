@@ -147,7 +147,7 @@
 }
 
 -(void)dealloc {
-    
+    removeNotificationObserver(self);
 }
 
 @end
