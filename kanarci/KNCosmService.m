@@ -31,6 +31,10 @@
 }
 
 
+#pragma mark -
+#pragma mark - Public methods
+
+
 + (void) postMeasurementToCosm:(Measurement *) measurement {
 
     

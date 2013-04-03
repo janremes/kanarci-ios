@@ -343,6 +343,8 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
         [KNCosmService postMeasurementToCosm:measurement];
     
     });
+    
+
 }
 
 -(NSArray *)getAllMeasures {
@@ -424,6 +426,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
 
 #pragma mark -
 #pragma mark CLLocationManagerDelegate Methods
+
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     self.location = newLocation;
     [locationManager stopUpdatingLocation];
@@ -474,6 +477,83 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
         default:
             break;
     }
+}
+
+
+#pragma mark -
+#pragma mark - Statistics methods
+
+
+-(NSArray *) getMeasuresForMonth:(int) month year:(int) year {
+  
+    //Create start and end dates for calculation
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+       
+    NSDateComponents *startDateComponent = [[NSDateComponents alloc] init];
+    [startDateComponent setDay:1];
+    [startDateComponent setMonth:month];
+    [startDateComponent setYear:year];
+    
+    NSDate *startDate = [calendar dateFromComponents:startDateComponent];
+    
+    NSDateComponents *endDateComponent = [[NSDateComponents alloc] init];
+    [endDateComponent setMonth:1];
+//    [endDateComponent setDay:-1];
+//    [endDateComponent setHour:24];
+    NSDate *endDate = [calendar dateByAddingComponents:endDateComponent toDate:startDate options:0];
+    
+    
+    //Predicate filtering
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date >= %@) AND (date <= %@)", startDate, endDate];
+    
+    NSUInteger unitFlags =  NSDayCalendarUnit;
+    
+    NSDateComponents *components = [calendar components:unitFlags
+                                                fromDate:startDate
+                                                  toDate:endDate options:0];
+    NSInteger days = [components day];
+    
+    NSArray *filteredArray = [_measurements filteredArrayUsingPredicate:predicate];
+    
+    NSMutableArray *returnedArray = [[NSMutableArray alloc] initWithCapacity:33];
+    
+    
+    
+    int currentDay = 1;
+    
+ 
+    for (Measurement *m in filteredArray) {
+        
+        NSDateComponents *dayComponents = [calendar components:NSDayCalendarUnit  fromDate:m.date];
+        NSInteger measurementDay = [dayComponents day];
+        
+        while (currentDay < measurementDay) {
+            [returnedArray addObject:[NSNumber numberWithInt:0]];
+            currentDay++;
+        }
+        
+        if ([returnedArray count] >= currentDay) {
+            
+            if ([[returnedArray objectAtIndex:measurementDay-1] intValue] < m.bucketValue) {
+               [returnedArray replaceObjectAtIndex:measurementDay-1 withObject:[NSNumber numberWithInt:m.bucketValue]];
+            }
+            
+        } else {
+                 [returnedArray addObject:[NSNumber numberWithInt:m.bucketValue]];
+        }
+        
+        
+        currentDay = measurementDay;
+        
+    }
+    
+    while ([returnedArray count] < days) {
+        [returnedArray addObject:[NSNumber numberWithInt:0]];
+    }
+    
+    
+    return [NSArray arrayWithArray:returnedArray];
+
 }
 
 

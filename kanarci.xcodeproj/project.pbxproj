@@ -139,6 +139,9 @@
 		7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B2C117010F35007752CA /* KNDescriptionViewController.m */; };
 		7CC9362A1704E3E8008E903C /* UIView+FFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC936291704E3E8008E903C /* UIView+FFAdditions.m */; };
 		7CC9362D1704E5A5008E903C /* KNTabBarCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9362C1704E5A5008E903C /* KNTabBarCenterButton.m */; };
+		7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD90A7170C5460008055C2 /* KNBarChart.m */; };
+		7CCD90AC170C6F42008055C2 /* kn_bar_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */; };
+		7CCD90AD170C6F42008055C2 /* kn_bar_chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */; };
 		7CF0820A1708630C004EE818 /* KNSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF082091708630C004EE818 /* KNSegmentedButton.m */; };
 		7CF0820E1708658F004EE818 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0820D1708658F004EE818 /* StatisticsViewController.m */; };
 		7CF0821417086DA7004EE818 /* kn_control_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821017086DA7004EE818 /* kn_control_active.png */; };
@@ -346,6 +349,10 @@
 		7CC936291704E3E8008E903C /* UIView+FFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFAdditions.m"; sourceTree = "<group>"; };
 		7CC9362B1704E5A5008E903C /* KNTabBarCenterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTabBarCenterButton.h; sourceTree = "<group>"; };
 		7CC9362C1704E5A5008E903C /* KNTabBarCenterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTabBarCenterButton.m; sourceTree = "<group>"; };
+		7CCD90A6170C5460008055C2 /* KNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBarChart.h; sourceTree = "<group>"; };
+		7CCD90A7170C5460008055C2 /* KNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBarChart.m; sourceTree = "<group>"; };
+		7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_bar_chart.png; sourceTree = "<group>"; };
+		7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_bar_chart@2x.png"; sourceTree = "<group>"; };
 		7CF082081708630C004EE818 /* KNSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNSegmentedButton.h; sourceTree = "<group>"; };
 		7CF082091708630C004EE818 /* KNSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNSegmentedButton.m; sourceTree = "<group>"; };
 		7CF0820C1708658F004EE818 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
@@ -526,6 +533,7 @@
 		7C9074AF16F1260600ED3DCD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7CCD90A9170C6F38008055C2 /* stats */,
 				7CF0820F17086D98004EE818 /* knsegmentedcontrol */,
 				7C1695501700781D00A8A2F0 /* kanari */,
 				7CBBB51916FDC0450027E4C5 /* mapPin */,
@@ -797,11 +805,22 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		7CCD90A9170C6F38008055C2 /* stats */ = {
+			isa = PBXGroup;
+			children = (
+				7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */,
+				7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */,
+			);
+			name = stats;
+			sourceTree = "<group>";
+		};
 		7CF0820B17086575004EE818 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
 				7CF0820C1708658F004EE818 /* StatisticsViewController.h */,
 				7CF0820D1708658F004EE818 /* StatisticsViewController.m */,
+				7CCD90A6170C5460008055C2 /* KNBarChart.h */,
+				7CCD90A7170C5460008055C2 /* KNBarChart.m */,
 			);
 			name = Statistics;
 			sourceTree = "<group>";
@@ -957,6 +976,8 @@
 				7CF0821F17086F23004EE818 /* kn_control__unsel_sel@2x.png in Resources */,
 				7CF08222170870E9004EE818 /* kn_control_unsel_unsel.png in Resources */,
 				7CF08223170870E9004EE818 /* kn_control_unsel_unsel@2x.png in Resources */,
+				7CCD90AC170C6F42008055C2 /* kn_bar_chart.png in Resources */,
+				7CCD90AD170C6F42008055C2 /* kn_bar_chart@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,6 +1057,7 @@
 				7C5811C71709E1E800680ECF /* COSMSubscribable.m in Sources */,
 				7C5811CA1709E29D00680ECF /* KNUser.m in Sources */,
 				7C5811CD1709EC9300680ECF /* KNCosmService.m in Sources */,
+				7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

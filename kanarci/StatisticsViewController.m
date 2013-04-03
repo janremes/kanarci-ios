@@ -8,6 +8,8 @@
 
 #import "StatisticsViewController.h"
 #import "KNUIFactory.h"
+#import "KNBarChart.h"
+#import "KNDataManager.h"
 
 @interface StatisticsViewController ()
 
@@ -15,6 +17,7 @@
 
 @implementation StatisticsViewController {
     UISegmentedControl *_segmentedControl;
+    KNBarChart *_monthChart;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,6 +40,23 @@
     
 	// Do any additional setup after loading the view.
 }
+
+
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    
+    
+    KNDataManager *dataManager = [KNDataManager sharedInstance];
+    
+    [dataManager getMeasuresForMonth:4 year:2013];
+    
+    _monthChart = [[KNBarChart alloc] initWithFrame:CGRectMake(0, 80, 320, 320) barChartType:KNBarChartMonthType];
+    
+    [self.view addSubview:_monthChart];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

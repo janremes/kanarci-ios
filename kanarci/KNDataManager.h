@@ -68,4 +68,7 @@ extern const NSString *KNMeasureDataChangedNotification;
 -(void) saveMeasure:(Measurement *) measure;
 -(NSArray *) getAllMeasures;
 
+//statistics
+-(NSArray *) getMeasuresForMonth:(int) month year:(int) year ;
+
 @end
