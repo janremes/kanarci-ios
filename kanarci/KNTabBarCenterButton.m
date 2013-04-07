@@ -128,10 +128,10 @@
     _label.left = 3;
     _label.width = self.width - 6;
     _label.height = 12;
-    _label.bottomMargin = 3;
+    _label.bottomMargin = 1;
     
     //  Icon image view
-    _imageView.bottomMargin = _label.bottomMargin + _label.height + 1 +6;
+    _imageView.bottomMargin = _label.bottomMargin + _label.height + 1 +9;
     [_imageView centerHorizontally];
 }
 

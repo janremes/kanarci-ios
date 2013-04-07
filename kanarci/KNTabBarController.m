@@ -67,7 +67,7 @@
 		centerButton.highlightedImage = centerItem.finishedSelectedImage;
         
 		centerButton.titleText = @"měření";
-        centerButton.highlightedImage = [UIImage imageNamed:@"kn_tab_bg_active"];
+        centerButton.highlightedImage = [UIImage imageNamed:@"tab3-active"];
        // centerButton.normalImage = [UIImage imageNamed:@"tab_measure"];
         
         

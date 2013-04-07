@@ -34,7 +34,7 @@
 }
 
 -(void)awakeFromNib {
-    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab_measure"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab_measure"]];
+    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab3"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab3"]];
 }
 
 - (void)viewDidLoad

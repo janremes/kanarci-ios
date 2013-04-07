@@ -25,7 +25,7 @@
     return self;
 }
 -(void)awakeFromNib {
-     [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab_legend"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab_legend"]];
+     [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab4"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab4"]];
 }
 
 - (void)viewDidLoad

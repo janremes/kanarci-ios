@@ -29,6 +29,10 @@
     return self;
 }
 
+-(void)awakeFromNib {
+    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab2"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab2"]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

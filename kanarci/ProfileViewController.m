@@ -40,7 +40,7 @@
 }
 
 -(void)awakeFromNib {
-    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab_profile"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab_profile"]];
+    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab5"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab5"]];
     addNotificationObserver(self, measurementDataChangedWithNotification:, KNMeasureDataChangedNotification, nil);
     _dateFormatter = [[NSDateFormatter alloc] init];
     _timeFormatter = [[NSDateFormatter alloc] init];
@@ -79,6 +79,15 @@
     
     cell.dateLabel.text = [_dateFormatter stringFromDate:currentMeasure.date];
     cell.timeLabel.text = [_timeFormatter stringFromDate:currentMeasure.date];
+    
+    [cell.dateLabel sizeToFit];
+    [cell.timeLabel sizeToFit];
+    
+    cell.timeLabel.left = cell.dateLabel.right + 4;
+    cell.timeLabel.center = CGPointMake(cell.timeLabel.center.x, cell.dateLabel.center.y) ;
+    
+  //  [cell.timeLabel centerVertically];
+  //  [cell.dateLabel centerVertically];
     
     if (currentMeasure.locationDataAvailable) {
         cell.thoroughfareLabel.text = currentMeasure.thoroughfare;

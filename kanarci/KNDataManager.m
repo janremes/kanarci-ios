@@ -155,7 +155,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
         
                 
                 if ([_measurements count] < [[_dataDocument documentData] count]) {
-                    _measurements = [[NSMutableArray alloc] initWithArray:[_dataDocument documentData] copyItems:YES] ;
+                    _measurements = [[NSMutableArray alloc] initWithArray:[_dataDocument documentData] copyItems:NO] ;
                 } else if ([_measurements count] > [[_dataDocument documentData] count]) {
                     _dataDocument.documentData = [[NSMutableArray alloc] init];
                     

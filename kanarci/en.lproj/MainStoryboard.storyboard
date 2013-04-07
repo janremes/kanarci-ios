@@ -24,7 +24,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="mapa" image="tab_map.png" id="7"/>
+                    <tabBarItem key="tabBarItem" title="mapa" image="tab1.png" id="7"/>
                     <connections>
                         <outlet property="mapView" destination="Gbw-2s-18K" id="A3C-tf-OMJ"/>
                     </connections>
@@ -62,7 +62,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="legenda" image="tab_legend.png" id="pa6-8D-rYK"/>
+                    <tabBarItem key="tabBarItem" title="legenda" image="tab4.png" id="pa6-8D-rYK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaD-bE-r3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +102,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="profil" image="tab_profile.png" id="WSt-7F-afT"/>
+                    <tabBarItem key="tabBarItem" title="profil" image="tab5.png" id="WSt-7F-afT"/>
                     <connections>
                         <outlet property="_tableView" destination="PPu-fy-S4L" id="Jog-Ll-7gN"/>
                     </connections>
@@ -132,7 +132,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="statistiky" image="tab_stats.png" id="6"/>
+                    <tabBarItem key="tabBarItem" title="statistiky" image="tab2.png" id="6"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
@@ -153,7 +153,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAS-B3-QMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="666"/>
+            <point key="canvasLocation" x="1160" y="975"/>
         </scene>
         <!--Measure View Controller - Měření-->
         <scene sceneID="C73-qV-Vzm">
@@ -215,46 +215,11 @@
     </scenes>
     <resources>
         <image name="legenda_bg.png" width="320" height="342"/>
-        <image name="tab_legend.png" width="22" height="6"/>
-        <image name="tab_map.png" width="17" height="16"/>
-        <image name="tab_profile.png" width="12" height="16"/>
-        <image name="tab_stats.png" width="17" height="18"/>
+        <image name="tab1.png" width="20" height="20"/>
+        <image name="tab2.png" width="17" height="17"/>
+        <image name="tab4.png" width="21" height="21"/>
+        <image name="tab5.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="KNDescriptionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNDescriptionViewController.h"/>
-        </class>
-        <class className="KNNavigationBar" superclassName="UINavigationBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNNavigationBar.h"/>
-        </class>
-        <class className="KNNavigationItem" superclassName="UINavigationItem">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNNavigationItem.h"/>
-        </class>
-        <class className="KNTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNTabBarController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="MeasureViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeasureViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="testButtonTouched:"/>
-            </relationships>
-        </class>
-        <class className="ProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="_tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="StatisticsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

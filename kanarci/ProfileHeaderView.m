@@ -16,9 +16,9 @@
     if (self) {
         [self setBackgroundColor:[UIColor whiteColor] ];
         
-        CGFloat imageSize = 81;
+        CGFloat imageSize = 80;
         _profileImageView = [[UIImageView alloc] initWithFrame:CGRectMake((frame.size.width/2) - imageSize/2, 0, imageSize, imageSize)];
-        [_profileImageView setImage:[UIImage imageNamed:@"profile_header_me"]];
+        [_profileImageView setImage:[UIImage imageNamed:@"profile_default"]];
         [_profileImageView setBackgroundColor:[UIColor whiteColor]];
         
         [self addSubview:_profileImageView];
