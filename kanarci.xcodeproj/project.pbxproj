@@ -66,6 +66,9 @@
 		7C73F2D71711A36B00B09A8A /* tab3-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2D51711A36B00B09A8A /* tab3-active@2x.png */; };
 		7C73F2DA1711DC4400B09A8A /* profile_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2D81711DC4400B09A8A /* profile_default.png */; };
 		7C73F2DB1711DC4400B09A8A /* profile_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2D91711DC4400B09A8A /* profile_default@2x.png */; };
+		7C73F2DE1712101300B09A8A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2DC1712101300B09A8A /* logo.png */; };
+		7C73F2DF1712101300B09A8A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2DD1712101300B09A8A /* logo@2x.png */; };
+		7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C73F2E21712116A00B09A8A /* StartViewController.m */; };
 		7C9074BB16F1261E00ED3DCD /* tab_legend.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B116F1261E00ED3DCD /* tab_legend.png */; };
 		7C9074BC16F1261F00ED3DCD /* tab_measure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B216F1261E00ED3DCD /* tab_measure.png */; };
 		7C9074BD16F1261F00ED3DCD /* tab_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9074B316F1261E00ED3DCD /* tab_profile.png */; };
@@ -259,6 +262,10 @@
 		7C73F2D51711A36B00B09A8A /* tab3-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab3-active@2x.png"; sourceTree = "<group>"; };
 		7C73F2D81711DC4400B09A8A /* profile_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_default.png; sourceTree = "<group>"; };
 		7C73F2D91711DC4400B09A8A /* profile_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_default@2x.png"; sourceTree = "<group>"; };
+		7C73F2DC1712101300B09A8A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		7C73F2DD1712101300B09A8A /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		7C73F2E11712116A00B09A8A /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		7C73F2E21712116A00B09A8A /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		7C9074B116F1261E00ED3DCD /* tab_legend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_legend.png; sourceTree = "<group>"; };
 		7C9074B216F1261E00ED3DCD /* tab_measure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_measure.png; sourceTree = "<group>"; };
 		7C9074B316F1261E00ED3DCD /* tab_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_profile.png; sourceTree = "<group>"; };
@@ -483,6 +490,7 @@
 		7C365F5116ED36F0001BC05C /* kanarci */ = {
 			isa = PBXGroup;
 			children = (
+				7C73F2E01712114B00B09A8A /* Start */,
 				7CF0820B17086575004EE818 /* Statistics */,
 				7CC0B2BF17010F16007752CA /* Legend */,
 				7CBBB4F716FCDBAB0027E4C5 /* Data */,
@@ -562,9 +570,20 @@
 			name = Cosm;
 			sourceTree = "<group>";
 		};
+		7C73F2E01712114B00B09A8A /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				7C73F2E11712116A00B09A8A /* StartViewController.h */,
+				7C73F2E21712116A00B09A8A /* StartViewController.m */,
+			);
+			name = Start;
+			sourceTree = "<group>";
+		};
 		7C9074AF16F1260600ED3DCD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7C73F2DC1712101300B09A8A /* logo.png */,
+				7C73F2DD1712101300B09A8A /* logo@2x.png */,
 				7C73F2D81711DC4400B09A8A /* profile_default.png */,
 				7C73F2D91711DC4400B09A8A /* profile_default@2x.png */,
 				7C73F2BE1711992600B09A8A /* icon_114.png */,
@@ -1042,6 +1061,8 @@
 				7C73F2D71711A36B00B09A8A /* tab3-active@2x.png in Resources */,
 				7C73F2DA1711DC4400B09A8A /* profile_default.png in Resources */,
 				7C73F2DB1711DC4400B09A8A /* profile_default@2x.png in Resources */,
+				7C73F2DE1712101300B09A8A /* logo.png in Resources */,
+				7C73F2DF1712101300B09A8A /* logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,6 +1143,7 @@
 				7C5811CA1709E29D00680ECF /* KNUser.m in Sources */,
 				7C5811CD1709EC9300680ECF /* KNCosmService.m in Sources */,
 				7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */,
+				7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,4 +27,7 @@
 
 
 + (UISegmentedControl *)segmentedControlWithItems:(NSArray *)items;
+
++ (UIImage *)imageFromColor:(UIColor *)color ;
++ (UIImage *)imageFromColorButton:(UIColor *)color;
 @end

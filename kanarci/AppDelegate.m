@@ -26,8 +26,8 @@
     [KNUser sharedInstance];
     
     // Select the center tab of our initial tab bar controller:
-    UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
-    tabBar.selectedIndex = 1;
+//    UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+//    tabBar.selectedIndex = 1;
     
     // Override point for customization after application launch.
     return YES;
