@@ -54,6 +54,7 @@
  UIImage *image = [UIImage imageNamed: @"navbar_bg"];
  [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     
+    
 
     
   
@@ -74,6 +75,8 @@
     CGRect barFrame = self.frame;
     barFrame.size.height = 58.0;
     self.frame = barFrame;
+    
+    
     
 
 }

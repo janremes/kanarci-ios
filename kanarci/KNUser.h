@@ -18,6 +18,8 @@
 @property (nonatomic,strong) NSString *password;
 @property(nonatomic, readonly) NSString *userId;
 
+@property(nonatomic,assign) BOOL needsLogin;
+
 
 + (KNUser *) sharedInstance ;
 

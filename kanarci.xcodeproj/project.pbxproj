@@ -161,6 +161,7 @@
 		7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD90A7170C5460008055C2 /* KNBarChart.m */; };
 		7CCD90AC170C6F42008055C2 /* kn_bar_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */; };
 		7CCD90AD170C6F42008055C2 /* kn_bar_chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */; };
+		7CDC2D911715AB84009AAF05 /* KNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC2D901715AB84009AAF05 /* KNLoginViewController.m */; };
 		7CF0820A1708630C004EE818 /* KNSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF082091708630C004EE818 /* KNSegmentedButton.m */; };
 		7CF0820E1708658F004EE818 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0820D1708658F004EE818 /* StatisticsViewController.m */; };
 		7CF0821417086DA7004EE818 /* kn_control_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821017086DA7004EE818 /* kn_control_active.png */; };
@@ -392,6 +393,8 @@
 		7CCD90A7170C5460008055C2 /* KNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBarChart.m; sourceTree = "<group>"; };
 		7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_bar_chart.png; sourceTree = "<group>"; };
 		7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_bar_chart@2x.png"; sourceTree = "<group>"; };
+		7CDC2D8F1715AB84009AAF05 /* KNLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNLoginViewController.h; sourceTree = "<group>"; };
+		7CDC2D901715AB84009AAF05 /* KNLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNLoginViewController.m; sourceTree = "<group>"; };
 		7CF082081708630C004EE818 /* KNSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNSegmentedButton.h; sourceTree = "<group>"; };
 		7CF082091708630C004EE818 /* KNSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNSegmentedButton.m; sourceTree = "<group>"; };
 		7CF0820C1708658F004EE818 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
@@ -575,6 +578,8 @@
 			children = (
 				7C73F2E11712116A00B09A8A /* StartViewController.h */,
 				7C73F2E21712116A00B09A8A /* StartViewController.m */,
+				7CDC2D8F1715AB84009AAF05 /* KNLoginViewController.h */,
+				7CDC2D901715AB84009AAF05 /* KNLoginViewController.m */,
 			);
 			name = Start;
 			sourceTree = "<group>";
@@ -1144,6 +1149,7 @@
 				7C5811CD1709EC9300680ECF /* KNCosmService.m in Sources */,
 				7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */,
 				7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */,
+				7CDC2D911715AB84009AAF05 /* KNLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

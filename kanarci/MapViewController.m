@@ -32,7 +32,7 @@
 }
 
 -(void)awakeFromNib {
-    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab_map"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab_map"]];
+    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab1"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab1"]];
 }
 
 - (void)viewDidLoad
@@ -66,20 +66,35 @@
 
 -(void)updateMapView {
     if(self.mapView.annotations) [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    
+    
     if(self.annotations) {
         [self.mapView addAnnotations:self.annotations];
+        
+        if ([[KNDataManager sharedInstance] positionLoaded]) {
+            
+            CLLocation *userLocation = [[KNDataManager sharedInstance] location];
+            
+            MKCoordinateSpan span = {.latitudeDelta =  3, .longitudeDelta =  3};
+            MKCoordinateRegion region = {userLocation.coordinate, span};
+            [self.mapView setRegion:region];
+            
+        } else {
+
+            MKCoordinateRegion viewRegion;
+            
+            
+            MKMapRect region = [self mapRectForAnnotations:[NSArray arrayWithArray:self.annotations]];
+            viewRegion = MKCoordinateRegionForMapRect(region);
+            
+            
+            MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
+            
+            [_mapView setRegion:adjustedRegion animated:YES];
+        }
     
-        MKCoordinateRegion viewRegion;
-        
-        
-        MKMapRect region = [self mapRectForAnnotations:[NSArray arrayWithArray:self.annotations]];
-        viewRegion = MKCoordinateRegionForMapRect(region);
-        
-        
-        MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
-        
-        [_mapView setRegion:adjustedRegion animated:YES];
-        [_mapView setShowsUserLocation:true];
+
     
 
         

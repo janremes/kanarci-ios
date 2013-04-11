@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "KNDataManager.h"
 #import "KNUser.h"
+#import "KNNavigationBar.h"
 
 
 @implementation AppDelegate
@@ -16,14 +17,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    
-    
+
+
     
     //Initialize data manager
     [KNDataManager sharedInstance];
     
     //Initialize user data
     [KNUser sharedInstance];
+    
+    [self customizeAppearance];
+    
+    //TODO: present modal view controller
+    if ([[KNUser sharedInstance] needsLogin]) {
+      // UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+        
+    }
     
     // Select the center tab of our initial tab bar controller:
 //    UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
@@ -62,16 +71,18 @@
 
 - (void)customizeAppearance {
     
-	//  Customize navigation bar
-	// Customize the title text for *all* UINavigationBars
-	[[UINavigationBar appearance] setTitleTextAttributes:@{
-                               UITextAttributeTextColor : [Theme defaultTextColor],
-                         UITextAttributeTextShadowColor : [UIColor clearColor],
-                                    UITextAttributeFont : [Theme boldAppFontOfSize:20.0]}];
+//	//  Customize navigation bar
+//	// Customize the title text for *all* UINavigationBars
+//	[[UINavigationBar appearance] setTitleTextAttributes:@{
+//                               UITextAttributeTextColor : [Theme defaultTextColor],
+//                         UITextAttributeTextShadowColor : [UIColor clearColor],
+//                                    UITextAttributeFont : [Theme boldAppFontOfSize:20.0]}];
+//    
+//	//  Custom navigation bar background
+//	[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar_bg"] forBarMetrics:UIBarMetricsDefault];
+//    
     
-	//  Custom navigation bar background
-	[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar_bg"] forBarMetrics:UIBarMetricsDefault];
-    
+    [[UIBarButtonItem appearanceWhenContainedIn:[KNNavigationBar class], nil] setBackButtonBackgroundVerticalPositionAdjustment:-8 forBarMetrics:UIBarMetricsDefault];
    
     
     
@@ -96,6 +107,9 @@
                          UITextAttributeTextShadowColor : [UIColor clearColor]
      }
 	                                            forState:UIControlStateDisabled];
+    
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     
     
 //	//  Bar button item

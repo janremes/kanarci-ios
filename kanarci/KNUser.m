@@ -26,7 +26,7 @@
 	dispatch_once(&onceToken, ^{
         if (instance == nil) {
 	    	instance = [KNUser new];
-
+            instance.needsLogin = YES;
             
         }
         
@@ -110,6 +110,7 @@
     
     return YES;
 }
+
 
 
 - (void) saveState: (NSNotification *) notification {

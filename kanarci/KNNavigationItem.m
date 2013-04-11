@@ -30,6 +30,7 @@
     
     
     [self setTitleView:_titleLabel];
+
     
 
     

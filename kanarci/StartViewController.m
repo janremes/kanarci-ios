@@ -15,7 +15,6 @@
 @end
 
 @implementation StartViewController
-@synthesize loginButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,43 +29,19 @@
 {
     [super viewDidLoad];
     
-    //    self.layer.shadowOpacity = 0.3f;
-   // self.layer.shadowRadius = 4.0f;
-  //  self.layer.shadowOffset = CGSizeMake(0, 3.0f);
     
-    [self.navigationController.navigationBar setHidden:YES];
-    UIImage *whiteImage = [KNUIFactory imageFromColorButton:[UIColor whiteColor]];
-     UIImage *yellowImage = [KNUIFactory imageFromColorButton:[UIColor colorWithRed:255.0/255.0 green:244.0/255.0 blue:101.0/255.0 alpha:1.0]];
-    [self.loginButton setBackgroundImage:whiteImage forState:UIControlStateNormal];
-    [self.registerButton setBackgroundImage:whiteImage forState:UIControlStateNormal];
-    [self.loginButton setBackgroundImage:yellowImage forState:UIControlStateHighlighted];
-    [self.registerButton setBackgroundImage:yellowImage forState:UIControlStateHighlighted];
+    [self.navigationController setNavigationBarHidden:YES];
     
-    //[self.loginButton setAdjustsImageWhenHighlighted:NO];
-    
-    
-    
-  //  [self.loginButton setTitle:@"Přihlaš se" forState:UIControlStateNormal];
-    
-
-    self.registerButton.layer.masksToBounds = NO;
-    self.registerButton.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.registerButton.layer.shadowRadius = 6.0f;
-    self.registerButton.layer.shadowOpacity = 0.6f;
-    self.registerButton.layer.shadowOffset = CGSizeMake(0, 0);
-    [self.registerButton.layer setShadowPath:[[UIBezierPath
-                                  bezierPathWithRect:self.registerButton.bounds] CGPath]];
-    
-    self.loginButton.layer.masksToBounds = NO;
-    self.loginButton.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.loginButton.layer.shadowRadius = 6.0f;
-    self.loginButton.layer.shadowOpacity = 0.6f;
-    self.loginButton.layer.shadowOffset = CGSizeMake(0, 0);
-    [self.loginButton.layer setShadowPath:[[UIBezierPath
-                                  bezierPathWithRect:self.loginButton.bounds] CGPath]];
+    [KNUIFactory setupMenuButon:self.registerButton];
+    [KNUIFactory setupMenuButon:self.loginButton];
     
     
 	// Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,6 +49,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 - (void)viewDidUnload {
     [self setRegisterButton:nil];

@@ -24,6 +24,7 @@
  @returns Prepared label
  */
 + (UILabel *)labelWithFontSize:(CGFloat)size bold:(BOOL)bold;
++(void) setupMenuButon:(UIButton *) button;
 
 
 + (UISegmentedControl *)segmentedControlWithItems:(NSArray *)items;

@@ -12,6 +12,27 @@
 @implementation KNUIFactory
 
 
++(void) setupMenuButon:(UIButton *) button {
+
+    
+    UIImage *whiteImage = [self imageFromColorButton:[UIColor whiteColor]];
+    UIImage *yellowImage = [self imageFromColorButton:[UIColor colorWithRed:255.0/255.0 green:244.0/255.0 blue:101.0/255.0 alpha:1.0]];
+    [button setBackgroundImage:whiteImage forState:UIControlStateNormal];
+    [button setBackgroundImage:yellowImage forState:UIControlStateHighlighted];
+
+    button.layer.masksToBounds = NO;
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowRadius = 6.0f;
+    button.layer.shadowOpacity = 0.6f;
+    button.layer.shadowOffset = CGSizeMake(0, 0);
+
+    [button setAdjustsImageWhenHighlighted:NO];
+    
+    
+
+}
+
+
 
 + (UILabel *)labelWithFontSize:(CGFloat)size bold:(BOOL)bold
 {
