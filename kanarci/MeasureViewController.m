@@ -11,6 +11,8 @@
 #import "KNUIFactory.h"
 #import "KNMeasureHelper.h"
 #import "KNDataManager.h"
+#import "KNUser.h"
+#import "KNLoginViewController.h"
 
 @interface MeasureViewController ()
 
@@ -37,9 +39,27 @@
     [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab3"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab3"]];
 }
 
+-(void) checkLogin {
+    
+    if ([[KNUser sharedInstance] needsLogin]) {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
+                                                                 bundle: nil];
+        
+        
+        UINavigationController *navControler = (UINavigationController *)  [mainStoryboard instantiateViewControllerWithIdentifier:@"loginRegisterNavController"];
+        
+        [self presentViewController:navControler animated:NO completion:nil];
+    }
+    
+}
+
 - (void)viewDidLoad
+
 {
     [super viewDidLoad];
+    
+    [self checkLogin];
+    
     
     CGFloat descLabelSize = 15.0;
     

@@ -38,7 +38,7 @@
 + (void) postMeasurementToCosm:(Measurement *) measurement {
 
     
-	NSString *APIPath;
+//	NSString *APIPath;
     
 
     NSURL *url = [NSURL URLWithString:@"http://api.cosm.com/v2/feeds/122067/datastreams/prach_test/datapoints/?key=igfescVEn9RuG-L1_1ZFdVUZ2vSSAKxOVzM5WmZkWFR0RT0g"];

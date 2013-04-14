@@ -112,6 +112,17 @@
 }
 
 
+-(BOOL) needsLogin {
+    
+    if( defaultsValue(kUserIdDefaultsKey) ) {
+        _needsLogin = NO;
+    } else {
+        _needsLogin = YES;
+    }
+    
+    return _needsLogin;
+}
+
 
 - (void) saveState: (NSNotification *) notification {
     

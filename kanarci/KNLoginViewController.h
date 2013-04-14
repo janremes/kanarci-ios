@@ -15,4 +15,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 
+- (IBAction)loginButtonClicked:(id)sender;
+
 @end

@@ -160,7 +160,7 @@
 - (void) createRoundedCorners {
     
 //	//  Create rounded borders depending on state
-	CGFloat cornerRadius = 4;
+//	CGFloat cornerRadius = 4;
 	CGFloat bottomRadius = 0;
     
 	CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;

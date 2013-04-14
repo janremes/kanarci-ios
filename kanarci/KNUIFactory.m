@@ -79,7 +79,7 @@
 	//  Customize background
 	UIImage *activeImage =  [UIImage imageNamed:@"kn_control_active"];
 	UIImage *inactiveImage = [UIImage imageNamed:@"kn_control_passive"];
-	UIImage *spaceImage = [[self class] imageFromColor:[UIColor clearColor]];
+//	UIImage *spaceImage = [[self class] imageFromColor:[UIColor clearColor]];
     UIImage *selUnselImage = [UIImage imageNamed:@"kn_control__sel_unsel"];
     UIImage *unselSselImage = [UIImage imageNamed:@"kn_control__unsel_sel"];
      UIImage *unselSUnselImage = [UIImage imageNamed:@"kn_control_unsel_unsel"];

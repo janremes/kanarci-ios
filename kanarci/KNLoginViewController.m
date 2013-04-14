@@ -9,6 +9,7 @@
 #import "KNLoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "KNUIFactory.h"
+#import "KNUser.h"
 
 @interface KNLoginViewController ()
 
@@ -63,5 +64,30 @@
     [self setPasswordTextField:nil];
     [self setLoginButton:nil];
     [super viewDidUnload];
+}
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == _emailTextField) {
+        [textField resignFirstResponder];
+        [_passwordTextField becomeFirstResponder];
+    } else if (textField == _passwordTextField) {
+
+        [self loginButtonClicked:self];
+    }
+    return YES;
+}
+
+
+- (IBAction)loginButtonClicked:(id)sender {
+    
+    if ([_passwordTextField.text length] > 1 && [_emailTextField.text length] > 1 ) {
+        [[KNUser sharedInstance] setUserId:_emailTextField.text andPassword:_passwordTextField.text error:nil];
+         [self dismissModalViewControllerAnimated:YES];
+        
+    }
+    
+   
 }
 @end

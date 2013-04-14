@@ -19,6 +19,7 @@
     
 
 
+
     
     //Initialize data manager
     [KNDataManager sharedInstance];
@@ -28,17 +29,10 @@
     
     [self customizeAppearance];
     
-    //TODO: present modal view controller
-    if ([[KNUser sharedInstance] needsLogin]) {
-      // UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
-        
-    }
-    
-    // Select the center tab of our initial tab bar controller:
-//    UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
-//    tabBar.selectedIndex = 1;
-    
-    // Override point for customization after application launch.
+
+     UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+    tabBar.selectedIndex = 2;
+
     return YES;
 }
 							

@@ -90,21 +90,21 @@ return [StationMeasurement titleForMeasurement:self.name];
 }
 
 -(NSString*)getFormatedValue {
-    float value = [self.value floatValue];
+    float valueLocal = [self.value floatValue];
     NSString *formatedString; 
     // its int ?
-    if(value == round(value)) {
-        formatedString = [NSString stringWithFormat:@"%d",(int)value];
-    } else if (value >= 1000) {
-        if( value/1000.0 == round(value/1000.0) ) {
-            formatedString = [NSString stringWithFormat:@"%2.0fk",value/1000.0];      
+    if(valueLocal == round(valueLocal)) {
+        formatedString = [NSString stringWithFormat:@"%d",(int)valueLocal];
+    } else if (valueLocal >= 1000) {
+        if( valueLocal/1000.0 == round(valueLocal/1000.0) ) {
+            formatedString = [NSString stringWithFormat:@"%2.0fk",valueLocal/1000.0];      
         } else {
-            formatedString = [NSString stringWithFormat:@"%2.2fk",value/1000.0];      
+            formatedString = [NSString stringWithFormat:@"%2.2fk",valueLocal/1000.0];      
         }    
     } else {
-        formatedString = [NSString stringWithFormat:@"%2.1f",value];
+        formatedString = [NSString stringWithFormat:@"%2.1f",valueLocal];
     }
-    NSLog(formatedString);
+    NSLog(@"%@",formatedString);
     formatedString = [formatedString stringByReplacingOccurrencesOfString:@"." withString:@","];
 //    formatedString = @"0.55k";
     return formatedString;
@@ -116,14 +116,14 @@ return [StationMeasurement titleForMeasurement:self.name];
         return 0;
     }
     
-    float value = [self.value floatValue];
+    float valueLocal = [self.value floatValue];
     int quality = 0; float lastValue;
     for(NSNumber *level in [self getQualityLevels]) {
         quality++;
-        if(value < [level floatValue]) return quality;
+        if(valueLocal < [level floatValue]) return quality;
         lastValue = [level floatValue];
     }
-    if(value > lastValue) {
+    if(valueLocal > lastValue) {
         return 6;
     }
     

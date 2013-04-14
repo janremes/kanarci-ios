@@ -23,4 +23,7 @@
 
 + (KNUser *) sharedInstance ;
 
+
+- (BOOL)setUserId:(NSString *)userId andPassword:(NSString *)password error:(NSError **)error;
+
 @end

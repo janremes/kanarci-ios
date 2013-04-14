@@ -174,6 +174,7 @@
 		7CF0821F17086F23004EE818 /* kn_control__unsel_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821B17086F23004EE818 /* kn_control__unsel_sel@2x.png */; };
 		7CF08222170870E9004EE818 /* kn_control_unsel_unsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF08220170870E9004EE818 /* kn_control_unsel_unsel.png */; };
 		7CF08223170870E9004EE818 /* kn_control_unsel_unsel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF08221170870E9004EE818 /* kn_control_unsel_unsel@2x.png */; };
+		7CF37451171B004500505D65 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF37450171B004500505D65 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -409,6 +410,7 @@
 		7CF0821B17086F23004EE818 /* kn_control__unsel_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control__unsel_sel@2x.png"; sourceTree = "<group>"; };
 		7CF08220170870E9004EE818 /* kn_control_unsel_unsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_control_unsel_unsel.png; sourceTree = "<group>"; };
 		7CF08221170870E9004EE818 /* kn_control_unsel_unsel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control_unsel_unsel@2x.png"; sourceTree = "<group>"; };
+		7CF37450171B004500505D65 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +418,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF37451171B004500505D65 /* MobileCoreServices.framework in Frameworks */,
 				7C5811A31709E18800680ECF /* CFNetwork.framework in Frameworks */,
 				7C5811A11709E18100680ECF /* libicucore.dylib in Frameworks */,
 				7CBBB4FC16FDB5B80027E4C5 /* Security.framework in Frameworks */,
@@ -476,8 +479,9 @@
 		7C365F4A16ED36F0001BC05C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7C5811A21709E18800680ECF /* CFNetwork.framework */,
 				7C5811A01709E18100680ECF /* libicucore.dylib */,
+				7CF37450171B004500505D65 /* MobileCoreServices.framework */,
+				7C5811A21709E18800680ECF /* CFNetwork.framework */,
 				7CBBB4FB16FDB5B80027E4C5 /* Security.framework */,
 				7CBBB4C916FCD3820027E4C5 /* QuartzCore.framework */,
 				7CBBB4C716FCD37C0027E4C5 /* CoreLocation.framework */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ot8-WU-gw4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
@@ -158,7 +158,7 @@
         <!--Measure View Controller - Měření-->
         <scene sceneID="C73-qV-Vzm">
             <objects>
-                <viewController title="Měření" id="vUn-4z-iPv" customClass="MeasureViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeasureController" title="Měření" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vUn-4z-iPv" customClass="MeasureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cf1-Tj-MoL">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -190,7 +190,7 @@
         <!--Start View Controller-->
         <scene sceneID="yqY-hy-iN1">
             <objects>
-                <viewController id="aQu-Qt-qAR" customClass="StartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartController" id="aQu-Qt-qAR" customClass="StartViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AkE-bA-I5V">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -276,18 +276,27 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="33w-Q1-N1x" eventType="touchUpInside" id="aIJ-Rg-5vF"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="heslo" minimumFontSize="17" id="XU7-pU-vvd">
                                 <rect key="frame" x="56" y="66" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="33w-Q1-N1x" id="3jc-rb-v0X"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="17" id="vT7-f8-2sh">
                                 <rect key="frame" x="56" y="28" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="33w-Q1-N1x" id="CMi-Dt-Oh4"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -307,7 +316,8 @@
         <!--Navigation Controller-->
         <scene sceneID="frq-0J-LLt">
             <objects>
-                <navigationController definesPresentationContext="YES" id="ot8-WU-gw4" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUx-W3-kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="loginRegisterNavController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ot8-WU-gw4" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XxB-vY-3rn" customClass="KNNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
@@ -316,7 +326,6 @@
                         <segue destination="aQu-Qt-qAR" kind="relationship" relationship="rootViewController" id="rpU-gA-Sqm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vUx-W3-kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-754" y="-875"/>
         </scene>
@@ -361,6 +370,7 @@
         <class className="KNLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KNLoginViewController.h"/>
             <relationships>
+                <relationship kind="action" name="loginButtonClicked:"/>
                 <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
@@ -378,6 +388,7 @@
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
             <relationships>
+                <relationship kind="action" name="showStation:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
