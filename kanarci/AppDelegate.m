@@ -73,10 +73,10 @@
 //                                    UITextAttributeFont : [Theme boldAppFontOfSize:20.0]}];
 //    
 //	//  Custom navigation bar background
-//	[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar_bg"] forBarMetrics:UIBarMetricsDefault];
-//    
+//	[[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
+//
     
-    [[UIBarButtonItem appearanceWhenContainedIn:[KNNavigationBar class], nil] setBackButtonBackgroundVerticalPositionAdjustment:-8 forBarMetrics:UIBarMetricsDefault];
+//    [[UIBarButtonItem appearanceWhenContainedIn:[KNNavigationBar class], nil] setBackButtonBackgroundVerticalPositionAdjustment:-8 forBarMetrics:UIBarMetricsDefault];
    
     
     
@@ -103,7 +103,7 @@
 	                                            forState:UIControlStateDisabled];
     
     
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+ //   [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     
     
 //	//  Bar button item
@@ -134,7 +134,7 @@
                                   };
     
 	[[UITabBarItem appearance] setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
-    
+       
 	/* [NSDictionary dictionaryWithObjectsAndKeys:
      [Theme boldAppFontOfSize: [Theme defaultControlsTextSize]], UITextAttributeFont,
      RGBCOLOR(74, 74, 74), UITextAttributeTextColor,

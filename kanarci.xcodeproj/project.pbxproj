@@ -162,6 +162,11 @@
 		7CCD90AC170C6F42008055C2 /* kn_bar_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */; };
 		7CCD90AD170C6F42008055C2 /* kn_bar_chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */; };
 		7CDC2D911715AB84009AAF05 /* KNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC2D901715AB84009AAF05 /* KNLoginViewController.m */; };
+		7CE0965D17F61B54009BB15B /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CE0965B17F61B54009BB15B /* settings.png */; };
+		7CE0965E17F61B54009BB15B /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CE0965C17F61B54009BB15B /* settings@2x.png */; };
+		7CE0966117F61FFB009BB15B /* KNMeasureSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0966017F61FFB009BB15B /* KNMeasureSettingsViewController.m */; };
+		7CE0966517F62775009BB15B /* MeasurementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0966417F62775009BB15B /* MeasurementDetailViewController.m */; };
+		7CE0966817F62A9E009BB15B /* PinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0966717F62A9E009BB15B /* PinAnnotation.m */; };
 		7CF0820A1708630C004EE818 /* KNSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF082091708630C004EE818 /* KNSegmentedButton.m */; };
 		7CF0820E1708658F004EE818 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0820D1708658F004EE818 /* StatisticsViewController.m */; };
 		7CF0821417086DA7004EE818 /* kn_control_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821017086DA7004EE818 /* kn_control_active.png */; };
@@ -178,7 +183,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C0E4D89170351BE00B130E5 /* kanarci.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = kanarci.entitlements; sourceTree = "<group>"; };
 		7C0E4D8A170352EC00B130E5 /* KNMeasureDataDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureDataDocument.h; sourceTree = "<group>"; };
 		7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureDataDocument.m; sourceTree = "<group>"; };
 		7C16954D17005A2B00A8A2F0 /* KNMeasureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureHelper.h; sourceTree = "<group>"; };
@@ -396,6 +400,15 @@
 		7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_bar_chart@2x.png"; sourceTree = "<group>"; };
 		7CDC2D8F1715AB84009AAF05 /* KNLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNLoginViewController.h; sourceTree = "<group>"; };
 		7CDC2D901715AB84009AAF05 /* KNLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNLoginViewController.m; sourceTree = "<group>"; };
+		7CE0965B17F61B54009BB15B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		7CE0965C17F61B54009BB15B /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		7CE0965F17F61FFB009BB15B /* KNMeasureSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureSettingsViewController.h; sourceTree = "<group>"; };
+		7CE0966017F61FFB009BB15B /* KNMeasureSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureSettingsViewController.m; sourceTree = "<group>"; };
+		7CE0966217F6243D009BB15B /* kanarci.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = kanarci.entitlements; sourceTree = "<group>"; };
+		7CE0966317F62775009BB15B /* MeasurementDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementDetailViewController.h; sourceTree = "<group>"; };
+		7CE0966417F62775009BB15B /* MeasurementDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementDetailViewController.m; sourceTree = "<group>"; };
+		7CE0966617F62A9E009BB15B /* PinAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinAnnotation.h; sourceTree = "<group>"; };
+		7CE0966717F62A9E009BB15B /* PinAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinAnnotation.m; sourceTree = "<group>"; };
 		7CF082081708630C004EE818 /* KNSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNSegmentedButton.h; sourceTree = "<group>"; };
 		7CF082091708630C004EE818 /* KNSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNSegmentedButton.m; sourceTree = "<group>"; };
 		7CF0820C1708658F004EE818 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
@@ -497,6 +510,7 @@
 		7C365F5116ED36F0001BC05C /* kanarci */ = {
 			isa = PBXGroup;
 			children = (
+				7CE0966217F6243D009BB15B /* kanarci.entitlements */,
 				7C73F2E01712114B00B09A8A /* Start */,
 				7CF0820B17086575004EE818 /* Statistics */,
 				7CC0B2BF17010F16007752CA /* Legend */,
@@ -520,7 +534,6 @@
 		7C365F5216ED36F0001BC05C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C0E4D89170351BE00B130E5 /* kanarci.entitlements */,
 				7C365F5316ED36F0001BC05C /* kanarci-Info.plist */,
 				7C365F5416ED36F0001BC05C /* InfoPlist.strings */,
 				7C365F5716ED36F0001BC05C /* main.m */,
@@ -591,6 +604,8 @@
 		7C9074AF16F1260600ED3DCD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7CE0965B17F61B54009BB15B /* settings.png */,
+				7CE0965C17F61B54009BB15B /* settings@2x.png */,
 				7C73F2DC1712101300B09A8A /* logo.png */,
 				7C73F2DD1712101300B09A8A /* logo@2x.png */,
 				7C73F2D81711DC4400B09A8A /* profile_default.png */,
@@ -702,6 +717,10 @@
 				7C9074E816F1E59500ED3DCD /* MeasurementCell.h */,
 				7C9074E916F1E59500ED3DCD /* MeasurementCell.m */,
 				7C9074EB16F2787F00ED3DCD /* MeasurementCell.xib */,
+				7CE0966317F62775009BB15B /* MeasurementDetailViewController.h */,
+				7CE0966417F62775009BB15B /* MeasurementDetailViewController.m */,
+				7CE0966617F62A9E009BB15B /* PinAnnotation.h */,
+				7CE0966717F62A9E009BB15B /* PinAnnotation.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -859,6 +878,8 @@
 				7CBBB53E16FE42B10027E4C5 /* MeasurementManager.m */,
 				7C16954D17005A2B00A8A2F0 /* KNMeasureHelper.h */,
 				7C16954E17005A2C00A8A2F0 /* KNMeasureHelper.m */,
+				7CE0965F17F61FFB009BB15B /* KNMeasureSettingsViewController.h */,
+				7CE0966017F61FFB009BB15B /* KNMeasureSettingsViewController.m */,
 			);
 			name = Measure;
 			sourceTree = "<group>";
@@ -947,6 +968,19 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Jan Remes";
+				TargetAttributes = {
+					7C365F4716ED36F0001BC05C = {
+						DevelopmentTeam = 7R765P5R84;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 7C365F4316ED36F0001BC05C /* Build configuration list for PBXProject "kanarci" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1023,6 +1057,7 @@
 				7CBBB53916FE32F70027E4C5 /* air_quality3@2x.png in Resources */,
 				7CBBB53A16FE32F70027E4C5 /* air_quality4@2x.png in Resources */,
 				7CBBB53B16FE32F70027E4C5 /* air_quality5@2x.png in Resources */,
+				7CE0965E17F61B54009BB15B /* settings@2x.png in Resources */,
 				7CBBB53C16FE32F70027E4C5 /* air_quality6@2x.png in Resources */,
 				7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */,
 				7C1695601700783900A8A2F0 /* kanar6.png in Resources */,
@@ -1070,6 +1105,7 @@
 				7C73F2D71711A36B00B09A8A /* tab3-active@2x.png in Resources */,
 				7C73F2DA1711DC4400B09A8A /* profile_default.png in Resources */,
 				7C73F2DB1711DC4400B09A8A /* profile_default@2x.png in Resources */,
+				7CE0965D17F61B54009BB15B /* settings.png in Resources */,
 				7C73F2DE1712101300B09A8A /* logo.png in Resources */,
 				7C73F2DF1712101300B09A8A /* logo@2x.png in Resources */,
 			);
@@ -1128,8 +1164,10 @@
 				7CBBB52016FE2ED80027E4C5 /* MeasureBar.m in Sources */,
 				7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */,
 				7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */,
+				7CE0966117F61FFB009BB15B /* KNMeasureSettingsViewController.m in Sources */,
 				7C16954F17005A2C00A8A2F0 /* KNMeasureHelper.m in Sources */,
 				7CC0B2B6170109F6007752CA /* KNTabBarController.m in Sources */,
+				7CE0966817F62A9E009BB15B /* PinAnnotation.m in Sources */,
 				7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */,
 				7C0E4D8C170352EC00B130E5 /* KNMeasureDataDocument.m in Sources */,
 				7CC9362A1704E3E8008E903C /* UIView+FFAdditions.m in Sources */,
@@ -1154,6 +1192,7 @@
 				7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */,
 				7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */,
 				7CDC2D911715AB84009AAF05 /* KNLoginViewController.m in Sources */,
+				7CE0966517F62775009BB15B /* MeasurementDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,12 +1277,15 @@
 		7C365F7716ED36F1001BC05C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = kanarci/kanarci.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jan Remes (CXME58UJUP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Remes (CXME58UJUP)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanarci/kanarci-Prefix.pch";
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F449484A-1872-4489-A40C-B2F3F777A104";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F449484A-1872-4489-A40C-B2F3F777A104";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1251,12 +1293,15 @@
 		7C365F7816ED36F1001BC05C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = kanarci/kanarci.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jan Remes (CXME58UJUP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Remes (CXME58UJUP)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanarci/kanarci-Prefix.pch";
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F449484A-1872-4489-A40C-B2F3F777A104";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F449484A-1872-4489-A40C-B2F3F777A104";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

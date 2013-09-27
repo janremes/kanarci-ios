@@ -26,10 +26,6 @@
     return self;
 }
 
--(void)awakeFromNib {
-   
-    
-}
 
 - (void)viewDidLoad
 {

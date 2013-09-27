@@ -113,9 +113,10 @@
     //  Create label fot the title text
     _label = [KNUIFactory labelWithFontSize:10 bold:NO];
     [_label setTextColor:[UIColor whiteColor]];
-    [_label setFont:[UIFont boldSystemFontOfSize:10.0]];
+    [_label setFont:[UIFont systemFontOfSize:10.0]];
     _label.textAlignment = UITextAlignmentCenter;
     
+  //  self.showsTouchWhenHighlighted = YES;
     
    // [_label setBackgroundColor:[UIColor blackColor]];
     

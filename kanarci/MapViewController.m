@@ -32,7 +32,7 @@
 }
 
 -(void)awakeFromNib {
-    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab1"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab1"]];
+  
 }
 
 - (void)viewDidLoad
@@ -106,7 +106,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-
+    [self.navigationController setNavigationBarHidden:YES];
      
     NSDate *lastStationLoadTime = [[KNDataManager sharedInstance] stationsLoadTime];
     

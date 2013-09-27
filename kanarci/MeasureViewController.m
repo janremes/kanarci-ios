@@ -35,22 +35,24 @@
     return self;
 }
 
--(void)awakeFromNib {
-    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab3"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab3"]];
-}
+
 
 -(void) checkLogin {
     
-    if ([[KNUser sharedInstance] needsLogin]) {
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
-                                                                 bundle: nil];
-        
-        
-        UINavigationController *navControler = (UINavigationController *)  [mainStoryboard instantiateViewControllerWithIdentifier:@"loginRegisterNavController"];
-        
-        [self presentViewController:navControler animated:NO completion:nil];
-    }
+//    if ([[KNUser sharedInstance] needsLogin]) {
+//        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
+//                                                                 bundle: nil];
+//        
+//        
+//        UINavigationController *navControler = (UINavigationController *)  [mainStoryboard instantiateViewControllerWithIdentifier:@"loginRegisterNavController"];
+//        
+//        [self presentViewController:navControler animated:NO completion:nil];
+//    }
     
+}
+
+-(void) settingsTapped:(id) sender {
+    [self performSegueWithIdentifier:@"SettingsSegue" sender:self];
 }
 
 - (void)viewDidLoad
@@ -59,6 +61,19 @@
     [super viewDidLoad];
     
     [self checkLogin];
+    
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [button setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
+    button.showsTouchWhenHighlighted = YES;
+    
+    [button addTarget:self action:@selector(settingsTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+
+    self.navigationItem.rightBarButtonItem = settingsButton;
+
     
     
     CGFloat descLabelSize = 15.0;
@@ -87,11 +102,15 @@
     
     [self.view addSubview:timeLabel];
     
+    timeLabel.bottom = self.tabBarController.tabBar.top - 100;
+    
     
     _measureDateLabel = [KNUIFactory labelWithFontSize:15.0 bold:YES];
     
 
     [_measureDateLabel setFrame:CGRectMake(15, 320, 150, 20)];
+    
+     _measureDateLabel.bottom = self.tabBarController.tabBar.top - 80;
     
     [self setMeasureDateTitle:[NSDate new]];
     

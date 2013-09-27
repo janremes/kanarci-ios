@@ -29,21 +29,19 @@
     return self;
 }
 
--(void)awakeFromNib {
-    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab2"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab2"]];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _segmentedControl = [KNUIFactory segmentedControlWithItems:@[@"DEN",@"TÝDEN",@"MĚSÍC"]];
-    _segmentedControl.frame = CGRectMake(20.0, 50.0, 280.0, 30.0);
+    _segmentedControl.frame = CGRectMake(20.0, 0.0, 280.0, 30.0);
     _segmentedControl.selectedSegmentIndex = 2;
     
     [self.view addSubview:_segmentedControl];
     
-	// Do any additional setup after loading the view.
+ 	// Do any additional setup after loading the view.
 }
+
+
 
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -55,7 +53,7 @@
     
     [dataManager getMeasuresForMonth:4 year:2013];
     
-    _monthChart = [[KNBarChart alloc] initWithFrame:CGRectMake(0, 80, 320, 320) barChartType:KNBarChartMonthType];
+    _monthChart = [[KNBarChart alloc] initWithFrame:CGRectMake(0, 40, 320, 320) barChartType:KNBarChartMonthType];
     
     [self.view addSubview:_monthChart];
 }

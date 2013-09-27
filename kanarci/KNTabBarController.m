@@ -38,6 +38,27 @@
 	[[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"kn_tab_bg_active"]];
     
     
+        UITabBar *tabbar = self.tabBar;
+    UITabBarItem *mapItem = tabbar.items[0];
+    [mapItem setImage:[[UIImage imageNamed: @"tab1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [mapItem setSelectedImage:[[UIImage imageNamed: @"tab1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    UITabBarItem *statsItem = tabbar.items[1];
+    [statsItem setImage:[[UIImage imageNamed: @"tab2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [statsItem setSelectedImage:[[UIImage imageNamed: @"tab2"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
+    
+    UITabBarItem *infoItem = tabbar.items[3];
+    [infoItem setImage:[[UIImage imageNamed: @"tab4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [infoItem setSelectedImage:[[UIImage imageNamed: @"tab4"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
+    
+    UITabBarItem *profilItem = tabbar.items[4];
+    [profilItem setImage:[[UIImage imageNamed: @"tab5"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [profilItem setSelectedImage:[[UIImage imageNamed: @"tab5"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
+
+    
     //  Set text
 	NSDictionary *textAttributes = @{
                                   UITextAttributeTextColor : [UIColor whiteColor],
@@ -63,9 +84,8 @@
 		centerButton.normalBackgroundColor = [UIColor blackColor];
 		centerButton.highlightedBackgroundColor = [UIColor blackColor];
         
-		centerButton.normalImage = centerItem.finishedUnselectedImage;
-		centerButton.highlightedImage = centerItem.finishedSelectedImage;
-        
+		centerButton.normalImage = [UIImage imageNamed:@"tab3"];
+		      
 		centerButton.titleText = @"měření";
         centerButton.highlightedImage = [UIImage imageNamed:@"tab3-active"];
        // centerButton.normalImage = [UIImage imageNamed:@"tab_measure"];

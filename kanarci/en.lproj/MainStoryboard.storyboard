@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <deployment version="1296" identifier="iOS"/>
-        <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment version="1296" defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller - mapa-->
+        <scene sceneID="99H-YK-uhN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="MpK-5K-Nie" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="mapa" image="tab1.png" id="F8P-kO-BMU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iaK-hU-qNg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="uAJ-69-zKc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qv5-Ym-OkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-7"/>
+        </scene>
         <!--Map View Controller - Mapa-->
         <scene sceneID="11">
             <objects>
                 <viewController title="Mapa" id="2" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="Gbw-2s-18K">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="2" id="W6B-wN-ZXD"/>
@@ -25,63 +40,65 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="mapa" image="tab1.png" id="7"/>
+                    <navigationItem key="navigationItem" id="f9U-zZ-Ltt"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Gbw-2s-18K" id="A3C-tf-OMJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821" y="-86"/>
+            <point key="canvasLocation" x="2073" y="-168"/>
         </scene>
-        <!--Description View Controller - legenda-->
+        <!--Description View Controller - Legenda-->
         <scene sceneID="Vrr-IX-kmD">
             <objects>
-                <viewController id="rcV-Yc-8Hp" customClass="KNDescriptionViewController" sceneMemberID="viewController">
+                <viewController title="Legenda" id="rcV-Yc-8Hp" customClass="KNDescriptionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhn-IS-09v">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="Vl4-NP-xDm" customClass="KNNavigationBar">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Legenda" id="pN6-1i-4VV" customClass="KNNavigationItem"/>
-                                </items>
-                            </navigationBar>
-                            <view contentMode="scaleToFill" id="2NM-P1-y2Q">
-                                <rect key="frame" x="0.0" y="49" width="320" height="371"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="legenda_bg.png" id="719-d4-fla">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="legenda" image="tab4.png" id="pa6-8D-rYK"/>
+                    <navigationItem key="navigationItem" title="Legenda" id="hZO-Te-zzT"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaD-bE-r3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650" y="1509"/>
         </scene>
-        <!--Profile View Controller - profil-->
+        <!--Navigation Controller - legenda-->
+        <scene sceneID="mva-V0-hY6">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="6LM-ie-OZl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="legenda" image="tab4.png" id="ihK-Ro-uQQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jEq-ej-MKY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rcV-Yc-8Hp" kind="relationship" relationship="rootViewController" id="IAl-v2-YY0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXF-a2-DZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="1509"/>
+        </scene>
+        <!--Profile View Controller - Profil-->
         <scene sceneID="glj-24-0hq">
             <objects>
                 <viewController id="iFN-Tm-69M" customClass="ProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0B5-FC-v7N">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="0cI-YQ-Imu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PPu-fy-S4L">
-                                        <rect key="frame" x="0.0" y="58" width="320" height="353"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PPu-fy-S4L">
+                                        <rect key="frame" x="0.0" y="20" width="320" height="484"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -89,62 +106,136 @@
                                             <outlet property="delegate" destination="iFN-Tm-69M" id="K7x-jb-Yxg"/>
                                         </connections>
                                     </tableView>
-                                    <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="dGt-3b-QgQ" customClass="KNNavigationBar">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <items>
-                                            <navigationItem title="Profil" id="kIE-Jh-0WH" customClass="KNNavigationItem"/>
-                                        </items>
-                                    </navigationBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="profil" image="tab5.png" id="WSt-7F-afT"/>
+                    <navigationItem key="navigationItem" title="Profil" id="0SF-T7-WdQ"/>
                     <connections>
                         <outlet property="_tableView" destination="PPu-fy-S4L" id="Jog-Ll-7gN"/>
+                        <segue destination="Bzk-SO-mq7" kind="push" identifier="MeasurementDetail" id="HhP-r9-eDt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWe-bR-Wfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1771" y="1326"/>
+            <point key="canvasLocation" x="1835" y="1483"/>
+        </scene>
+        <!--Measurement Detail View Controller - Detail měření-->
+        <scene sceneID="Mi1-zY-D7i">
+            <objects>
+                <viewController id="Bzk-SO-mq7" customClass="MeasurementDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q0a-4Y-MsU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="35Q-l9-cFG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" id="BlT-q7-dgK">
+                                        <rect key="frame" x="26" y="159" width="269" height="157"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </mapView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="datum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ur-3b-0Bk">
+                                        <rect key="frame" x="85" y="20" width="151" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naměřená hodnota :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ys-AH-LkJ">
+                                        <rect key="frame" x="26" y="119" width="157" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="geo-it-8Zr">
+                                        <rect key="frame" x="197" y="119" width="115" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TMN-fm-nEm">
+                                        <rect key="frame" x="140" y="62" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Detail měření" id="Mjb-zF-uNX"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="9ur-3b-0Bk" id="8bg-E8-qAo"/>
+                        <outlet property="mapView" destination="BlT-q7-dgK" id="Cab-CJ-1i6"/>
+                        <outlet property="measureImageView" destination="TMN-fm-nEm" id="Wes-LL-SLb"/>
+                        <outlet property="preciseValueLabel" destination="geo-it-8Zr" id="iwQ-Yi-i8w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0V-HO-Etd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360" y="1477"/>
+        </scene>
+        <!--Navigation Controller - profil-->
+        <scene sceneID="1qE-N9-F3t">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8ea-UT-sZe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="profil" image="tab5.png" id="YNP-Tr-q4A"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="WHr-z7-PGz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iFN-Tm-69M" kind="relationship" relationship="rootViewController" id="pFc-N0-KDR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWM-wX-ciO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="1469"/>
+        </scene>
+        <!--Navigation Controller - statistika-->
+        <scene sceneID="yAQ-h4-7hk">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="myj-CS-er3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="statistika" image="tab2.png" id="ueS-fR-dkT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ZbX-AN-Kpv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="Zhm-8C-ZFu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jd-fV-1dP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="147"/>
         </scene>
         <!--Statistics View Controller - Second-->
         <scene sceneID="13">
             <objects>
                 <viewController title="Second" id="3" customClass="StatisticsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" id="7K1-Xi-ieK" customClass="KNNavigationBar">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Statistiky" id="vgn-io-LPe" customClass="KNNavigationItem"/>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="3" id="nIu-sJ-123"/>
-                                </connections>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="statistiky" image="tab2.png" id="6"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Statistika" id="QFv-Li-vUQ"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="280"/>
+            <point key="canvasLocation" x="953" y="252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aIE-Gf-9vW">
             <objects>
                 <navigationController definesPresentationContext="YES" id="HPq-YB-GBU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="pqW-Bq-Wkt"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eri-rv-Xp8" customClass="KNNavigationBar">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="eri-rv-Xp8" customClass="KNNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -153,26 +244,21 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAS-B3-QMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160" y="975"/>
+            <point key="canvasLocation" x="1410" y="690"/>
         </scene>
         <!--Measure View Controller - Měření-->
         <scene sceneID="C73-qV-Vzm">
             <objects>
                 <viewController storyboardIdentifier="MeasureController" title="Měření" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vUn-4z-iPv" customClass="MeasureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cf1-Tj-MoL">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fz2-y4-v0X">
                                 <rect key="frame" x="261" y="326" width="51" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="test">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="testButtonTouched:" destination="vUn-4z-iPv" eventType="touchUpInside" id="zxs-j8-8Bu"/>
@@ -181,22 +267,99 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Měření" id="Pjw-ql-3My" customClass="KNNavigationItem"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Měření" id="Pjw-ql-3My"/>
+                    <connections>
+                        <segue destination="c1U-MB-fmo" kind="push" identifier="SettingsSegue" id="H94-Ju-0K4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnz-eP-QjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="672"/>
+            <point key="canvasLocation" x="1968" y="690"/>
+        </scene>
+        <!--Measure Settings View Controller - Nastavení měřáku-->
+        <scene sceneID="JZn-vF-0dX">
+            <objects>
+                <viewController id="c1U-MB-fmo" customClass="KNMeasureSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D5F-aH-Cwi">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Připojit přes audio port" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wBQ-h2-w7u">
+                                <rect key="frame" x="20" y="73" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Připojit přes bluetooth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5cp-Ha-EJO">
+                                <rect key="frame" x="20" y="124" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odesílat data na Xively" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OXt-qb-NYW">
+                                <rect key="frame" x="20" y="222" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id měřáku :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KuH-ww-g4R">
+                                <rect key="frame" x="20" y="26" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2385489" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="agM-xq-U7P">
+                                <rect key="frame" x="120" y="26" width="180" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="DPq-zC-24T">
+                                <rect key="frame" x="251" y="73" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="audioSwitched:" destination="c1U-MB-fmo" eventType="valueChanged" id="Rgy-7y-D30"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="1OB-kh-xkh">
+                                <rect key="frame" x="251" y="124" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="bluetoothSwitched:" destination="c1U-MB-fmo" eventType="valueChanged" id="Wcg-EF-oAk"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="bcI-IP-PtM">
+                                <rect key="frame" x="251" y="222" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Nastavení měřáku" id="Ihr-cQ-Gv8"/>
+                    <connections>
+                        <outlet property="audioSwitch" destination="DPq-zC-24T" id="MEF-xW-9YT"/>
+                        <outlet property="bluetoothSwitch" destination="1OB-kh-xkh" id="Jch-aA-4VP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSQ-fq-7ih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2395" y="698"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="yqY-hy-iN1">
             <objects>
                 <viewController storyboardIdentifier="StartController" id="aQu-Qt-qAR" customClass="StartViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AkE-bA-I5V">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="50f-eM-Xxx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" id="8bG-vn-2B1">
@@ -234,7 +397,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tKa-AT-xhq"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="loginButton" destination="HvS-O1-wfA" id="qCv-3t-iaZ"/>
                         <outlet property="registerButton" destination="tTr-pJ-cFB" id="eMg-9y-2MP"/>
@@ -249,7 +411,7 @@
             <objects>
                 <viewController id="jBh-Go-WN8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IhL-BK-8B5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -265,11 +427,11 @@
             <objects>
                 <viewController id="33w-Q1-N1x" customClass="KNLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YkW-Ps-njM">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="ecZ-Rf-rmC">
-                                <rect key="frame" x="56" y="117" width="209" height="34"/>
+                                <rect key="frame" x="56" y="101" width="209" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Přihlásit se">
@@ -281,7 +443,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="heslo" minimumFontSize="17" id="XU7-pU-vvd">
-                                <rect key="frame" x="56" y="66" width="209" height="30"/>
+                                <rect key="frame" x="56" y="63" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -290,7 +452,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="17" id="vT7-f8-2sh">
-                                <rect key="frame" x="56" y="28" width="209" height="30"/>
+                                <rect key="frame" x="56" y="13" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
@@ -301,6 +463,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Přihlášení" id="GXK-wi-MJm" customClass="KNNavigationItem"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -316,9 +479,7 @@
         <!--Navigation Controller-->
         <scene sceneID="frq-0J-LLt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vUx-W3-kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="loginRegisterNavController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ot8-WU-gw4" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XxB-vY-3rn" customClass="KNNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -326,6 +487,7 @@
                         <segue destination="aQu-Qt-qAR" kind="relationship" relationship="rootViewController" id="rpU-gA-Sqm"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUx-W3-kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-754" y="-875"/>
         </scene>
@@ -334,7 +496,6 @@
             <objects>
                 <tabBarController id="4" customClass="KNTabBarController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -343,11 +504,11 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="MpK-5K-Nie" kind="relationship" relationship="viewControllers" id="Z0Z-sz-QHz"/>
+                        <segue destination="myj-CS-er3" kind="relationship" relationship="viewControllers" id="ZvS-Pw-Tp6"/>
                         <segue destination="HPq-YB-GBU" kind="relationship" relationship="viewControllers" id="5xN-Mz-83z"/>
-                        <segue destination="rcV-Yc-8Hp" kind="relationship" relationship="viewControllers" id="hVs-p8-p5c"/>
-                        <segue destination="iFN-Tm-69M" kind="relationship" relationship="viewControllers" id="i4v-og-SDH"/>
+                        <segue destination="6LM-ie-OZl" kind="relationship" relationship="viewControllers" id="7ax-l6-8F2"/>
+                        <segue destination="8ea-UT-sZe" kind="relationship" relationship="viewControllers" id="Ld8-sY-lYB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -356,65 +517,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="legenda_bg.png" width="320" height="342"/>
         <image name="logo.png" width="264" height="219"/>
         <image name="tab1.png" width="20" height="20"/>
+        <image name="tab1.png" width="20" height="20"/>
+        <image name="tab2.png" width="17" height="17"/>
         <image name="tab2.png" width="17" height="17"/>
         <image name="tab4.png" width="21" height="21"/>
+        <image name="tab4.png" width="21" height="21"/>
+        <image name="tab5.png" width="20" height="20"/>
         <image name="tab5.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="KNDescriptionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNDescriptionViewController.h"/>
-        </class>
-        <class className="KNLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonClicked:"/>
-                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="KNNavigationBar" superclassName="UINavigationBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNNavigationBar.h"/>
-        </class>
-        <class className="KNNavigationItem" superclassName="UINavigationItem">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNNavigationItem.h"/>
-        </class>
-        <class className="KNTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KNTabBarController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showStation:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="MeasureViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeasureViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="testButtonTouched:"/>
-            </relationships>
-        </class>
-        <class className="ProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="_tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="StartViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="registerButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="StatisticsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

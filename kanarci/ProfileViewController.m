@@ -12,6 +12,7 @@
 #import "Measurement.h"
 #import "KNDataManager.h"
 #import "KNMeasureHelper.h"
+#import "MeasurementDetailViewController.h"
 
 @interface ProfileViewController ()
     
@@ -22,6 +23,7 @@
     NSArray *_measurements;
     NSDateFormatter *_dateFormatter;
     NSDateFormatter *_timeFormatter;
+    Measurement *selectedMeasurement;
     
     
 
@@ -40,7 +42,7 @@
 }
 
 -(void)awakeFromNib {
-    [self.tabBarItem setFinishedSelectedImage: [UIImage imageNamed: @"tab5"] withFinishedUnselectedImage: [UIImage imageNamed: @"tab5"]];
+
     addNotificationObserver(self, measurementDataChangedWithNotification:, KNMeasureDataChangedNotification, nil);
     _dateFormatter = [[NSDateFormatter alloc] init];
     _timeFormatter = [[NSDateFormatter alloc] init];
@@ -130,13 +132,26 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    selectedMeasurement = [_measurements objectAtIndex:[_measurements count] - indexPath.row -1];
+    [self performSegueWithIdentifier:@"MeasurementDetail" sender:self];
+
 }
 
 -(void) measurementDataChangedWithNotification:(NSNotification *) notification {
     _measurements = [[KNDataManager sharedInstance] getAllMeasures];
     [_tableView reloadData];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"MeasurementDetail"]) {
+        MeasurementDetailViewController *destvc = segue.destinationViewController;
+        destvc.measurement = selectedMeasurement;
+    }
+}
+
+
 
 #pragma mark -
 #pragma mark View controllers delegates
