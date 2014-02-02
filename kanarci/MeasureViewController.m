@@ -13,6 +13,9 @@
 #import "KNDataManager.h"
 #import "KNUser.h"
 #import "KNLoginViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import "CVAudioSession.h"
+#import "MKBlockAdditions.h"
 
 @interface MeasureViewController ()
 
@@ -39,15 +42,15 @@
 
 -(void) checkLogin {
     
-//    if ([[KNUser sharedInstance] needsLogin]) {
-//        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
-//                                                                 bundle: nil];
-//        
-//        
-//        UINavigationController *navControler = (UINavigationController *)  [mainStoryboard instantiateViewControllerWithIdentifier:@"loginRegisterNavController"];
-//        
-//        [self presentViewController:navControler animated:NO completion:nil];
-//    }
+    if ([[KNUser sharedInstance] needsLogin]) {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
+                                                                 bundle: nil];
+        
+        
+        UINavigationController *navControler = (UINavigationController *)  [mainStoryboard instantiateViewControllerWithIdentifier:@"loginRegisterNavController"];
+        
+        [self presentViewController:navControler animated:NO completion:nil];
+    }
     
 }
 
@@ -62,6 +65,9 @@
     
     [self checkLogin];
     
+    [CVAudioSession setup];
+    
+    addNotificationObserver(self, newAudioDetected:, kCVAudioInputNewDetectedNotification, nil);
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
     [button setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
@@ -135,6 +141,26 @@
     [self setKanarImage:0];
     
     
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+
+}
+
+-(void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self setDefaults];
+}
+
+
+-(void) newAudioDetected:(NSNotification *) notification {
+    [UIAlertView alertViewWithTitle:@"Kanárek připojen" message:@"Chcete přenést data?" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Ok"] onDismiss:^(int buttonIndex, UIAlertView *alertView) {
+        [self performSelector:@selector(testButtonTouched:) withObject:nil afterDelay:2.0];
+    } onCancel:^{
+        
+    }];
 }
 
 

@@ -82,7 +82,7 @@
     
 	//  Customize bar button items - normal state
 	[[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                               UITextAttributeTextColor : [Theme defaultTextColor],
+                               NSForegroundColorAttributeName : [Theme defaultTextColor],
                          UITextAttributeTextShadowColor : [UIColor clearColor],
                                     UITextAttributeFont : [Theme boldAppFontOfSize:[Theme defaultControlsTextSize]]
      }
@@ -97,7 +97,7 @@
     
     //  Customize bar button items - disabled state
 	[[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                               UITextAttributeTextColor : [Theme lightTextColor],
+                               NSForegroundColorAttributeName : [Theme lightTextColor],
                          UITextAttributeTextShadowColor : [UIColor clearColor]
      }
 	                                            forState:UIControlStateDisabled];

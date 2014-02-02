@@ -10,14 +10,16 @@
 #import "KNUIFactory.h"
 #import "KNBarChart.h"
 #import "KNDataManager.h"
+#import <PNBarChart.h>
+#import "KNBarItem.h"
 
-@interface StatisticsViewController ()
+@interface StatisticsViewController () 
 
 @end
 
 @implementation StatisticsViewController {
     UISegmentedControl *_segmentedControl;
-    KNBarChart *_monthChart;
+    PNBarChart *_barChart;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,18 +46,28 @@
 
 
 
--(void) viewDidAppear:(BOOL)animated {
+-(void) viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    NSMutableArray *values = [NSMutableArray array];
+    NSMutableArray *colors = [NSMutableArray array];
+    NSMutableArray *titles = [NSMutableArray array];
     
+    NSArray *barItems = [[KNDataManager sharedInstance] getLastWeekBarItems];
     
-    KNDataManager *dataManager = [KNDataManager sharedInstance];
+    for (KNBarItem *barItem in [barItems reverseObjectEnumerator]) {
+        [values addObject:barItem.value];
+        [colors addObject:barItem.color];
+        [titles addObject:barItem.title];
+    }
     
-    [dataManager getMeasuresForMonth:4 year:2013];
+    _barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 135.0, self.view.width, 200.0)];
+    [_barChart setXLabels:titles];
+    [_barChart setYValues:values];
+    _barChart.strokeColors = colors;
+    [_barChart strokeChart];
     
-    _monthChart = [[KNBarChart alloc] initWithFrame:CGRectMake(0, 40, 320, 320) barChartType:KNBarChartMonthType];
-    
-    [self.view addSubview:_monthChart];
+    [self.view addSubview:_barChart];
 }
 
 

@@ -8,7 +8,7 @@
 
 #import "KNUser.h"
 #import "SFHFKeychainUtils.h"
-#import "COSMAPI.h"
+//#import "COSMAPI.h"
 
 
 #define kServiceDomainName @"com.neobab.kanarci"
@@ -49,7 +49,7 @@
         
         //initialize cosm service
         
-         [[COSMAPI defaultAPI] setApiKey:@"igfescVEn9RuG-L1_1ZFdVUZ2vSSAKxOVzM5WmZkWFR0RT0g"];
+       //  [[COSMAPI defaultAPI] setApiKey:@"igfescVEn9RuG-L1_1ZFdVUZ2vSSAKxOVzM5WmZkWFR0RT0g"];
         
 	}
     

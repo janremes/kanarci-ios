@@ -65,7 +65,7 @@
 -(void) updateArrowToValue:(int) value {
     
     CGPoint oldCenter = _arrow.center;
-    CGFloat newY = [[_markers objectAtIndex:value] center].y;
+    CGFloat newY = [(UIImageView *) [_markers objectAtIndex:value] center].y;
     
     [UIView animateWithDuration:0.9
                           delay:0.0

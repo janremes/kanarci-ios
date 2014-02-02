@@ -70,5 +70,6 @@ extern const NSString *KNMeasureDataChangedNotification;
 
 //statistics
 -(NSArray *) getMeasuresForMonth:(int) month year:(int) year ;
+-(NSArray *) getLastWeekBarItems ;
 
 @end

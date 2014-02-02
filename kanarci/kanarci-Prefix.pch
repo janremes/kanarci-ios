@@ -18,6 +18,7 @@
 #import "KNFormatter.h"
 #import "KNTheme.h"
 #import "UIView+FFAdditions.h"
+#import "eMan-Utility.h"
 
 #endif
 

@@ -41,8 +41,8 @@
     label.font = (bold ? [Theme boldAppFontOfSize:size] : [Theme appFontOfSize:size]);
     label.numberOfLines = 1;
     label.textColor = [UIColor blackColor];
-    label.textAlignment = UITextAlignmentLeft;
-    label.lineBreakMode = UILineBreakModeTailTruncation;
+    label.textAlignment = NSTextAlignmentLeft;
+    label.lineBreakMode = NSLineBreakByTruncatingTail;
     label.adjustsFontSizeToFitWidth = YES;
     label.minimumFontSize = size/1.3;
     

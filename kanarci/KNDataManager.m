@@ -12,11 +12,11 @@
 #import "KNDataManager.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Station.h"
-#import "AFJSONRequestOperation.h"
+#import "AFNetworking/AFHTTPRequestOperation.h"
 #import "KNMeasureDataDocument.h"
 #import "COSMDatapointModel.h"
 #import "KNCosmService.h"
-
+#import "KNBarItem.h"
 
 #define kFilename_icloud @"kanarci_data"
 #define kFilename_local @"kanarci_data_local"
@@ -29,6 +29,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     NSMetadataQuery *_query;
     KNMeasureDataDocument *_dataDocument;
     Measurement *_currentMeasurement;
+    NSArray *_graphColors;
 }
 
 @synthesize stations, responseData, stationsLoadTime;
@@ -76,7 +77,14 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
         
         [self checkForICloud];
         
+        UIColor *c1= [UIColor colorWithHexString:@"bdd7f1"];
+        UIColor *c2= [UIColor colorWithHexString:@"cbe7d4"];
+        UIColor *c3= [UIColor colorWithHexString:@"fff57e"];
+        UIColor *c4= [UIColor colorWithHexString:@"ffb677"];
+        UIColor *c5= [UIColor colorWithHexString:@"ff1e36"];
+        UIColor *c6= [UIColor colorWithHexString:@"912553"];
         
+        _graphColors =  @[c1,c2,c3,c4,c5,c6];
 	}
     
 	return self;
@@ -224,15 +232,18 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     NSURL *url = [NSURL URLWithString:kJsonUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        
-        if ([NSJSONSerialization isValidJSONObject:JSON]) {
-              
-            NSMutableArray *stationsJSON = [JSON objectForKey:@"stations"];
+    
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+        if ([NSJSONSerialization isValidJSONObject:responseObject]) {
             
-            self.stationsLoadTime = [NSDate dateWithTimeIntervalSince1970:[[JSON objectForKey:@"date"] doubleValue]];
+            NSMutableArray *stationsJSON = [responseObject objectForKey:@"stations"];
+            
+            self.stationsLoadTime = [NSDate dateWithTimeIntervalSince1970:[[responseObject objectForKey:@"date"] doubleValue]];
             self.stations = [[NSMutableArray alloc] initWithCapacity:[stationsJSON count]];
-             int number = 0;
+            int number = 0;
             
             for (NSDictionary *stationJSON in stationsJSON) {
                 Station *station = [[Station alloc] initWithDictionaryData:stationJSON];
@@ -243,12 +254,12 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
                 
                 //if we are not missing information then add..
                 if (station.totalQuality != 0) {
-                 [self.stations addObject:station];   
+                    [self.stations addObject:station];
                 }
-             
+                
                 
             }
-          
+            
             NSArray *retStations = [[NSArray alloc] initWithArray:self.stations];
             
             if(success) {
@@ -258,12 +269,10 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
             }
             
         }
-
         
-    
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response,NSError *error, id JSON) {
         
-         NSLog(@"Connection failed: %@", [error description]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Connection failed: %@", [error description]);
         
         if(failure) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -271,10 +280,12 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
             });
         }
     }];
-    
+                                         
+                                         
+                                         
     [operation start];
-    
-    
+                                         
+                                        
 }
 
 #pragma mark
@@ -482,6 +493,86 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
 
 #pragma mark -
 #pragma mark - Statistics methods
+
+
+-(NSArray *) getLastWeekBarItems {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    //Create start and end dates for calculation
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSInteger days = 7;
+    
+    
+    NSDateComponents *dayComponents = [calendar components:NSDayCalendarUnit | NSMonthCalendarUnit  fromDate:[NSDate new]];
+    NSInteger startDay = [dayComponents day];
+    int currentDay = startDay;
+    int lastDay = startDay - days;
+    
+    NSMutableArray *returnedArray = [[NSMutableArray alloc] initWithCapacity:days];
+    
+    for (Measurement *m in [_measurements reverseObjectEnumerator]) {
+        
+        
+      
+        NSDateComponents *dayComponents = [calendar components:NSDayCalendarUnit | NSMonthCalendarUnit  fromDate:m.date];
+        NSInteger measurementDay = [dayComponents day];
+        
+        if (measurementDay < lastDay) {
+            break;
+        }
+        
+        while (currentDay < measurementDay && currentDay >= lastDay) {
+            [returnedArray addObject:[NSNumber numberWithInt:0]];
+            currentDay++;
+        }
+        
+        if ([returnedArray count] >= currentDay) {
+            
+            if ([[returnedArray objectAtIndex:measurementDay-1] intValue] < m.bucketValue) {
+                [returnedArray replaceObjectAtIndex:measurementDay-1 withObject:[NSNumber numberWithInt:m.bucketValue]];
+            }
+            
+        } else {
+            [returnedArray addObject:[NSNumber numberWithInt:m.bucketValue]];
+        }
+        
+        
+        currentDay = measurementDay;
+    }
+    
+    while ([returnedArray count] < days) {
+        [returnedArray addObject:[NSNumber numberWithInt:0]];
+    }
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMM d"];
+    
+    for (NSNumber *number in returnedArray) {
+          KNBarItem *barItem = [[KNBarItem alloc] init];
+        barItem.value = number;
+        if ( [number integerValue] <= _graphColors.count) {
+            
+            if ([number intValue] == 0) {
+                barItem.color = [UIColor whiteColor];
+            } else {
+                barItem.color = [_graphColors objectAtIndex:[number intValue] -1];   
+            }
+            
+            
+        } else {
+            barItem.color = [UIColor lightGrayColor];
+        }
+       
+        barItem.title = [dateFormatter stringFromDate:today];
+        today = [today dateByAddingTimeInterval:(-24*60*60)];
+        
+        [array addObject:barItem];
+    }
+    
+    
+    return [NSArray arrayWithArray:array];
+}
 
 
 -(NSArray *) getMeasuresForMonth:(int) month year:(int) year {
