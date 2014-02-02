@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "KNDataManager.h"
-#import "KNUser.h"
+#import "KNUserService.h"
 #import "KNNavigationBar.h"
 
 
@@ -25,7 +25,7 @@
     [KNDataManager sharedInstance];
     
     //Initialize user data
-    [KNUser sharedInstance];
+    [KNUserService sharedInstance];
     
     [self customizeAppearance];
     

@@ -23,6 +23,9 @@
 #import "UISearchBar+eMan.h"
 #import "UITableView+eMan.h"
 #import "UITableViewCell+eMan.h"
+#import "UIApplication+Paths.h"
+#import "NSObject+NSCoding.h"
+#import "Archiver.h"
 
 // Maps
 #import "MKMapView+eMan.h"

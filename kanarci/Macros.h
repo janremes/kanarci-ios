@@ -34,6 +34,14 @@
 #define IS_IPOD     ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
 #define IS_IPHONE_5 (IS_IPHONE && IS_4_INCH_DEVICE)
 
+#define LOCS(_a) NSLocalizedString(_a, nil)
+
+#ifdef DEBUG
+#    define DLog(...) NSLog(__VA_ARGS__)
+#else
+#    define DLog(...) /* */
+#endif
+
 /*!
  @macro addNotificationObserver
  @abstract Add observer to default notification center

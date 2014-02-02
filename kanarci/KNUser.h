@@ -8,22 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KNUser : NSObject
+@interface KNUser : NSObject <NSCoding>
 
 
-
-@property (nonatomic,strong) NSString *cosmApiKey;
 @property (nonatomic,strong) NSString *email;
 @property (nonatomic,strong) NSString *name;
-@property (nonatomic,strong) NSString *password;
-@property(nonatomic, readonly) NSString *userId;
+@property (nonatomic, readonly) NSString *userId;
+@property (nonatomic, strong) NSNumber *feedId;
+@property (nonatomic, assign) BOOL confirmed;
 
-@property(nonatomic,assign) BOOL needsLogin;
-
-
-+ (KNUser *) sharedInstance ;
-
-
-- (BOOL)setUserId:(NSString *)userId andPassword:(NSString *)password error:(NSError **)error;
 
 @end
