@@ -9,22 +9,13 @@
 #import "KNLoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "KNUIFactory.h"
-#import "KNUser.h"
+#import "KNUserService.h"
 
 @interface KNLoginViewController ()
 
 @end
 
 @implementation KNLoginViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 
 - (void)viewDidLoad
@@ -43,10 +34,7 @@
     [self.loginButton setBackgroundImage:yellowImage forState:UIControlStateNormal];
     [self.loginButton setBackgroundImage:whiteImage forState:UIControlStateHighlighted];
     
-    
- //   [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
-  
-	// Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,9 +66,19 @@
 
 - (IBAction)loginButtonClicked:(id)sender {
     
+    
     if ([_passwordTextField.text length] > 1 && [_emailTextField.text length] > 1 ) {
-        [[KNUser sharedInstance] setUserId:_emailTextField.text andPassword:_passwordTextField.text error:nil];
-         [self dismissModalViewControllerAnimated:YES];
+       
+        __weak typeof(self) wself = self;
+        [[KNUserService sharedInstance] loginUserWith:self.emailTextField.text password:self.passwordTextField.text success:^(KNUser *user) {
+            
+             [wself dismissViewControllerAnimated:YES completion:NULL];
+        } failure:^(NSError *error) {
+            
+        }];
+        
+       
+        
         
     }
     

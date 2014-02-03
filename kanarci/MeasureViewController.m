@@ -11,7 +11,7 @@
 #import "KNUIFactory.h"
 #import "KNMeasureHelper.h"
 #import "KNDataManager.h"
-#import "KNUser.h"
+#import "KNUserService.h"
 #import "KNLoginViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "CVAudioSession.h"
@@ -42,7 +42,7 @@
 
 -(void) checkLogin {
     
-    if ([[KNUser sharedInstance] needsLogin]) {
+    if ([[KNUserService sharedInstance] needsLogin]) {
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
                                                                  bundle: nil];
         

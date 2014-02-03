@@ -167,6 +167,9 @@
 		7CCC38C3189ED62A00AD6A15 /* UIApplication+Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC38C2189ED62A00AD6A15 /* UIApplication+Paths.m */; };
 		7CCC38C8189ED89500AD6A15 /* Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC38C5189ED89500AD6A15 /* Archiver.m */; };
 		7CCC38C9189ED89500AD6A15 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC38C7189ED89500AD6A15 /* NSObject+NSCoding.m */; };
+		7CCC38EF189EF17C00AD6A15 /* polyline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC38EE189EF17C00AD6A15 /* polyline@2x.png */; };
+		7CCC38F3189EF5BF00AD6A15 /* ActivityMeasureSetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC38F2189EF5BF00AD6A15 /* ActivityMeasureSetupVC.m */; };
+		7CCC38F6189EF5D400AD6A15 /* ActivityMeasureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC38F5189EF5D400AD6A15 /* ActivityMeasureVC.m */; };
 		7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD90A7170C5460008055C2 /* KNBarChart.m */; };
 		7CCD90AC170C6F42008055C2 /* kn_bar_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */; };
 		7CCD90AD170C6F42008055C2 /* kn_bar_chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD90AB170C6F42008055C2 /* kn_bar_chart@2x.png */; };
@@ -418,6 +421,11 @@
 		7CCC38C5189ED89500AD6A15 /* Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Archiver.m; sourceTree = "<group>"; };
 		7CCC38C6189ED89500AD6A15 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
 		7CCC38C7189ED89500AD6A15 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
+		7CCC38EE189EF17C00AD6A15 /* polyline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "polyline@2x.png"; sourceTree = "<group>"; };
+		7CCC38F1189EF5BF00AD6A15 /* ActivityMeasureSetupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityMeasureSetupVC.h; sourceTree = "<group>"; };
+		7CCC38F2189EF5BF00AD6A15 /* ActivityMeasureSetupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityMeasureSetupVC.m; sourceTree = "<group>"; };
+		7CCC38F4189EF5D400AD6A15 /* ActivityMeasureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityMeasureVC.h; sourceTree = "<group>"; };
+		7CCC38F5189EF5D400AD6A15 /* ActivityMeasureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityMeasureVC.m; sourceTree = "<group>"; };
 		7CCD90A6170C5460008055C2 /* KNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBarChart.h; sourceTree = "<group>"; };
 		7CCD90A7170C5460008055C2 /* KNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBarChart.m; sourceTree = "<group>"; };
 		7CCD90AA170C6F42008055C2 /* kn_bar_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_bar_chart.png; sourceTree = "<group>"; };
@@ -660,6 +668,7 @@
 		7C9074AF16F1260600ED3DCD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7CCC38EE189EF17C00AD6A15 /* polyline@2x.png */,
 				7CE0965B17F61B54009BB15B /* settings.png */,
 				7CE0965C17F61B54009BB15B /* settings@2x.png */,
 				7C73F2DC1712101300B09A8A /* logo.png */,
@@ -843,6 +852,7 @@
 		7CBBB4D516FCD6410027E4C5 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				7CCC38CA189EE84400AD6A15 /* Xively */,
 				7C2AF32E1885E78E0060FA56 /* Eman */,
 				7C5811961709E0EB00680ECF /* SocketRocket */,
 				7CC936271704E3D6008E903C /* Extensions */,
@@ -888,6 +898,7 @@
 		7CBBB51A16FE2D050027E4C5 /* Measure */ = {
 			isa = PBXGroup;
 			children = (
+				7CCC38F0189EF31E00AD6A15 /* ActivityMeasure */,
 				7CBBB51B16FE2D270027E4C5 /* MeasureViewController.h */,
 				7CBBB51C16FE2D270027E4C5 /* MeasureViewController.m */,
 				7CBBB51E16FE2ED80027E4C5 /* MeasureBar.h */,
@@ -972,6 +983,24 @@
 				7CCC38BC189EC6A800AD6A15 /* KNUserService.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		7CCC38CA189EE84400AD6A15 /* Xively */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Xively;
+			sourceTree = "<group>";
+		};
+		7CCC38F0189EF31E00AD6A15 /* ActivityMeasure */ = {
+			isa = PBXGroup;
+			children = (
+				7CCC38F1189EF5BF00AD6A15 /* ActivityMeasureSetupVC.h */,
+				7CCC38F2189EF5BF00AD6A15 /* ActivityMeasureSetupVC.m */,
+				7CCC38F4189EF5D400AD6A15 /* ActivityMeasureVC.h */,
+				7CCC38F5189EF5D400AD6A15 /* ActivityMeasureVC.m */,
+			);
+			name = ActivityMeasure;
 			sourceTree = "<group>";
 		};
 		7CCD90A9170C6F38008055C2 /* stats */ = {
@@ -1187,6 +1216,7 @@
 				7CE0965D17F61B54009BB15B /* settings.png in Resources */,
 				7C73F2DE1712101300B09A8A /* logo.png in Resources */,
 				7C73F2DF1712101300B09A8A /* logo@2x.png in Resources */,
+				7CCC38EF189EF17C00AD6A15 /* polyline@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1269,6 +1299,8 @@
 				7CBBB51D16FE2D270027E4C5 /* MeasureViewController.m in Sources */,
 				7C8DA580183786CA002A3EF3 /* CVAudioSession.m in Sources */,
 				7CBBB52016FE2ED80027E4C5 /* MeasureBar.m in Sources */,
+				7CCC38F3189EF5BF00AD6A15 /* ActivityMeasureSetupVC.m in Sources */,
+				7CCC38F6189EF5D400AD6A15 /* ActivityMeasureVC.m in Sources */,
 				7CBBB53F16FE42B10027E4C5 /* MeasurementManager.m in Sources */,
 				7CBBB54216FE4A010027E4C5 /* KNUIFactory.m in Sources */,
 				7C2AF3621885E7B20060FA56 /* NSArray+eMan.m in Sources */,

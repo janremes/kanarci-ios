@@ -9,7 +9,7 @@
 #import "KNUserService.h"
 #import "KNUser.h"
 
-#import <Lockbox.h>
+#import <Lockbox/Lockbox.h>
 #import <AFNetworking.h>
 #import "NSDictionary+EMSafeParsing.h"
 
@@ -46,6 +46,8 @@ static NSString *const kPasswordLockBox = @"kPasswordLockBox";
 
 -(void) doInit {
     
+    [self deleteAllUserData];
+    
     self.currentUser = [Archiver retrieve:kUserDocumentsPath];
     
     if (!self.currentUser) {
@@ -67,7 +69,8 @@ static NSString *const kPasswordLockBox = @"kPasswordLockBox";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    [manager GET:@"http://kanarci.cz/api/sign-up" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSDictionary *params = @{@"u": email, @"p": password};
+    [manager GET:@"http://kanarci.cz/api/sign-up" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         DLog(@"%@", responseObject);
         
         if (responseObject && [responseObject isKindOfClass:[NSDictionary class]]) {
@@ -112,13 +115,14 @@ static NSString *const kPasswordLockBox = @"kPasswordLockBox";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
-    [manager GET:@"http://kanarci.cz/api/sign-in" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        DLog(@"%@", responseObject);
+    NSDictionary *params = @{@"u": email, @"p": password};
+    [manager POST:@"http://kanarci.cz/api/sign-in" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        DLog(@"%@ , %@", responseObject,operation);
         
         if (responseObject && [responseObject isKindOfClass:[NSDictionary class]]) {
     
             NSDictionary *dict = responseObject;
-            if ([[dict numberOrNilForKey:@"error"] boolValue]) {
+            if ([dict stringOrNilForKey:@"error"]) {
               
                 if (failure) {
                     failure(nil);
@@ -153,6 +157,12 @@ static NSString *const kPasswordLockBox = @"kPasswordLockBox";
         user.email = [userDict stringOrNilForKey:@"email"];
         user.feedId = [userDict numberOrNilForKey:@"feed_id"];
         user.confirmed = [[userDict numberOrNilForKey:@"confirmed"] boolValue];
+    }
+    
+    //TODO: fix creating feeds on server
+    
+    if ([user.feedId integerValue] == 0) {
+        user.feedId = @150;
     }
     
     self.currentUser = user;

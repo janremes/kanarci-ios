@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment version="1296" defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0V-HO-Etd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2360" y="1477"/>
+            <point key="canvasLocation" x="2242" y="1483"/>
         </scene>
         <!--Navigation Controller - profil-->
         <scene sceneID="1qE-N9-F3t">
@@ -268,7 +268,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Měření" id="Pjw-ql-3My"/>
+                    <navigationItem key="navigationItem" title="Měření" id="Pjw-ql-3My">
+                        <barButtonItem key="leftBarButtonItem" image="polyline.png" id="56h-wH-WYu">
+                            <connections>
+                                <segue destination="J7W-Yg-wWC" kind="push" id="bak-yj-Dkv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="c1U-MB-fmo" kind="push" identifier="SettingsSegue" id="H94-Ju-0K4"/>
                     </connections>
@@ -276,6 +282,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnz-eP-QjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1968" y="690"/>
+        </scene>
+        <!--View Controller - Nastavení-->
+        <scene sceneID="bFV-rC-DDw">
+            <objects>
+                <viewController id="J7W-Yg-wWC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRK-h4-2J8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="we6-Ov-p11">
+                                <rect key="frame" x="66" y="203" width="188" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Začít měřit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZmE-DC-T6V" kind="push" id="qhv-oN-08h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Měřit počet kroků :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ee3-lL-P7W">
+                                <rect key="frame" x="23" y="45" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaznamenávat polohu :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RdP-0c-Fq3">
+                                <rect key="frame" x="23" y="91" width="180" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="N04-D3-F6m">
+                                <rect key="frame" x="249" y="40" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="s8n-uS-5QW">
+                                <rect key="frame" x="249" y="86" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nastavení" id="jLu-7x-zez"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMD-ba-RO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="1002"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dcb-fl-XY0">
+            <objects>
+                <viewController id="ZmE-DC-T6V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcM-eL-uEV">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I16-e7-Zyh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Df7-YI-QuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3238" y="1002"/>
         </scene>
         <!--Measure Settings View Controller - Nastavení měřáku-->
         <scene sceneID="JZn-vF-0dX">
@@ -348,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSQ-fq-7ih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2395" y="698"/>
+            <point key="canvasLocation" x="2471" y="298"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="yqY-hy-iN1">
@@ -406,16 +476,48 @@
             </objects>
             <point key="canvasLocation" x="20" y="-844"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Registrace-->
         <scene sceneID="wEF-H3-N2Q">
             <objects>
                 <viewController id="jBh-Go-WN8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IhL-BK-8B5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="aQX-in-Pzo">
+                                <rect key="frame" x="56" y="190" width="209" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Přihlásit se">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="33w-Q1-N1x" eventType="touchUpInside" id="YMT-bu-zdh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="heslo" minimumFontSize="17" id="8xI-j2-j0P">
+                                <rect key="frame" x="56" y="152" width="209" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="33w-Q1-N1x" id="tZU-06-NZE"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="17" id="fvR-bQ-nPx">
+                                <rect key="frame" x="56" y="102" width="209" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="33w-Q1-N1x" id="qrE-hZ-6Uy"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="63z-dA-dFK"/>
+                    <navigationItem key="navigationItem" title="Registrace" id="63z-dA-dFK"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mm7-R6-oM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -518,6 +620,7 @@
     </scenes>
     <resources>
         <image name="logo.png" width="264" height="219"/>
+        <image name="polyline.png" width="16" height="16"/>
         <image name="tab1.png" width="20" height="20"/>
         <image name="tab2.png" width="17" height="17"/>
         <image name="tab4.png" width="21" height="21"/>
