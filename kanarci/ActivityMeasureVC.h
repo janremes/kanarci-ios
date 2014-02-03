@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class KNActivity;
 @interface ActivityMeasureVC : UIViewController
+
+@property (nonatomic,strong) KNActivity *activity;
 
 @end

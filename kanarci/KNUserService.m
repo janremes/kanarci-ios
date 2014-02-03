@@ -46,7 +46,7 @@ static NSString *const kPasswordLockBox = @"kPasswordLockBox";
 
 -(void) doInit {
     
-    [self deleteAllUserData];
+ //   [self deleteAllUserData];
     
     self.currentUser = [Archiver retrieve:kUserDocumentsPath];
     

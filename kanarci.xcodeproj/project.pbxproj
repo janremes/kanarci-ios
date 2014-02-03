@@ -78,6 +78,8 @@
 		7C73F2DE1712101300B09A8A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2DC1712101300B09A8A /* logo.png */; };
 		7C73F2DF1712101300B09A8A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2DD1712101300B09A8A /* logo@2x.png */; };
 		7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C73F2E21712116A00B09A8A /* StartViewController.m */; };
+		7C7B9FCA18A0371400340671 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7B9FC918A0371400340671 /* CoreMotion.framework */; };
+		7C7B9FCD18A03F7800340671 /* KNActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7B9FCC18A03F7800340671 /* KNActivity.m */; };
 		7C8DA57D18378670002A3EF3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8DA57C18378670002A3EF3 /* AudioToolbox.framework */; };
 		7C8DA580183786CA002A3EF3 /* CVAudioSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA57F183786CA002A3EF3 /* CVAudioSession.m */; };
 		7C8DA58918378A0D002A3EF3 /* NSObject+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA58418378A0D002A3EF3 /* NSObject+MKBlockAdditions.m */; };
@@ -300,6 +302,9 @@
 		7C73F2DD1712101300B09A8A /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		7C73F2E11712116A00B09A8A /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		7C73F2E21712116A00B09A8A /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		7C7B9FC918A0371400340671 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		7C7B9FCB18A03F7800340671 /* KNActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNActivity.h; sourceTree = "<group>"; };
+		7C7B9FCC18A03F7800340671 /* KNActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNActivity.m; sourceTree = "<group>"; };
 		7C8DA57C18378670002A3EF3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7C8DA57E183786CA002A3EF3 /* CVAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVAudioSession.h; sourceTree = "<group>"; };
 		7C8DA57F183786CA002A3EF3 /* CVAudioSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVAudioSession.m; sourceTree = "<group>"; };
@@ -464,13 +469,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CBBB4C816FCD37C0027E4C5 /* CoreLocation.framework in Frameworks */,
+				7C7B9FCA18A0371400340671 /* CoreMotion.framework in Frameworks */,
 				7C8DA57D18378670002A3EF3 /* AudioToolbox.framework in Frameworks */,
 				7CF37451171B004500505D65 /* MobileCoreServices.framework in Frameworks */,
 				7C5811A31709E18800680ECF /* CFNetwork.framework in Frameworks */,
 				7C5811A11709E18100680ECF /* libicucore.dylib in Frameworks */,
 				7CBBB4FC16FDB5B80027E4C5 /* Security.framework in Frameworks */,
 				7CBBB4CA16FCD3820027E4C5 /* QuartzCore.framework in Frameworks */,
-				7CBBB4C816FCD37C0027E4C5 /* CoreLocation.framework in Frameworks */,
 				7CBBB4C616FCD3660027E4C5 /* SystemConfiguration.framework in Frameworks */,
 				7CBBB4C416FCD35D0027E4C5 /* MapKit.framework in Frameworks */,
 				7C365F4C16ED36F0001BC05C /* UIKit.framework in Frameworks */,
@@ -578,6 +584,7 @@
 		7C365F4A16ED36F0001BC05C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C7B9FC918A0371400340671 /* CoreMotion.framework */,
 				7C8DA57C18378670002A3EF3 /* AudioToolbox.framework */,
 				7C5811A01709E18100680ECF /* libicucore.dylib */,
 				7CF37450171B004500505D65 /* MobileCoreServices.framework */,
@@ -999,6 +1006,8 @@
 				7CCC38F2189EF5BF00AD6A15 /* ActivityMeasureSetupVC.m */,
 				7CCC38F4189EF5D400AD6A15 /* ActivityMeasureVC.h */,
 				7CCC38F5189EF5D400AD6A15 /* ActivityMeasureVC.m */,
+				7C7B9FCB18A03F7800340671 /* KNActivity.h */,
+				7C7B9FCC18A03F7800340671 /* KNActivity.m */,
 			);
 			name = ActivityMeasure;
 			sourceTree = "<group>";
@@ -1285,6 +1294,7 @@
 				7C9074E416F1E14D00ED3DCD /* ProfileViewController.m in Sources */,
 				7CCC38B4189E926500AD6A15 /* KNLocationManager.m in Sources */,
 				7C9074E716F1E40D00ED3DCD /* ProfileHeaderView.m in Sources */,
+				7C7B9FCD18A03F7800340671 /* KNActivity.m in Sources */,
 				7C9074EA16F1E59500ED3DCD /* MeasurementCell.m in Sources */,
 				7C9074FE16F28B9100ED3DCD /* Measurement.m in Sources */,
 				7CBBB4C216FCD3170027E4C5 /* MapViewController.m in Sources */,
@@ -1434,8 +1444,8 @@
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3C4B2AB1-FAAD-46F1-A8FF-3C795B6A46EB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3C4B2AB1-FAAD-46F1-A8FF-3C795B6A46EB";
+				PROVISIONING_PROFILE = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1451,8 +1461,8 @@
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3C4B2AB1-FAAD-46F1-A8FF-3C795B6A46EB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3C4B2AB1-FAAD-46F1-A8FF-3C795B6A46EB";
+				PROVISIONING_PROFILE = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

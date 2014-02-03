@@ -7,21 +7,17 @@
 //
 
 #import "ActivityMeasureSetupVC.h"
+#import "ActivityMeasureVC.h"
+#import "KNActivity.h"
 
 @interface ActivityMeasureSetupVC ()
+@property (strong, nonatomic) IBOutlet UISwitch *stepsSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *locationSwitch;
+@property (strong, nonatomic) IBOutlet UIButton *startButton;
 
 @end
 
 @implementation ActivityMeasureSetupVC
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -33,6 +29,26 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBA Actions
+
+- (IBAction)startButtonTapped:(id)sender {
+
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  
+    if ([segue.identifier isEqualToString:@"startMeasureSegue"]) {
+        ActivityMeasureVC *vc = segue.destinationViewController;
+        KNActivity *activity = [KNActivity new];
+        activity.measureLocation = self.locationSwitch.on;
+        activity.measureSteps = self.stepsSwitch.on;
+        activity.locations = [NSMutableArray array];
+        vc.activity = activity;
+    }
+    
 }
 
 @end
