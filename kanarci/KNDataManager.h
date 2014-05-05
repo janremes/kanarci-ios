@@ -65,11 +65,15 @@ extern const NSString *KNMeasureDataChangedNotification;
 - (void) loadStationsWithSuccess:(void (^)(NSArray *stations))success
                          failure:(void (^)(NSError *error))failure;
 
+- (void) loadKanarciWithSuccess:(void (^)(NSArray *stations))success
+                        failure:(void (^)(NSError *error))failure;
+
 -(void) saveMeasure:(Measurement *) measure;
 -(NSArray *) getAllMeasures;
 
 //statistics
 -(NSArray *) getMeasuresForMonth:(int) month year:(int) year ;
 -(NSArray *) getLastWeekBarItems ;
-
+-(NSArray *) getLastBarItemsForDays:(int) days;
+-(NSArray *) getLastBarItemsForHours:(int) hours;
 @end

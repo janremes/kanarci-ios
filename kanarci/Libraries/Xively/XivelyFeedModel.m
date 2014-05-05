@@ -1,7 +1,7 @@
 #import "XivelyFeedModel.h"
 #import "XivelyDatastreamModel.h"
 #import <AFHTTPRequestOperation.h>
-#import <AFHTTPRequestOperationManager.h
+#import <AFHTTPRequestOperationManager.h>
 
 @implementation XivelyFeedModel
 
@@ -58,8 +58,10 @@
     if (self.isNew) {
         // POST
         NSURL *url = [self.api urlForRoute:@"feeds/"];
-        AFHTTPClient *httpClient = [AFHTTPClient clientWithBaseURL:url];
-        NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:nil parameters:nil];
+        AFHTTPRequestOperationManager *httpClient = [[AFHTTPRequestOperationManager  alloc] initWithBaseURL:url];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        request.HTTPMethod = @"POST";
+        request.URL = url;
         [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:self.api.versionString forHTTPHeaderField:@"User-Agent"];

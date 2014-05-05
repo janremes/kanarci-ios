@@ -8,7 +8,7 @@
 
 #import "Station.h"
 #import "StationMeasurement.h"
-
+#import "NSDictionary+EMSafeParsing.h"
 
 @interface NSString (ReplaceExtensions)
 - (NSString *)stringByReplacingStringsFromDictionary:(NSDictionary *)dict;
@@ -59,13 +59,37 @@
             self.totalQuality = 0;
         }
         
-        
+        self.stationType = kStationTypeCHMU;
         
     }
     
   return self;  
 }
 
+-(id)initWithXivelyDictionaryData:(NSDictionary *)dictionary {
+   	self = [super init];
+	if(self) {
+        _name = [dictionary stringOrNilForKey:@"title"];
+        _code = [[dictionary numberOrNilForKey:@"id"] stringValue];
+        
+        NSDictionary *locDict = [dictionary dictionaryOrNilForKey:@"location"];
+        if (locDict) {
+            CLLocationDegrees latitude = [[locDict numberOrNilForKey:@"lat"] doubleValue];
+            CLLocationDegrees longitude = [[locDict numberOrNilForKey:@"lon"] doubleValue];
+            
+            if (latitude != 0 || longitude != 0) {
+                  self.location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+            }
+            
+          
+        }
+
+        self.stationType = kStationTypeKanarek;
+        
+        self.totalQuality = 0;
+    }
+    return self;
+}
 
 -(BOOL)isEqualToStation:(Station*)station {
     return [self.code isEqualToString:station.code];
@@ -181,7 +205,19 @@
 
 
 -(UIImage *)mapPinImage {
-    NSString *imageName = [[NSString alloc] initWithFormat:@"mapPin%d.png",[self.totalQuality intValue]];
+    
+    NSString *imageName = nil;
+    switch (self.stationType) {
+        case kStationTypeCHMU:
+           imageName = [[NSString alloc] initWithFormat:@"mapPin%d.png",[self.totalQuality intValue]];
+            break;
+         case kStationTypeKanarek:
+            imageName = @"kanar2_transparent";
+            break;
+        default:
+            break;
+    }
+
     return [UIImage imageNamed:imageName]; 
 }
 

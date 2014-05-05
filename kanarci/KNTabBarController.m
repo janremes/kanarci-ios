@@ -79,8 +79,9 @@
 	//  Create custom center tabbar button
 	if(centerItem && !_tabbarCenterButton) {
         
-		KNTabBarCenterButton *centerButton = [[KNTabBarCenterButton alloc] initWithFrame:CGRectMake(0, 0, self.tabBar.width / 5, 52)];
+		KNTabBarCenterButton *centerButton = [[KNTabBarCenterButton alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
         
+        centerButton.layer.cornerRadius = centerButton.width/2;
 		centerButton.normalBackgroundColor = [UIColor blackColor];
 		centerButton.highlightedBackgroundColor = [UIColor blackColor];
         
@@ -142,7 +143,7 @@
         
         //  Center tabbar is already selected, pop navigation controller to the top
         if (self.selectedIndex == CENTER_TAB_INDEX) {
-            [((UINavigationController *)self.viewControllers[CENTER_TAB_INDEX]) popToRootViewControllerAnimated:YES];
+          //  [((UINavigationController *)self.viewControllers[CENTER_TAB_INDEX]) popToRootViewControllerAnimated:YES];
         }
         //  Else selected center tab
         else {

@@ -8,8 +8,9 @@
 
 #import "KNDescriptionViewController.h"
 
-@interface KNDescriptionViewController ()
-
+@interface KNDescriptionViewController () <UIWebViewDelegate>
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
 @end
 
 @implementation KNDescriptionViewController
@@ -31,7 +32,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://kanarci.cz/legenda"]];
+    
+   // [request setCachePolicy:NSURLRequestReturnCacheDataElseLoad] ;
+    
+    [self.webView loadRequest:request];
+    
+    self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    [self.view addSubview:self.activityIndicatorView];
+    
+    [self.activityIndicatorView centerInSuperview];
+    
+    [self.activityIndicatorView startAnimating];
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -39,6 +54,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Web view delegates 
+
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.activityIndicatorView stopAnimating];
+    self.activityIndicatorView.hidden = YES;
+    [self.activityIndicatorView removeFromSuperview];
 }
 
 @end

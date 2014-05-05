@@ -41,6 +41,9 @@
 		7C2AF3631885E7B20060FA56 /* NSData+eMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2AF3501885E7B20060FA56 /* NSData+eMan.m */; };
 		7C2AF3641885E7B20060FA56 /* NSString+eMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2AF3521885E7B20060FA56 /* NSString+eMan.m */; };
 		7C2AF3651885E7B20060FA56 /* UIColor+eMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2AF3541885E7B20060FA56 /* UIColor+eMan.m */; };
+		7C35580818A80E4200F0C9FD /* user-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C35580618A80E4100F0C9FD /* user-icon.png */; };
+		7C35580918A80E4200F0C9FD /* user-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C35580718A80E4200F0C9FD /* user-icon@2x.png */; };
+		7C35580D18A8172700F0C9FD /* ProfileSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35580C18A8172700F0C9FD /* ProfileSettingsViewController.m */; };
 		7C365F4C16ED36F0001BC05C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C365F4B16ED36F0001BC05C /* UIKit.framework */; };
 		7C365F4E16ED36F0001BC05C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C365F4D16ED36F0001BC05C /* Foundation.framework */; };
 		7C365F5016ED36F0001BC05C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C365F4F16ED36F0001BC05C /* CoreGraphics.framework */; };
@@ -59,6 +62,14 @@
 		7C5811A31709E18800680ECF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5811A21709E18800680ECF /* CFNetwork.framework */; };
 		7C5811CA1709E29D00680ECF /* KNUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811C91709E29D00680ECF /* KNUser.m */; };
 		7C5811CD1709EC9300680ECF /* KNCosmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5811CC1709EC9300680ECF /* KNCosmService.m */; };
+		7C6CFE171905AD5600DD0C0E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6CFE161905AD5600DD0C0E /* AVFoundation.framework */; };
+		7C6CFE2A1905B1A300DD0C0E /* AudioQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CFE1B1905B1A300DD0C0E /* AudioQueueObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C6CFE2B1905B1A300DD0C0E /* AudioSignalAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CFE1D1905B1A300DD0C0E /* AudioSignalAnalyzer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C6CFE2C1905B1A300DD0C0E /* AudioSignalGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CFE1F1905B1A300DD0C0E /* AudioSignalGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C6CFE2D1905B1A300DD0C0E /* FSKRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CFE231905B1A300DD0C0E /* FSKRecognizer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C6CFE2E1905B1A300DD0C0E /* FSKSerialGenerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CFE251905B1A300DD0C0E /* FSKSerialGenerator.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C6CFE2F1905B1A300DD0C0E /* MultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CFE281905B1A300DD0C0E /* MultiDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C6CFE321905B28200DD0C0E /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CFE311905B28200DD0C0E /* AudioManager.m */; };
 		7C73F2BD1711992100B09A8A /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2BC1711992100B09A8A /* icon_57.png */; };
 		7C73F2BF1711992600B09A8A /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2BE1711992600B09A8A /* icon_114.png */; };
 		7C73F2C217119EED00B09A8A /* tab1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C73F2C017119EED00B09A8A /* tab1.png */; };
@@ -80,6 +91,7 @@
 		7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C73F2E21712116A00B09A8A /* StartViewController.m */; };
 		7C7B9FCA18A0371400340671 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7B9FC918A0371400340671 /* CoreMotion.framework */; };
 		7C7B9FCD18A03F7800340671 /* KNActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7B9FCC18A03F7800340671 /* KNActivity.m */; };
+		7C7BB44419057F27005C182C /* kanar2_transparent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7BB44319057F27005C182C /* kanar2_transparent@2x.png */; };
 		7C8DA57D18378670002A3EF3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8DA57C18378670002A3EF3 /* AudioToolbox.framework */; };
 		7C8DA580183786CA002A3EF3 /* CVAudioSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA57F183786CA002A3EF3 /* CVAudioSession.m */; };
 		7C8DA58918378A0D002A3EF3 /* NSObject+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA58418378A0D002A3EF3 /* NSObject+MKBlockAdditions.m */; };
@@ -194,6 +206,7 @@
 		7CF08222170870E9004EE818 /* kn_control_unsel_unsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF08220170870E9004EE818 /* kn_control_unsel_unsel.png */; };
 		7CF08223170870E9004EE818 /* kn_control_unsel_unsel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF08221170870E9004EE818 /* kn_control_unsel_unsel@2x.png */; };
 		7CF37451171B004500505D65 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF37450171B004500505D65 /* MobileCoreServices.framework */; };
+		7CFEE83D18CD0D100037A3C0 /* kanarci.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CFEE83B18CD0D100037A3C0 /* kanarci.xcdatamodeld */; };
 		B90C4E3D21614D98B25CD925 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A024068454E4C6B952254FA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -254,6 +267,10 @@
 		7C2AF3521885E7B20060FA56 /* NSString+eMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+eMan.m"; sourceTree = "<group>"; };
 		7C2AF3531885E7B20060FA56 /* UIColor+eMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+eMan.h"; sourceTree = "<group>"; };
 		7C2AF3541885E7B20060FA56 /* UIColor+eMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+eMan.m"; sourceTree = "<group>"; };
+		7C35580618A80E4100F0C9FD /* user-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-icon.png"; sourceTree = "<group>"; };
+		7C35580718A80E4200F0C9FD /* user-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-icon@2x.png"; sourceTree = "<group>"; };
+		7C35580B18A8172700F0C9FD /* ProfileSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSettingsViewController.h; sourceTree = "<group>"; };
+		7C35580C18A8172700F0C9FD /* ProfileSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileSettingsViewController.m; sourceTree = "<group>"; };
 		7C365F4816ED36F0001BC05C /* kanarci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kanarci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C365F4B16ED36F0001BC05C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C365F4D16ED36F0001BC05C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -282,6 +299,26 @@
 		7C5811C91709E29D00680ECF /* KNUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNUser.m; sourceTree = "<group>"; };
 		7C5811CB1709EC9300680ECF /* KNCosmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNCosmService.h; sourceTree = "<group>"; };
 		7C5811CC1709EC9300680ECF /* KNCosmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNCosmService.m; sourceTree = "<group>"; };
+		7C6CFE161905AD5600DD0C0E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7C6CFE191905B1A300DD0C0E /* CharReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharReceiver.h; sourceTree = "<group>"; };
+		7C6CFE1A1905B1A300DD0C0E /* AudioQueueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueueObject.h; sourceTree = "<group>"; };
+		7C6CFE1B1905B1A300DD0C0E /* AudioQueueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioQueueObject.m; sourceTree = "<group>"; };
+		7C6CFE1C1905B1A300DD0C0E /* AudioSignalAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSignalAnalyzer.h; sourceTree = "<group>"; };
+		7C6CFE1D1905B1A300DD0C0E /* AudioSignalAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSignalAnalyzer.m; sourceTree = "<group>"; };
+		7C6CFE1E1905B1A300DD0C0E /* AudioSignalGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSignalGenerator.h; sourceTree = "<group>"; };
+		7C6CFE1F1905B1A300DD0C0E /* AudioSignalGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSignalGenerator.m; sourceTree = "<group>"; };
+		7C6CFE201905B1A300DD0C0E /* FSKModemConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKModemConfig.h; sourceTree = "<group>"; };
+		7C6CFE211905B1A300DD0C0E /* FSKByteQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKByteQueue.h; sourceTree = "<group>"; };
+		7C6CFE221905B1A300DD0C0E /* FSKRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKRecognizer.h; sourceTree = "<group>"; };
+		7C6CFE231905B1A300DD0C0E /* FSKRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKRecognizer.mm; sourceTree = "<group>"; };
+		7C6CFE241905B1A300DD0C0E /* FSKSerialGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKSerialGenerator.h; sourceTree = "<group>"; };
+		7C6CFE251905B1A300DD0C0E /* FSKSerialGenerator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKSerialGenerator.mm; sourceTree = "<group>"; };
+		7C6CFE261905B1A300DD0C0E /* lockfree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lockfree.h; sourceTree = "<group>"; };
+		7C6CFE271905B1A300DD0C0E /* MultiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiDelegate.h; sourceTree = "<group>"; };
+		7C6CFE281905B1A300DD0C0E /* MultiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiDelegate.m; sourceTree = "<group>"; };
+		7C6CFE291905B1A300DD0C0E /* PatternRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternRecognizer.h; sourceTree = "<group>"; };
+		7C6CFE301905B28200DD0C0E /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
+		7C6CFE311905B28200DD0C0E /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManager.m; sourceTree = "<group>"; };
 		7C73F2BC1711992100B09A8A /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57.png; path = ../icon_57.png; sourceTree = "<group>"; };
 		7C73F2BE1711992600B09A8A /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
 		7C73F2C017119EED00B09A8A /* tab1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab1.png; sourceTree = "<group>"; };
@@ -305,6 +342,7 @@
 		7C7B9FC918A0371400340671 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7C7B9FCB18A03F7800340671 /* KNActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNActivity.h; sourceTree = "<group>"; };
 		7C7B9FCC18A03F7800340671 /* KNActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNActivity.m; sourceTree = "<group>"; };
+		7C7BB44319057F27005C182C /* kanar2_transparent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanar2_transparent@2x.png"; sourceTree = "<group>"; };
 		7C8DA57C18378670002A3EF3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7C8DA57E183786CA002A3EF3 /* CVAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVAudioSession.h; sourceTree = "<group>"; };
 		7C8DA57F183786CA002A3EF3 /* CVAudioSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVAudioSession.m; sourceTree = "<group>"; };
@@ -461,6 +499,7 @@
 		7CF08220170870E9004EE818 /* kn_control_unsel_unsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kn_control_unsel_unsel.png; sourceTree = "<group>"; };
 		7CF08221170870E9004EE818 /* kn_control_unsel_unsel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kn_control_unsel_unsel@2x.png"; sourceTree = "<group>"; };
 		7CF37450171B004500505D65 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7CFEE83C18CD0D100037A3C0 /* kanarci.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kanarci.xcdatamodel; sourceTree = "<group>"; };
 		9A024068454E4C6B952254FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -469,6 +508,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C6CFE171905AD5600DD0C0E /* AVFoundation.framework in Frameworks */,
 				7CBBB4C816FCD37C0027E4C5 /* CoreLocation.framework in Frameworks */,
 				7C7B9FCA18A0371400340671 /* CoreMotion.framework in Frameworks */,
 				7C8DA57D18378670002A3EF3 /* AudioToolbox.framework in Frameworks */,
@@ -492,6 +532,7 @@
 		7C1695501700781D00A8A2F0 /* kanari */ = {
 			isa = PBXGroup;
 			children = (
+				7C7BB44319057F27005C182C /* kanar2_transparent@2x.png */,
 				7C1695511700783900A8A2F0 /* kanar6@2x.png */,
 				7C1695521700783900A8A2F0 /* kanar6.png */,
 				7C1695531700783900A8A2F0 /* kanar5@2x.png */,
@@ -560,6 +601,19 @@
 			name = Eman;
 			sourceTree = "<group>";
 		};
+		7C35580A18A816FC00F0C9FD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7C9074E216F1E14D00ED3DCD /* ProfileViewController.h */,
+				7C9074E316F1E14D00ED3DCD /* ProfileViewController.m */,
+				7C9074E516F1E40D00ED3DCD /* ProfileHeaderView.h */,
+				7C9074E616F1E40D00ED3DCD /* ProfileHeaderView.m */,
+				7C35580B18A8172700F0C9FD /* ProfileSettingsViewController.h */,
+				7C35580C18A8172700F0C9FD /* ProfileSettingsViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		7C365F3F16ED36F0001BC05C = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +638,7 @@
 		7C365F4A16ED36F0001BC05C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C6CFE161905AD5600DD0C0E /* AVFoundation.framework */,
 				7C7B9FC918A0371400340671 /* CoreMotion.framework */,
 				7C8DA57C18378670002A3EF3 /* AudioToolbox.framework */,
 				7C5811A01709E18100680ECF /* libicucore.dylib */,
@@ -608,8 +663,8 @@
 				7CCC38B8189E930800AD6A15 /* Resources */,
 				7C8DA581183789FC002A3EF3 /* Library */,
 				7CCC38B7189E92DA00AD6A15 /* Services */,
+				7CFEE83A18CD0CE50037A3C0 /* DB */,
 				7CCC38B6189E92D100AD6A15 /* GUI */,
-				7C9074FB16F28B7E00ED3DCD /* Model */,
 				7C9074C516F12AD100ED3DCD /* Global */,
 				7C365F5A16ED36F0001BC05C /* AppDelegate.h */,
 				7C365F5B16ED36F0001BC05C /* AppDelegate.m */,
@@ -646,6 +701,30 @@
 			name = SocketRocket;
 			sourceTree = "<group>";
 		};
+		7C6CFE181905B19900DD0C0E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				7C6CFE191905B1A300DD0C0E /* CharReceiver.h */,
+				7C6CFE1A1905B1A300DD0C0E /* AudioQueueObject.h */,
+				7C6CFE1B1905B1A300DD0C0E /* AudioQueueObject.m */,
+				7C6CFE1C1905B1A300DD0C0E /* AudioSignalAnalyzer.h */,
+				7C6CFE1D1905B1A300DD0C0E /* AudioSignalAnalyzer.m */,
+				7C6CFE1E1905B1A300DD0C0E /* AudioSignalGenerator.h */,
+				7C6CFE1F1905B1A300DD0C0E /* AudioSignalGenerator.m */,
+				7C6CFE201905B1A300DD0C0E /* FSKModemConfig.h */,
+				7C6CFE211905B1A300DD0C0E /* FSKByteQueue.h */,
+				7C6CFE221905B1A300DD0C0E /* FSKRecognizer.h */,
+				7C6CFE231905B1A300DD0C0E /* FSKRecognizer.mm */,
+				7C6CFE241905B1A300DD0C0E /* FSKSerialGenerator.h */,
+				7C6CFE251905B1A300DD0C0E /* FSKSerialGenerator.mm */,
+				7C6CFE261905B1A300DD0C0E /* lockfree.h */,
+				7C6CFE271905B1A300DD0C0E /* MultiDelegate.h */,
+				7C6CFE281905B1A300DD0C0E /* MultiDelegate.m */,
+				7C6CFE291905B1A300DD0C0E /* PatternRecognizer.h */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
 		7C73F2E01712114B00B09A8A /* Start */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,10 +736,9 @@
 			name = Start;
 			sourceTree = "<group>";
 		};
-		7C8DA581183789FC002A3EF3 /* Library */ = {
+		7C7B9FCE18A0DDC500340671 /* MKBlockAdditions */ = {
 			isa = PBXGroup;
 			children = (
-				7CBBB4D516FCD6410027E4C5 /* ThirdParty */,
 				7C8DA58218378A0D002A3EF3 /* MKBlockAdditions.h */,
 				7C8DA58318378A0D002A3EF3 /* NSObject+MKBlockAdditions.h */,
 				7C8DA58418378A0D002A3EF3 /* NSObject+MKBlockAdditions.m */,
@@ -669,12 +747,32 @@
 				7C8DA58718378A0D002A3EF3 /* UIAlertView+MKBlockAdditions.h */,
 				7C8DA58818378A0D002A3EF3 /* UIAlertView+MKBlockAdditions.m */,
 			);
+			name = MKBlockAdditions;
+			sourceTree = "<group>";
+		};
+		7C7B9FCF18A0DE2A00340671 /* Xively */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Xively;
+			sourceTree = "<group>";
+		};
+		7C8DA581183789FC002A3EF3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7C6CFE181905B19900DD0C0E /* Audio */,
+				7C7B9FCF18A0DE2A00340671 /* Xively */,
+				7C7B9FCE18A0DDC500340671 /* MKBlockAdditions */,
+				7CBBB4D516FCD6410027E4C5 /* ThirdParty */,
+			);
 			name = Library;
 			sourceTree = "<group>";
 		};
 		7C9074AF16F1260600ED3DCD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7C35580618A80E4100F0C9FD /* user-icon.png */,
+				7C35580718A80E4200F0C9FD /* user-icon@2x.png */,
 				7CCC38EE189EF17C00AD6A15 /* polyline@2x.png */,
 				7CE0965B17F61B54009BB15B /* settings.png */,
 				7CE0965C17F61B54009BB15B /* settings@2x.png */,
@@ -782,10 +880,6 @@
 		7C9074E116F1E12900ED3DCD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7C9074E216F1E14D00ED3DCD /* ProfileViewController.h */,
-				7C9074E316F1E14D00ED3DCD /* ProfileViewController.m */,
-				7C9074E516F1E40D00ED3DCD /* ProfileHeaderView.h */,
-				7C9074E616F1E40D00ED3DCD /* ProfileHeaderView.m */,
 				7C9074E816F1E59500ED3DCD /* MeasurementCell.h */,
 				7C9074E916F1E59500ED3DCD /* MeasurementCell.m */,
 				7C9074EB16F2787F00ED3DCD /* MeasurementCell.xib */,
@@ -918,6 +1012,8 @@
 				7CE0966017F61FFB009BB15B /* KNMeasureSettingsViewController.m */,
 				7C8DA57E183786CA002A3EF3 /* CVAudioSession.h */,
 				7C8DA57F183786CA002A3EF3 /* CVAudioSession.m */,
+				7C6CFE301905B28200DD0C0E /* AudioManager.h */,
+				7C6CFE311905B28200DD0C0E /* AudioManager.m */,
 			);
 			name = Measure;
 			sourceTree = "<group>";
@@ -943,6 +1039,7 @@
 		7CCC38B6189E92D100AD6A15 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				7C35580A18A816FC00F0C9FD /* Profile */,
 				7C73F2E01712114B00B09A8A /* Start */,
 				7CF0820B17086575004EE818 /* Statistics */,
 				7CC0B2BF17010F16007752CA /* Legend */,
@@ -1049,6 +1146,15 @@
 				7CF0821317086DA7004EE818 /* kn_control_passive@2x.png */,
 			);
 			name = knsegmentedcontrol;
+			sourceTree = "<group>";
+		};
+		7CFEE83A18CD0CE50037A3C0 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				7C9074FB16F28B7E00ED3DCD /* Model */,
+				7CFEE83B18CD0D100037A3C0 /* kanarci.xcdatamodeld */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1163,6 +1269,7 @@
 				7CBBB51816FDC03F0027E4C5 /* mapPin0.png in Resources */,
 				7CBBB52F16FE32F70027E4C5 /* air_quality0.png in Resources */,
 				7CBBB53016FE32F70027E4C5 /* air_quality4.png in Resources */,
+				7C7BB44419057F27005C182C /* kanar2_transparent@2x.png in Resources */,
 				7CBBB53116FE32F70027E4C5 /* air_quality5.png in Resources */,
 				7CBBB53216FE32F70027E4C5 /* air_quality6.png in Resources */,
 				7CBBB53316FE32F70027E4C5 /* measure_bar_arrow.png in Resources */,
@@ -1174,6 +1281,7 @@
 				7CBBB53916FE32F70027E4C5 /* air_quality3@2x.png in Resources */,
 				7CBBB53A16FE32F70027E4C5 /* air_quality4@2x.png in Resources */,
 				7CBBB53B16FE32F70027E4C5 /* air_quality5@2x.png in Resources */,
+				7C35580818A80E4200F0C9FD /* user-icon.png in Resources */,
 				7CE0965E17F61B54009BB15B /* settings@2x.png in Resources */,
 				7CBBB53C16FE32F70027E4C5 /* air_quality6@2x.png in Resources */,
 				7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */,
@@ -1184,6 +1292,7 @@
 				7C1695641700783900A8A2F0 /* kanar4.png in Resources */,
 				7C1695651700783900A8A2F0 /* kanar3@2x.png in Resources */,
 				7C1695661700783900A8A2F0 /* kanar3.png in Resources */,
+				7C35580918A80E4200F0C9FD /* user-icon@2x.png in Resources */,
 				7C1695671700783900A8A2F0 /* kanar2@2x.png in Resources */,
 				7C1695681700783900A8A2F0 /* kanar2.png in Resources */,
 				7C1695691700783900A8A2F0 /* kanar1@2x.png in Resources */,
@@ -1291,6 +1400,7 @@
 				7C9074D516F1346200ED3DCD /* KNNavigationBar.m in Sources */,
 				7C2AF35C1885E7B20060FA56 /* UIScrollView+eMan.m in Sources */,
 				7C9074DB16F13AC900ED3DCD /* KNNavigationItem.m in Sources */,
+				7C6CFE2C1905B1A300DD0C0E /* AudioSignalGenerator.m in Sources */,
 				7C9074E416F1E14D00ED3DCD /* ProfileViewController.m in Sources */,
 				7CCC38B4189E926500AD6A15 /* KNLocationManager.m in Sources */,
 				7C9074E716F1E40D00ED3DCD /* ProfileHeaderView.m in Sources */,
@@ -1308,6 +1418,7 @@
 				7C2AF3571885E7B20060FA56 /* UIButton+eMan.m in Sources */,
 				7CBBB51D16FE2D270027E4C5 /* MeasureViewController.m in Sources */,
 				7C8DA580183786CA002A3EF3 /* CVAudioSession.m in Sources */,
+				7CFEE83D18CD0D100037A3C0 /* kanarci.xcdatamodeld in Sources */,
 				7CBBB52016FE2ED80027E4C5 /* MeasureBar.m in Sources */,
 				7CCC38F3189EF5BF00AD6A15 /* ActivityMeasureSetupVC.m in Sources */,
 				7CCC38F6189EF5D400AD6A15 /* ActivityMeasureVC.m in Sources */,
@@ -1332,22 +1443,29 @@
 				7C2AF3601885E7B20060FA56 /* MKMapView+eMan.m in Sources */,
 				7C2AF3311885E7A50060FA56 /* NSMutableURLRequest+CurlDescription.m in Sources */,
 				7C58119E1709E11200680ECF /* SRWebSocket.m in Sources */,
+				7C35580D18A8172700F0C9FD /* ProfileSettingsViewController.m in Sources */,
 				7C2AF3651885E7B20060FA56 /* UIColor+eMan.m in Sources */,
 				7C58119F1709E11200680ECF /* NSData+SRB64Additions.m in Sources */,
 				7C8DA58918378A0D002A3EF3 /* NSObject+MKBlockAdditions.m in Sources */,
+				7C6CFE2D1905B1A300DD0C0E /* FSKRecognizer.mm in Sources */,
+				7C6CFE2E1905B1A300DD0C0E /* FSKSerialGenerator.mm in Sources */,
 				7C8DA58A18378A0D002A3EF3 /* UIActionSheet+MKBlockAdditions.m in Sources */,
 				7CCC38BD189EC6A800AD6A15 /* KNUserService.m in Sources */,
 				7C8DA58B18378A0D002A3EF3 /* UIAlertView+MKBlockAdditions.m in Sources */,
+				7C6CFE321905B28200DD0C0E /* AudioManager.m in Sources */,
 				7CCC38C8189ED89500AD6A15 /* Archiver.m in Sources */,
 				7C5811CA1709E29D00680ECF /* KNUser.m in Sources */,
 				7C2AF3561885E7B20060FA56 /* UIBarButtonItem+eMan.m in Sources */,
 				7C5811CD1709EC9300680ECF /* KNCosmService.m in Sources */,
 				7C4AAE9B18834F9400443E64 /* KNBarItem.m in Sources */,
+				7C6CFE2B1905B1A300DD0C0E /* AudioSignalAnalyzer.m in Sources */,
 				7CCD90A8170C5460008055C2 /* KNBarChart.m in Sources */,
 				7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */,
+				7C6CFE2F1905B1A300DD0C0E /* MultiDelegate.m in Sources */,
 				7C2AF35D1885E7B20060FA56 /* UISearchBar+eMan.m in Sources */,
 				7CCC38C9189ED89500AD6A15 /* NSObject+NSCoding.m in Sources */,
 				7C2AF3641885E7B20060FA56 /* NSString+eMan.m in Sources */,
+				7C6CFE2A1905B1A300DD0C0E /* AudioQueueObject.m in Sources */,
 				7CDC2D911715AB84009AAF05 /* KNLoginViewController.m in Sources */,
 				7C2AF35B1885E7B20060FA56 /* UINavigationController+eMan.m in Sources */,
 				7CCC38C3189ED62A00AD6A15 /* UIApplication+Paths.m in Sources */,
@@ -1437,15 +1555,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72912DD4834C443C88A72B73 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Remes (CXME58UJUP)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanarci/kanarci-Prefix.pch";
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
+				PROVISIONING_PROFILE = "5C6B238E-8556-4DAD-A8CD-36497EEC24F7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5C6B238E-8556-4DAD-A8CD-36497EEC24F7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1454,15 +1572,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72912DD4834C443C88A72B73 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Remes (CXME58UJUP)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanarci/kanarci-Prefix.pch";
 				INFOPLIST_FILE = "kanarci/kanarci-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A6015A39-DC26-4FCA-8A49-9AC3F67E7459";
+				PROVISIONING_PROFILE = "5C6B238E-8556-4DAD-A8CD-36497EEC24F7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5C6B238E-8556-4DAD-A8CD-36497EEC24F7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1489,6 +1607,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7CFEE83B18CD0D100037A3C0 /* kanarci.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7CFEE83C18CD0D100037A3C0 /* kanarci.xcdatamodel */,
+			);
+			currentVersion = 7CFEE83C18CD0D100037A3C0 /* kanarci.xcdatamodel */;
+			path = kanarci.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C365F4016ED36F0001BC05C /* Project object */;
 }

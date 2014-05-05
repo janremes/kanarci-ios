@@ -12,10 +12,13 @@
 #import "KNDataManager.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Station.h"
-#import "AFNetworking/AFHTTPRequestOperation.h"
+#import <AFNetworking.h>
 #import "KNMeasureDataDocument.h"
 #import "KNCosmService.h"
 #import "KNBarItem.h"
+#import "NSMutableURLRequest+CurlDescription.h"
+#import <NSDate+Calendar.h>
+
 
 #define kFilename_icloud @"kanarci_data"
 #define kFilename_local @"kanarci_data_local"
@@ -236,11 +239,14 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     
-        if ([NSJSONSerialization isValidJSONObject:responseObject]) {
+   //     NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        id json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        
+        if ([NSJSONSerialization isValidJSONObject:json]) {
             
-            NSMutableArray *stationsJSON = [responseObject objectForKey:@"stations"];
+            NSMutableArray *stationsJSON = [json objectForKey:@"stations"];
             
-            self.stationsLoadTime = [NSDate dateWithTimeIntervalSince1970:[[responseObject objectForKey:@"date"] doubleValue]];
+            self.stationsLoadTime = [NSDate dateWithTimeIntervalSince1970:[[json objectForKey:@"date"] doubleValue]];
             self.stations = [[NSMutableArray alloc] initWithCapacity:[stationsJSON count]];
             int number = 0;
             
@@ -283,9 +289,48 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
                                          
                                          
     [operation start];
-                                         
-                                        
+    
 }
+
+- (void) loadKanarciWithSuccess:(void (^)(NSArray *stations))success
+                         failure:(void (^)(NSError *error))failure  {
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"e389559f1c827457980090b6ea69ab055fe5fd2b305b07dd49ab039299d1f55e" forHTTPHeaderField:@"X-ApiKey"];
+    
+    [manager GET:@"http://api.xively.com/v2/feeds" parameters:@{@"q":@"kanarek",@"status":@"live"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSArray *results = [responseObject objectForKey:@"results"];
+        
+        NSMutableArray *array = [NSMutableArray array];
+        for(NSDictionary * dict in results) {
+            Station *st = [[Station alloc] initWithXivelyDictionaryData:dict];
+            
+            [array addObject:st];
+            
+        }
+
+        NSArray *retStations = [[NSArray alloc] initWithArray:array];
+        
+        if(success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                success(retStations);
+            });
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           DLog(@"%@ %@",[operation.request description],error);
+        
+        if(failure) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                failure(error);
+            });
+        }
+    }];
+    
+}
+
 
 #pragma mark
 #pragma mark - Location methods
@@ -494,6 +539,135 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
 #pragma mark - Statistics methods
 
 
+-(NSArray *) getLastBarItemsForHours:(int) hours {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    NSDate *now = [NSDate new];
+    
+   now = [now dateBySettingMinute:0];
+    now = [now dateBySettingSecond:0];
+    now = [now dateByAddingHour:1];
+    
+    NSDate *startDate = [now dateByAddingHour:-1];
+    NSDate *endDate = now;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"d"];
+    
+    NSArray *measures = [NSArray arrayWithArray:_measurements];
+    for (int i = 0; i < hours; i++) {
+        
+        
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF.date >= %@) AND (SELF.date <= %@)", startDate, endDate];
+        NSArray *result = [measures filteredArrayUsingPredicate:predicate];
+        
+        double resValue = 0;
+        if (result && result.count > 0) {
+            
+            for (Measurement *m in result) {
+                resValue += m.bucketValue;
+            }
+            
+            resValue/=result.count;
+            
+        }
+        
+        KNBarItem *barItem = [[KNBarItem alloc] init];
+        barItem.value = @(resValue);
+        int index = (int) resValue;
+        if (index == 0) {
+            barItem.color = [UIColor whiteColor];
+        } else {
+            
+            
+            barItem.color = [_graphColors objectAtIndex:index -1];
+        }
+        
+        barItem.title = [NSString stringWithFormat:@"%d",startDate.hour];
+        
+        if (resValue != 0) {
+            [array addObject:barItem];
+        }
+        
+        
+        if (startDate.hour == 0) {
+            break;
+        }
+        
+        startDate = [startDate dateByAddingHour:-1];
+        
+        endDate = [endDate dateByAddingHour:-1];
+        
+
+        
+    }
+    
+    
+    return array;
+    
+    
+}
+
+-(NSArray *) getLastBarItemsForDays:(int) days {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    //Create start and end dates for calculation
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDateComponents *dayComponents = [calendar components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit  fromDate:[NSDate new]];
+    
+    NSDate *now = [NSDate new];
+    NSDate *startDate = [now dateBySettingHour:0];
+    NSDate *endDate = [now dateBySettingHour:24];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"d"];
+    
+    NSArray *measures = [NSArray arrayWithArray:_measurements];
+    for (int i = 0; i < days; i++) {
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF.date >= %@) AND (SELF.date <= %@)", startDate, endDate];
+        NSArray *result = [measures filteredArrayUsingPredicate:predicate];
+        
+         double resValue = 0;
+        if (result && result.count > 0) {
+           
+            for (Measurement *m in result) {
+                resValue += m.bucketValue;
+            }
+            
+            resValue/=result.count;
+
+        }
+        
+        KNBarItem *barItem = [[KNBarItem alloc] init];
+        barItem.value = @(resValue);
+       int index = (int) resValue;
+        if (index == 0) {
+            barItem.color = [UIColor whiteColor];
+        } else {
+            
+          
+            barItem.color = [_graphColors objectAtIndex:index -1];
+        }
+        
+        barItem.title = [dateFormatter stringFromDate:startDate];
+        
+        [array addObject:barItem];
+        
+        startDate = [startDate dateYesterday];
+        
+        endDate = [endDate dateYesterday];
+        
+    }
+    
+    
+    return array;
+
+    
+}
+
 -(NSArray *) getLastWeekBarItems {
     NSMutableArray *array = [NSMutableArray array];
     
@@ -505,8 +679,8 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     
     NSDateComponents *dayComponents = [calendar components:NSDayCalendarUnit | NSMonthCalendarUnit  fromDate:[NSDate new]];
     NSInteger startDay = [dayComponents day];
-    int currentDay = startDay;
-    int lastDay = startDay - days;
+    NSInteger currentDay = startDay;
+    NSInteger lastDay = startDay - days;
     
     NSMutableArray *returnedArray = [[NSMutableArray alloc] initWithCapacity:days];
     
@@ -545,7 +719,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     }
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMM d"];
+    [dateFormatter setDateFormat:@"d"];
     
     for (NSNumber *number in returnedArray) {
           KNBarItem *barItem = [[KNBarItem alloc] init];

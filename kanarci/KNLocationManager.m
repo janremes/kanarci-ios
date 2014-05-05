@@ -42,7 +42,7 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     [self.locationManager setActivityType:CLActivityTypeFitness];
-    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.distanceFilter = 5.0f;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     if ([CMStepCounter isStepCountingAvailable]) {
@@ -77,11 +77,15 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
-    DLog(@"New location observed %@", [locations lastObject]);
+
     
     if (self.delegate) {
         for (CLLocation *location in locations) {
-            [self.delegate locationUpdated:location];
+            if(location.horizontalAccuracy < 20) {
+                DLog(@"New location observed %@ accuracy %f", location,location.horizontalAccuracy);
+                [self.delegate locationUpdated:location]; 
+            }
+           
         }
     }
 

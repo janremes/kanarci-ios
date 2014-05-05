@@ -61,13 +61,14 @@
     
 	//  Set custom font
 	UIFont *font = [Theme boldAppFontOfSize:12.0];
-	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:font, UITextAttributeFont,
-                                [UIColor blackColor], UITextAttributeTextColor,
-                                [UIColor clearColor], UITextAttributeTextShadowColor,
+	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName,
+                                [UIColor blackColor], NSForegroundColorAttributeName,
+                    
                                 nil];
 	[segment setTitleTextAttributes:attributes
 	                       forState:UIControlStateNormal];
-    
+    [segment setTitleTextAttributes:attributes
+	                       forState:UIControlStateSelected];
     
 //    for (UIView *view in segment.subviews) {
 //        view.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -86,7 +87,7 @@
 	//  Background of segments
 	[segment setBackgroundImage:inactiveImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 	[segment setBackgroundImage:activeImage forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
-    
+    [segment setBackgroundImage:inactiveImage forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
     
     //  Spacing images
 //	[segment setDividerImage:spaceImage
@@ -107,10 +108,22 @@
 	     forLeftSegmentState:UIControlStateNormal
 		   rightSegmentState:UIControlStateNormal
 				  barMetrics:UIBarMetricsDefault];
-	[segment setDividerImage:selUnselImage
+	
+	[segment setDividerImage:unselSUnselImage
+	     forLeftSegmentState:UIControlStateHighlighted
+		   rightSegmentState:UIControlStateNormal
+				  barMetrics:UIBarMetricsDefault];
+    
+    [segment setDividerImage:selUnselImage
 	     forLeftSegmentState:UIControlStateSelected
 		   rightSegmentState:UIControlStateNormal
 				  barMetrics:UIBarMetricsDefault];
+    
+    [segment setDividerImage:selUnselImage
+	     forLeftSegmentState:UIControlStateSelected
+		   rightSegmentState:UIControlStateNormal
+				  barMetrics:UIBarMetricsDefault];
+    
 	[segment setDividerImage:unselSselImage
 	     forLeftSegmentState:UIControlStateNormal
 		   rightSegmentState:UIControlStateSelected

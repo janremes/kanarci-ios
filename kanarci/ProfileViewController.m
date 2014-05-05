@@ -14,8 +14,8 @@
 #import "KNMeasureHelper.h"
 #import "MeasurementDetailViewController.h"
 
-@interface ProfileViewController ()
-    
+@interface ProfileViewController () <UIActionSheetDelegate>
+
 
 @end
 
@@ -24,22 +24,8 @@
     NSDateFormatter *_dateFormatter;
     NSDateFormatter *_timeFormatter;
     Measurement *selectedMeasurement;
-    
-    
-
-
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-       
-    }
-    return self;
-}
 
 -(void)awakeFromNib {
 
@@ -51,7 +37,24 @@
 
 }
 
+#pragma mark -
+#pragma mark View controllers delegates
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	
+    _measurements = [[KNDataManager sharedInstance] getAllMeasures];
+    
+
+
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 
 
@@ -153,22 +156,10 @@
 
 
 
-#pragma mark -
-#pragma mark View controllers delegates
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	
-     _measurements = [[KNDataManager sharedInstance] getAllMeasures];
-    
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 
 -(void)dealloc {
     removeNotificationObserver(self);

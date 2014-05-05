@@ -14,13 +14,15 @@
 @interface MapViewController ()
 
 @property(nonatomic,strong) IBOutlet MKMapView *mapView;
-
+@property (nonatomic, strong) NSMutableArray *annotations;
+@property (nonatomic,assign) BOOL stationsChmuLoaded;
+@property (nonatomic,assign) BOOL stationsKanarciLoaded;
 @end
 
 @implementation MapViewController
 
 @synthesize mapView = _mapView;
-@synthesize annotations = _annotations, lastCoordination;
+@synthesize lastCoordination;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,28 +42,58 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self performSelectorInBackground:@selector(loadData) withObject:nil];
+//    [self performSelectorInBackground:@selector(loadData) withObject:nil];
+    self.annotations = [NSMutableArray array];
 }
 
 
 -(void) loadData{
-    [[KNDataManager sharedInstance] loadStationsWithSuccess:^(NSArray *stations){
-        
-        NSMutableArray *annot = [NSMutableArray arrayWithCapacity:[stations count]];
-        for(Station *station in stations) {
-            [annot addObject:[StationAnnotation annotationForStation:station]];
-            
-        }
-        _annotations = annot;
-        
     
-       [self updateMapView];
+    if (!self.stationsChmuLoaded) {
+        [[KNDataManager sharedInstance] loadStationsWithSuccess:^(NSArray *stations){
+            
+            NSMutableArray *annot = [NSMutableArray arrayWithCapacity:[stations count]];
+            for(Station *station in stations) {
+                [annot addObject:[StationAnnotation annotationForStation:station]];
+                
+            }
+            [self.annotations addObjectsFromArray:annot];
+            self.stationsChmuLoaded = YES;
+            
+            [self updateMapView];
+            
+            
+            
+        } failure:^(NSError *error){
+            NSLog(@"Downloading stations failed");
+        }];
+    }
 
-        
-        
-    } failure:^(NSError *error){
-        NSLog(@"Downloading stations failed");
-    }];
+    
+    if (!self.stationsKanarciLoaded) {
+        [[KNDataManager sharedInstance] loadKanarciWithSuccess:^(NSArray *stations) {
+            
+            NSMutableArray *annot = [NSMutableArray arrayWithCapacity:[stations count]];
+            for(Station *station in stations) {
+                
+                if (station.location) {
+                    [annot addObject:[StationAnnotation annotationForStation:station]];
+                }
+                
+                
+            }
+            
+            [self.annotations addObjectsFromArray:annot];
+            self.stationsKanarciLoaded = YES;
+             [self updateMapView];
+            
+        } failure:^(NSError *error) {
+            
+        }];
+    }
+    
+
+
 }
 
 -(void)updateMapView {

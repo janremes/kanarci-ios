@@ -16,6 +16,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "CVAudioSession.h"
 #import "MKBlockAdditions.h"
+#import "AudioManager.h"
 
 @interface MeasureViewController ()
 
@@ -63,11 +64,14 @@
 {
     [super viewDidLoad];
     
-    [self checkLogin];
+  //  [self checkLogin];
     
-    [CVAudioSession setup];
+//    [CVAudioSession setup];
     
-    addNotificationObserver(self, newAudioDetected:, kCVAudioInputNewDetectedNotification, nil);
+//    addNotificationObserver(self, newAudioDetected:, kCVAudioInputNewDetectedNotification, nil);
+//    addNotificationObserver(self, newAudioDetected:, kCVAudioInputChangedNotification, nil);
+    
+    [[AudioManager sharedInstance] setup];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
     [button setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
@@ -162,6 +166,9 @@
         
     }];
 }
+
+
+
 
 
 -(void) updateWithMeasure:(Measurement *) measurement {

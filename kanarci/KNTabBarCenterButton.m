@@ -85,7 +85,7 @@
     
     [super setFrame:frame];
     
-    [self createRoundedCorners];
+//   [self createRoundedCorners];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,7 +96,7 @@
     //  Configure
     [self configureForCurrentState];
     
-    [self createRoundedCorners];
+  // [self createRoundedCorners];
     
     //  Create dropped shadow of the button
     self.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -151,9 +151,9 @@
     }
     
 //    //  Reconfigure layer
-//    CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
-//    shapeLayer.fillColor = backgroundColor.CGColor;
-    
+ //   CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
+ //   shapeLayer.fillColor = backgroundColor.CGColor;
+    self.backgroundColor = backgroundColor;
     //  Configure image view
     _imageView.image = image;
 }
@@ -203,7 +203,7 @@
     
 	//  MUST set the path to the property even if the animation is stared
 	//  Not doing so causes the path to animate and return back to the original state
-	shapeLayer.path = path;
+	[(CAShapeLayer *)self.layer setPath:path];
     
 	CGPathRelease(path);
 }

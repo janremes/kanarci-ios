@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KNTabBarCenterButton : UIButton
+@interface KNTabBarCenterButton : UIControl
 
 
 @property (nonatomic, strong) UIImage *normalImage;

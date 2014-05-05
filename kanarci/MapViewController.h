@@ -15,7 +15,7 @@
 
 }
 
-@property (nonatomic, strong) NSArray *annotations;
+
 @property(readwrite, assign) MKCoordinateRegion lastCoordination;
 
 @end

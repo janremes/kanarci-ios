@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KNActivity : NSObject
+@interface KNActivity : NSObject <NSCoding>
 
 @property (nonatomic,assign) BOOL measureLocation;
 @property (nonatomic,assign) BOOL measureSteps;

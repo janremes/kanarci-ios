@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "StationMeasurement.h"
-@class StationMeasurement;
 
+typedef enum StationType : NSUInteger {
+    kStationTypeCHMU,
+    kStationTypeKanarek
+} StationType;
+
+@class StationMeasurement;
 @interface Station : NSObject {
     NSInteger number;
     NSString *code;
@@ -42,8 +47,9 @@
 
 @property (nonatomic, strong) NSMutableDictionary *measurements;
 @property (nonatomic, strong) NSNumber *totalQuality;
+@property (nonatomic,assign) StationType stationType;
 
 -(id)initWithDictionaryData:(NSDictionary *)dictionary ;
-
+-(id)initWithXivelyDictionaryData:(NSDictionary *)dictionary ;
 
 @end
