@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C07130319181A7A00336863 /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C07130119181A7A00336863 /* StationViewController.m */; };
+		7C07130419181A7A00336863 /* StationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C07130219181A7A00336863 /* StationViewController.xib */; };
+		7C071307191822AB00336863 /* StationRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C071306191822AB00336863 /* StationRowView.m */; };
+		7C0713091918237700336863 /* StationRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C0713081918237700336863 /* StationRowView.xib */; };
 		7C0E4D8C170352EC00B130E5 /* KNMeasureDataDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */; };
 		7C16954F17005A2C00A8A2F0 /* KNMeasureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16954E17005A2C00A8A2F0 /* KNMeasureHelper.m */; };
 		7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695511700783900A8A2F0 /* kanar6@2x.png */; };
@@ -212,6 +216,12 @@
 
 /* Begin PBXFileReference section */
 		72912DD4834C443C88A72B73 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7C07130019181A7A00336863 /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationViewController.h; sourceTree = "<group>"; };
+		7C07130119181A7A00336863 /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
+		7C07130219181A7A00336863 /* StationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationViewController.xib; sourceTree = "<group>"; };
+		7C071305191822AB00336863 /* StationRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationRowView.h; sourceTree = "<group>"; };
+		7C071306191822AB00336863 /* StationRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationRowView.m; sourceTree = "<group>"; };
+		7C0713081918237700336863 /* StationRowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationRowView.xib; sourceTree = "<group>"; };
 		7C0E4D8A170352EC00B130E5 /* KNMeasureDataDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureDataDocument.h; sourceTree = "<group>"; };
 		7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureDataDocument.m; sourceTree = "<group>"; };
 		7C16954D17005A2B00A8A2F0 /* KNMeasureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureHelper.h; sourceTree = "<group>"; };
@@ -945,6 +955,12 @@
 				7CBBB4D016FCD4580027E4C5 /* Station.m */,
 				7CBBB4D216FCD4B40027E4C5 /* StationMeasurement.h */,
 				7CBBB4D316FCD4B40027E4C5 /* StationMeasurement.m */,
+				7C07130019181A7A00336863 /* StationViewController.h */,
+				7C07130119181A7A00336863 /* StationViewController.m */,
+				7C07130219181A7A00336863 /* StationViewController.xib */,
+				7C071305191822AB00336863 /* StationRowView.h */,
+				7C071306191822AB00336863 /* StationRowView.m */,
+				7C0713081918237700336863 /* StationRowView.xib */,
 			);
 			name = Map;
 			path = ..;
@@ -1251,6 +1267,7 @@
 				7C9074F116F286A500ED3DCD /* profile_header_me@2x.png in Resources */,
 				7C9074F416F28A0C00ED3DCD /* profile_divider.png in Resources */,
 				7C9074F516F28A0C00ED3DCD /* profile_divider@2x.png in Resources */,
+				7C07130419181A7A00336863 /* StationViewController.xib in Resources */,
 				7C9074F916F28AE800ED3DCD /* air_quality1.png in Resources */,
 				7C9074FA16F28AE800ED3DCD /* air_quality1@2x.png in Resources */,
 				7CBBB50B16FDC03F0027E4C5 /* mapPin1.png in Resources */,
@@ -1264,6 +1281,7 @@
 				7CBBB51316FDC03F0027E4C5 /* mapPin5.png in Resources */,
 				7CBBB51416FDC03F0027E4C5 /* mapPin5@2x.png in Resources */,
 				7CBBB51516FDC03F0027E4C5 /* mapPin6.png in Resources */,
+				7C0713091918237700336863 /* StationRowView.xib in Resources */,
 				7CBBB51616FDC03F0027E4C5 /* mapPin6@2x.png in Resources */,
 				7CBBB51716FDC03F0027E4C5 /* mapPin0@2x.png in Resources */,
 				7CBBB51816FDC03F0027E4C5 /* mapPin0.png in Resources */,
@@ -1440,6 +1458,7 @@
 				7CF0820E1708658F004EE818 /* StatisticsViewController.m in Sources */,
 				7C2AF35F1885E7B20060FA56 /* UITableViewCell+eMan.m in Sources */,
 				7C58119D1709E11200680ECF /* base64.c in Sources */,
+				7C071307191822AB00336863 /* StationRowView.m in Sources */,
 				7C2AF3601885E7B20060FA56 /* MKMapView+eMan.m in Sources */,
 				7C2AF3311885E7A50060FA56 /* NSMutableURLRequest+CurlDescription.m in Sources */,
 				7C58119E1709E11200680ECF /* SRWebSocket.m in Sources */,
@@ -1463,6 +1482,7 @@
 				7C73F2E31712116A00B09A8A /* StartViewController.m in Sources */,
 				7C6CFE2F1905B1A300DD0C0E /* MultiDelegate.m in Sources */,
 				7C2AF35D1885E7B20060FA56 /* UISearchBar+eMan.m in Sources */,
+				7C07130319181A7A00336863 /* StationViewController.m in Sources */,
 				7CCC38C9189ED89500AD6A15 /* NSObject+NSCoding.m in Sources */,
 				7C2AF3641885E7B20060FA56 /* NSString+eMan.m in Sources */,
 				7C6CFE2A1905B1A300DD0C0E /* AudioQueueObject.m in Sources */,

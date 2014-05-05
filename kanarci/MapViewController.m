@@ -10,8 +10,9 @@
 #import "Station.h"
 #import "StationAnnotation.h"
 #import "KNDataManager.h"
+#import "StationViewController.h"
 
-@interface MapViewController ()
+@interface MapViewController () <MKMapViewDelegate>
 
 @property(nonatomic,strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) NSMutableArray *annotations;
@@ -24,25 +25,12 @@
 @synthesize mapView = _mapView;
 @synthesize lastCoordination;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
--(void)awakeFromNib {
-  
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-//    [self performSelectorInBackground:@selector(loadData) withObject:nil];
+
     self.annotations = [NSMutableArray array];
 }
 
@@ -227,12 +215,16 @@
     aView.image = ((StationAnnotation*)annotation).station.mapPinImage;
     aView.annotation = annotation;
     
-//    UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//    rightButton.tag = ((StationAnnotation*)annotation).station.number;
-//    [rightButton addTarget:self
-//                    action:@selector(showStation:)
-//          forControlEvents:UIControlEventTouchUpInside];
-//    aView.rightCalloutAccessoryView = rightButton;
+    if( ((StationAnnotation*)annotation).station.stationType == kStationTypeCHMU) {
+        UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        rightButton.tag =[self.annotations indexOfObject:((StationAnnotation*)annotation)];
+        [rightButton addTarget:self
+                        action:@selector(showStation:)
+              forControlEvents:UIControlEventTouchUpInside];
+        aView.rightCalloutAccessoryView = rightButton;
+    }
+
+
     
     
     
@@ -240,16 +232,14 @@
     return aView;
 }
 
--(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-    
-}
+
 
 -(IBAction)showStation:(UIButton*)button {
     self.lastCoordination = self.mapView.region;
     
-    //    StationViewController *stationView = [[StationViewController alloc] initWithNibName:@"StationViewController" bundle:nil];
-    //    stationView.detailType = @"map";
-    //    stationView.station = [[[DataController getInstance] stations] objectAtIndex:button.tag];
+    StationViewController *stationView = [[StationViewController alloc] initWithNibName:@"StationViewController" bundle:nil];
+    stationView.station = [[self.annotations objectAtIndex:button.tag] station];
+    [self.navigationController pushViewController:stationView animated:YES];
     
     
 }

@@ -56,7 +56,7 @@
         
         self.totalQuality = (NSNumber*)[dictionary objectForKey:@"hourly_index"];
         if([self.totalQuality intValue] == -1) {
-            self.totalQuality = 0;
+            self.totalQuality = @0;
         }
         
         self.stationType = kStationTypeCHMU;
