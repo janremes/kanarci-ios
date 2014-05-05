@@ -11,6 +11,7 @@
 		7C07130419181A7A00336863 /* StationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C07130219181A7A00336863 /* StationViewController.xib */; };
 		7C071307191822AB00336863 /* StationRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C071306191822AB00336863 /* StationRowView.m */; };
 		7C0713091918237700336863 /* StationRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C0713081918237700336863 /* StationRowView.xib */; };
+		7C07130B19182B7F00336863 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C07130A19182B7F00336863 /* Localizable.strings */; };
 		7C0E4D8C170352EC00B130E5 /* KNMeasureDataDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */; };
 		7C16954F17005A2C00A8A2F0 /* KNMeasureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16954E17005A2C00A8A2F0 /* KNMeasureHelper.m */; };
 		7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1695511700783900A8A2F0 /* kanar6@2x.png */; };
@@ -222,6 +223,7 @@
 		7C071305191822AB00336863 /* StationRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationRowView.h; sourceTree = "<group>"; };
 		7C071306191822AB00336863 /* StationRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationRowView.m; sourceTree = "<group>"; };
 		7C0713081918237700336863 /* StationRowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationRowView.xib; sourceTree = "<group>"; };
+		7C07130A19182B7F00336863 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C0E4D8A170352EC00B130E5 /* KNMeasureDataDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureDataDocument.h; sourceTree = "<group>"; };
 		7C0E4D8B170352EC00B130E5 /* KNMeasureDataDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMeasureDataDocument.m; sourceTree = "<group>"; };
 		7C16954D17005A2B00A8A2F0 /* KNMeasureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMeasureHelper.h; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 				7C365F5D16ED36F0001BC05C /* Default.png */,
 				7C365F5F16ED36F0001BC05C /* Default@2x.png */,
 				7C365F6116ED36F0001BC05C /* Default-568h@2x.png */,
+				7C07130A19182B7F00336863 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1304,6 +1307,7 @@
 				7CBBB53C16FE32F70027E4C5 /* air_quality6@2x.png in Resources */,
 				7C16955F1700783900A8A2F0 /* kanar6@2x.png in Resources */,
 				7C1695601700783900A8A2F0 /* kanar6.png in Resources */,
+				7C07130B19182B7F00336863 /* Localizable.strings in Resources */,
 				7C1695611700783900A8A2F0 /* kanar5@2x.png in Resources */,
 				7C1695621700783900A8A2F0 /* kanar5.png in Resources */,
 				7C1695631700783900A8A2F0 /* kanar4@2x.png in Resources */,

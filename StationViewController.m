@@ -17,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *qualityLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-
+@property (strong, nonatomic) NSMutableArray *rows;
 @end
 
 @implementation StationViewController
@@ -36,7 +36,8 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterLongStyle;
     self.dateLabel.text = [dateFormatter stringFromDate:[[KNDataManager sharedInstance] stationsLoadTime]];
-    
+
+    self.rows = [NSMutableArray array];
     [self setupScrollView];
 }
 
@@ -44,6 +45,11 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self animateRows];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -56,6 +62,12 @@
     self.scrollView.height = self.view.height - self.scrollView.top - 50;
 }
 
+-(void) animateRows {
+    for(StationRowView *row in self.rows) {
+        [row animate];
+    }
+}
+
 -(void) setupScrollView{
     CGFloat height = 0;
     for(NSString *key in self.station.measurements.allKeys) {
@@ -63,6 +75,7 @@
         [row setupWithStationMeasurement:[self.station.measurements objectForKey:key]];
         [self.scrollView addSubview:row];
         height+=row.height;
+        [self.rows addObject:row];
     }
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.width, height);

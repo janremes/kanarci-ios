@@ -14,4 +14,5 @@
 
 
 -(void) setupWithStationMeasurement:(StationMeasurement *) measurement;
+-(void) animate;
 @end

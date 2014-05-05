@@ -96,7 +96,8 @@
                                   };
     
 	[[UITabBarItem appearance] setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
-       
+    
+     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
 
 }
 
