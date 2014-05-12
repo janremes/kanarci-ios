@@ -164,7 +164,7 @@
 //	CGFloat cornerRadius = 4;
 	CGFloat bottomRadius = 0;
     
-	CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
+//	CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
 //
     
 //    CALayer *layer = self.layer;

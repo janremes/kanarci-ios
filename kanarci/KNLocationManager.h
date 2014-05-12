@@ -27,11 +27,15 @@
 
 -(void) setNewActivity:(KNActivity *) activity;
 
+//location methods
 -(void) startObservingLocation;
 -(void) stopObservingLocation;
 
+// step counter methods
 -(void) startObservingStepCount;
 -(void) stopObservingStepCount;
+
+
 -(void) queryStepCounterStartDate:(NSDate *) startDate endDate:(NSDate *) endDate completion:(void (^)(NSInteger stepCount))completion ;
 
 @end

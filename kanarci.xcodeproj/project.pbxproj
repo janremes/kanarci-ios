@@ -198,6 +198,8 @@
 		7CE0966117F61FFB009BB15B /* KNMeasureSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0966017F61FFB009BB15B /* KNMeasureSettingsViewController.m */; };
 		7CE0966517F62775009BB15B /* MeasurementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0966417F62775009BB15B /* MeasurementDetailViewController.m */; };
 		7CE0966817F62A9E009BB15B /* PinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0966717F62A9E009BB15B /* PinAnnotation.m */; };
+		7CE43AAB191D67EF009954B9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE43AAA191D67EF009954B9 /* CoreBluetooth.framework */; };
+		7CE6347B191A27A50009E877 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE63479191A27A50009E877 /* BLE.m */; };
 		7CF0820A1708630C004EE818 /* KNSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF082091708630C004EE818 /* KNSegmentedButton.m */; };
 		7CF0820E1708658F004EE818 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0820D1708658F004EE818 /* StatisticsViewController.m */; };
 		7CF0821417086DA7004EE818 /* kn_control_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0821017086DA7004EE818 /* kn_control_active.png */; };
@@ -496,6 +498,10 @@
 		7CE0966417F62775009BB15B /* MeasurementDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementDetailViewController.m; sourceTree = "<group>"; };
 		7CE0966617F62A9E009BB15B /* PinAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinAnnotation.h; sourceTree = "<group>"; };
 		7CE0966717F62A9E009BB15B /* PinAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinAnnotation.m; sourceTree = "<group>"; };
+		7CE43AAA191D67EF009954B9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		7CE63478191A27A50009E877 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		7CE63479191A27A50009E877 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		7CE6347A191A27A50009E877 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 		7CF082081708630C004EE818 /* KNSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNSegmentedButton.h; sourceTree = "<group>"; };
 		7CF082091708630C004EE818 /* KNSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNSegmentedButton.m; sourceTree = "<group>"; };
 		7CF0820C1708658F004EE818 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
@@ -520,6 +526,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE43AAB191D67EF009954B9 /* CoreBluetooth.framework in Frameworks */,
 				7C6CFE171905AD5600DD0C0E /* AVFoundation.framework in Frameworks */,
 				7CBBB4C816FCD37C0027E4C5 /* CoreLocation.framework in Frameworks */,
 				7C7B9FCA18A0371400340671 /* CoreMotion.framework in Frameworks */,
@@ -650,6 +657,7 @@
 		7C365F4A16ED36F0001BC05C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7CE43AAA191D67EF009954B9 /* CoreBluetooth.framework */,
 				7C6CFE161905AD5600DD0C0E /* AVFoundation.framework */,
 				7C7B9FC918A0371400340671 /* CoreMotion.framework */,
 				7C8DA57C18378670002A3EF3 /* AudioToolbox.framework */,
@@ -773,6 +781,7 @@
 		7C8DA581183789FC002A3EF3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7CE63477191A27970009E877 /* BLE */,
 				7C6CFE181905B19900DD0C0E /* Audio */,
 				7C7B9FCF18A0DE2A00340671 /* Xively */,
 				7C7B9FCE18A0DDC500340671 /* MKBlockAdditions */,
@@ -1137,6 +1146,16 @@
 			name = stats;
 			sourceTree = "<group>";
 		};
+		7CE63477191A27970009E877 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				7CE63478191A27A50009E877 /* BLE.h */,
+				7CE63479191A27A50009E877 /* BLE.m */,
+				7CE6347A191A27A50009E877 /* BLEDefines.h */,
+			);
+			name = BLE;
+			sourceTree = "<group>";
+		};
 		7CF0820B17086575004EE818 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
@@ -1453,6 +1472,7 @@
 				7C16954F17005A2C00A8A2F0 /* KNMeasureHelper.m in Sources */,
 				7CC0B2B6170109F6007752CA /* KNTabBarController.m in Sources */,
 				7C2AF3551885E7B20060FA56 /* NSURL+OsLinks.m in Sources */,
+				7CE6347B191A27A50009E877 /* BLE.m in Sources */,
 				7CE0966817F62A9E009BB15B /* PinAnnotation.m in Sources */,
 				7CC0B2C217010F35007752CA /* KNDescriptionViewController.m in Sources */,
 				7C0E4D8C170352EC00B130E5 /* KNMeasureDataDocument.m in Sources */,

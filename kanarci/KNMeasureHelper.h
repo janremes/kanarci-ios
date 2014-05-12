@@ -18,7 +18,7 @@
  
  */
 
-+(NSString *) getQualityStringForValue:(int) value;
-+(NSString *) getImageNameForBucketValue:(int) value;
++(NSString *) getQualityStringForValue:(NSInteger) value;
++(NSString *) getImageNameForBucketValue:(NSInteger) value;
 
 @end

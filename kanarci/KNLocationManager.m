@@ -52,6 +52,10 @@
 
 }
 
+-(void)setNewActivity:(KNActivity *)activity {
+    self.activity = activity;
+}
+
 -(void)startObservingLocation {
     [self.locationManager startUpdatingLocation];
 }

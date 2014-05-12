@@ -13,8 +13,9 @@
 #import "KNActivity.h"
 #import <NCISimpleChartView.h>
 #import <NCIZoomGraphView.h>
+#import <GKLineGraph.h>
 
-@interface ActivityMeasureVC () <MKMapViewDelegate,KNLocationManagerDelegate>
+@interface ActivityMeasureVC () <MKMapViewDelegate,KNLocationManagerDelegate,GKLineGraphDataSource>
 
 @property (strong, nonatomic) IBOutlet UILabel *stepCountLabel;
 @property (strong, nonatomic) IBOutlet UILabel *stepLabel;
@@ -25,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *redoButton;
 @property (strong, nonatomic) NSTimer *stepQueryTimer;
 @property (strong, nonatomic) NCISimpleChartView *zoomingChart ;
+@property (strong, nonatomic) GKLineGraph *lineChart ;
 @end
 
 @implementation ActivityMeasureVC
@@ -55,6 +57,7 @@
     
     self.stepQueryTimer = [[NSTimer alloc] initWithFireDate:[NSDate new] interval:10 target:self selector:@selector(queryTimer) userInfo:nil repeats:YES];
     [self loadChart];
+   // [self loadLineChart];
     
 }
 
@@ -74,6 +77,18 @@
     
     self.zoomingChart.top = self.view.height - self.zoomingChart.height-self.tabBarController.tabBar.height-10;
     self.zoomingChart.left = 0;
+    
+    self.lineChart.top = self.view.height - self.lineChart.height-self.tabBarController.tabBar.height-10;
+    self.lineChart.left = 0;
+}
+
+-(void) loadLineChart {
+    self.lineChart = [[GKLineGraph alloc] initWithFrame:CGRectMake(0, 30, 320, 150)];
+    
+    self.lineChart.dataSource = self;
+    self.lineChart.lineWidth = 1.0;
+    [self.view addSubview:self.lineChart];
+    [self.lineChart draw];
 }
 
 -(void) loadChart {
@@ -109,7 +124,7 @@
                                                                  nciLabelsColor: [UIColor brownColor],
                                                                  nciLabelsDistance: @30
                                                                  },
-                                                     nciGridVertical: @{nciLineColor: [UIColor purpleColor],
+                                                     nciGridVertical: @{nciLineColor: [UIColor clearColor],
                                                                         nciLineDashes: @[],
                                                                         nciLineWidth: @1},
                                              //        nciGridHorizontal: @{nciLineColor: [UIColor greenColor],
@@ -124,7 +139,7 @@
     
    // self.zoomingChart.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.2];
     [self.view addSubview:self.zoomingChart];
-    int numOfPoints = 10;
+    int numOfPoints = 50;
     for (int ind = 0; ind < numOfPoints; ind ++){
         [self.zoomingChart addPoint:ind val:@[@((arc4random() % 100)+100)]];
     }
@@ -220,6 +235,31 @@
     }
     
     return nil;
+}
+
+#pragma mark - GLLine chart delegates
+
+-(NSInteger)numberOfLines {
+    return 1;
+}
+
+-(NSArray *)valuesForLineAtIndex:(NSInteger)index {
+    int numOfPoints = 50;
+    NSMutableArray *array = [NSMutableArray array];
+    for (int ind = 0; ind < numOfPoints; ind ++){
+        [array addObject:@((arc4random() % 100))];
+    }
+    
+    return [NSArray arrayWithArray:array];
+}
+
+-(UIColor *)colorForLineAtIndex:(NSInteger)index {
+    return [UIColor colorWithHexString:@"F1C40F"];
+}
+
+
+-(NSString *)titleForLineAtIndex:(NSInteger)index {
+    return @"";
 }
 
 @end

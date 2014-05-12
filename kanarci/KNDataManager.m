@@ -584,7 +584,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
             barItem.color = [_graphColors objectAtIndex:index -1];
         }
         
-        barItem.title = [NSString stringWithFormat:@"%d",startDate.hour];
+        barItem.title = [NSString stringWithFormat:@"%ld",(long)startDate.hour];
         
         if (resValue != 0) {
             [array addObject:barItem];
@@ -611,11 +611,6 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
 
 -(NSArray *) getLastBarItemsForDays:(int) days {
     NSMutableArray *array = [NSMutableArray array];
-    
-    //Create start and end dates for calculation
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    
-    NSDateComponents *dayComponents = [calendar components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit  fromDate:[NSDate new]];
     
     NSDate *now = [NSDate new];
     NSDate *startDate = [now dateBySettingHour:0];
@@ -703,11 +698,11 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
         if ([returnedArray count] >= currentDay) {
             
             if ([[returnedArray objectAtIndex:measurementDay-1] intValue] < m.bucketValue) {
-                [returnedArray replaceObjectAtIndex:measurementDay-1 withObject:[NSNumber numberWithInt:m.bucketValue]];
+                [returnedArray replaceObjectAtIndex:measurementDay-1 withObject:[NSNumber numberWithInteger:m.bucketValue]];
             }
             
         } else {
-            [returnedArray addObject:[NSNumber numberWithInt:m.bucketValue]];
+            [returnedArray addObject:[NSNumber numberWithInteger:m.bucketValue]];
         }
         
         
@@ -783,7 +778,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
     
     
     
-    int currentDay = 1;
+    NSInteger currentDay = 1;
     
  
     for (Measurement *m in filteredArray) {
@@ -799,7 +794,7 @@ const NSString *KNMeasureDataChangedNotification = @"KNMeasureDataDidChange";
         if ([returnedArray count] >= currentDay) {
             
             if ([[returnedArray objectAtIndex:measurementDay-1] intValue] < m.bucketValue) {
-               [returnedArray replaceObjectAtIndex:measurementDay-1 withObject:[NSNumber numberWithInt:m.bucketValue]];
+               [returnedArray replaceObjectAtIndex:measurementDay-1 withObject:[NSNumber numberWithInteger:m.bucketValue]];
             }
             
         } else {

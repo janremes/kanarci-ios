@@ -44,7 +44,6 @@
     label.textAlignment = NSTextAlignmentLeft;
     label.lineBreakMode = NSLineBreakByTruncatingTail;
     label.adjustsFontSizeToFitWidth = YES;
-    label.minimumFontSize = size/1.3;
     
     return label;
 }

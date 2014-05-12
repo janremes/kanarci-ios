@@ -11,7 +11,7 @@
 @implementation KNMeasureHelper
 
 
-+(NSString *) getQualityStringForValue:(int) value{
++(NSString *) getQualityStringForValue:(NSInteger) value{
         NSArray *qualities = [[NSArray alloc] initWithObjects:@"nezaměřeno",@"velmi dobrá",@"dobrá",@"uspokojivá",@"vyhovující",@"špatná",@"velmi špatná", nil];
     
     return [qualities objectAtIndex:value];
@@ -19,8 +19,8 @@
 }
 
 
-+(NSString *)getImageNameForBucketValue:(int)value {
-    return [NSString stringWithFormat:@"air_quality%d",value];
++(NSString *)getImageNameForBucketValue:(NSInteger)value {
+    return [NSString stringWithFormat:@"air_quality%ld",(long)value];
 }
 
 @end
